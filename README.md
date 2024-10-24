@@ -4,10 +4,12 @@
 
 [GitHub Tutorial](https://www.youtube.com/watch?v=Luu7V9Nx1EM)
 
-# 主流程
+# 角色與設定
+>name,age,attitude
 
-## 事件
+## 角色
 
-## 劇本
+## 關係
 
 # 想法
+>參考資料
