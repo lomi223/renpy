@@ -4,7 +4,11 @@
 # 為角色的名稱著色。
 
 define e = Character("艾琳")
-
+define t = Character("澤澤")
+define w = Character("勝勝")
+define a = Character("Alex")
+define s = Character("碩碩")
+define b = Character("BoB")
 
 # 遊戲從這裡開始。
 
