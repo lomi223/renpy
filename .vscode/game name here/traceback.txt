@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 43, in script
+    $ name = Alex
+  File "game/script.rpy", line 43, in <module>
+    $ name = Alex
+NameError: name 'Alex' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 43, in script
+    $ name = Alex
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 43, in <module>
+    $ name = Alex
+NameError: name 'Alex' is not defined
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.2.24090902
+not_yet_setted 1.0
+Mon Nov 11 23:23:13 2024

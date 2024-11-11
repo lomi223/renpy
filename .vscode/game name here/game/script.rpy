@@ -40,7 +40,7 @@ label inputname:
     $ name = name.strip()
 
     if not name:
-        $ name = Alex 
+        $ name = "Alex" 
     e "[name]是你的名字嗎?"
     
 menu:
