@@ -2,7 +2,7 @@
 
 [Renpy Tutorial](https://www.bianalyst-gt.com/post/renpy-tutorial-for-beginners)
 
-[Renpy English Tutorial Detailed](https://www.youtube.com/watch?v=ZcqJFBKPubY&list=PLJgbnTkC4bkCj2_8ZUg1o4CafLcRH0rAX&index=3)
+[Renpy English Tutorial Detailed](https://www.youtube.com/playlist?list=PLJgbnTkC4bkCj2_8ZUg1o4CafLcRH0rAX)
 
 [GitHub Tutorial](https://www.youtube.com/watch?v=Luu7V9Nx1EM)
 
