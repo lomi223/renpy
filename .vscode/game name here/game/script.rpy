@@ -9,6 +9,7 @@ define w = Character("勝勝")
 define a = Character("Alex")
 define s = Character("碩碩")
 define b = Character("BoB")
+define player = Character("[name]")
 
 # 遊戲從這裡開始。
 
@@ -19,19 +20,38 @@ label start:
     # images 目錄來顯示它。
 
     scene bg room
-
+    with fade
+    play music "audio/11-just-monika.mp3" fadein 0.1 volume 0.3
     # 這顯示了一個角色精靈。 使用了佔位符，但您可以
     # 透過將名為 "eileen happy.png" 的檔案
     # 新增至 images 目錄來取代它。
 
     show eileen happy
-
+    with dissolve
+    
     # 這些顯示對話行。
 
-    e "您已經創建了一個新的 Ren'Py 遊戲。"
+    e "感謝您遊玩DDGC。"
 
-    e "一旦您爲其添加一段故事, 圖片和音樂, 您就可以將它發佈給全世界！"
+    e "您將在此體驗您未曾有過的校園戀愛生活。"
 
+label inputname:
+    $ name = renpy.input("請在此輸入你的名字",length = 32)
+    $ name = name.strip()
+
+    if not name:
+        $ name = Alex 
+    e "[name]是你的名字嗎?"
+    
+menu:
+    "Yes":
+        jump say_my_name
+    "No":
+        jump inputname
+
+label say_my_name:
+    player "我的名字是[name]。"
     # 遊戲結束。
+
 
     return

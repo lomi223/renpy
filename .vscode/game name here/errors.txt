@@ -1,0 +1,18 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 35: expected statement.
+    set name = renpy.input("enter your name",length = 32)
+             ^
+
+File "game/script.rpy", line 36: expected statement.
+    set name = name.strip()
+             ^
+
+File "game/script.rpy", line 39: expected statement.
+    set name = Alex 
+             ^
+
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Mon Nov 11 22:53:20 2024
