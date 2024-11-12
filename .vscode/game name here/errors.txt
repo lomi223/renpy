@@ -2,17 +2,23 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 35: expected statement.
-    set name = renpy.input("enter your name",length = 32)
-             ^
+The label start is defined twice, at File "game/script.rpyc", line 16:
 
-File "game/script.rpy", line 36: expected statement.
-    set name = name.strip()
-             ^
+and File "game/starting.rpy", line 16:
+label start:
 
-File "game/script.rpy", line 39: expected statement.
-    set name = Alex 
-             ^
+
+The label inputname is defined twice, at File "game/script.rpyc", line 38:
+
+and File "game/starting.rpy", line 38:
+label inputname:
+
+
+The label say_my_name is defined twice, at File "game/script.rpyc", line 52:
+
+and File "game/starting.rpy", line 52:
+label say_my_name:
+
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Nov 11 22:53:20 2024
+Tue Nov 12 23:09:58 2024

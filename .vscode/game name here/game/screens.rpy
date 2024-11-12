@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## 初始化
 ################################################################################
 
@@ -169,9 +169,14 @@ style say_dialogue:
 screen input(prompt):
     style_prefix "input"
 
-    window:
-
+    frame:
+        background Frame("gui/input_frame_bg.png", Borders(25,25,25,25))
+        xalign 0.5
+        yalign 0.5
+        xpadding 30
+        ypadding 30
         vbox:
+            spacing 10
             xanchor gui.dialogue_text_xalign
             xpos gui.dialogue_xpos
             xsize gui.dialogue_width
@@ -185,12 +190,13 @@ style input_prompt is default
 style input_prompt:
     xalign gui.dialogue_text_xalign
     properties gui.text_properties("input_prompt")
-
+    color '#fff'
+    #font 'fonts/Nunito-Bold.ttf'
 style input:
     xalign gui.dialogue_text_xalign
     xmaximum gui.dialogue_width
-
-
+    color '#03fc77'
+    #font 'fonts/Nunito-Bold.ttf'
 ## 選擇畫面 ########################################################################
 ##
 ## 此畫面用於顯示選單語句所呈現的遊戲內選項。第一個參數，項目，是一個物件列表，
@@ -219,7 +225,7 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
-
+    activate_sound "/audio/SFX/minecraft_click.mp3"
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
 

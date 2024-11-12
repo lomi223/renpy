@@ -10,15 +10,38 @@ define a = Character("Alex")
 define s = Character("碩碩")
 define b = Character("BoB")
 define player = Character("[name]")
-
+#image splash = "image file here" 
+#遊戲開始的開場動畫
+"""
+label splashscreen:
+    scene black 
+    with Pause(1)
+    show splash with dissolve 
+    with pause(2)
+    scene black with dissolve
+    with pause(1)
+    return
+"""
 # 遊戲從這裡開始。
-
 label start:
 
+    
+    label inputname:
+        $ name = renpy.input("請在此輸入你的名字",length = 32)
+        $ name = name.strip()
+        if not name:
+            $ name = "Alex" 
+        "[name]是你的名字嗎?"
+        
+    menu:
+        "Yes":
+            jump say_my_name
+        "No":
+            jump inputname
+"""
     # 顯示背景。 預設情況下，它使用佔位符，但您可以
     # 將檔案（名為 "bg room.png" 或 "bg room.jpg"）新增至
     # images 目錄來顯示它。
-
     scene bg room
     with fade
     play music "audio/11-just-monika.mp3" fadein 0.1 volume 0.3
@@ -34,24 +57,11 @@ label start:
     e "感謝您遊玩DDGC。"
 
     e "您將在此體驗您未曾有過的校園戀愛生活。"
-
-label inputname:
-    $ name = renpy.input("請在此輸入你的名字",length = 32)
-    $ name = name.strip()
-
-    if not name:
-        $ name = "Alex" 
-    e "[name]是你的名字嗎?"
-    
-menu:
-    "Yes":
-        jump say_my_name
-    "No":
-        jump inputname
+"""
 
 label say_my_name:
     player "我的名字是[name]。"
-    # 遊戲結束。
+    jump act1
 
 
     return
