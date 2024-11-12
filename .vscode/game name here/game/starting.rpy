@@ -3,7 +3,6 @@
 # 聲明該遊戲使用的角色。 color 參數
 # 為角色的名稱著色。
 
-define e = Character("艾琳")
 define t = Character("澤澤")
 define w = Character("勝勝")
 define a = Character("Alex")
@@ -26,18 +25,18 @@ label splashscreen:
 label start:
 
     
-    label inputname:
-        $ name = renpy.input("請在此輸入你的名字",length = 32)
-        $ name = name.strip()
-        if not name:
-            $ name = "Alex" 
-        "[name]是你的名字嗎?"
-        
-    menu:
-        "Yes":
-            jump say_my_name
-        "No":
-            jump inputname
+label inputname:
+    $ name = renpy.input("請在此輸入你的名字",length = 32)
+    $ name = name.strip()
+    if not name:
+        $ name = "Alex" 
+    "[name]是你的名字嗎?"
+    
+menu:
+    "Yes":
+        jump say_my_name
+    "No":
+        jump inputname
 """
     # 顯示背景。 預設情況下，它使用佔位符，但您可以
     # 將檔案（名為 "bg room.png" 或 "bg room.jpg"）新增至
@@ -62,6 +61,5 @@ label start:
 label say_my_name:
     player "我的名字是[name]。"
     jump act1
-
-
+    
     return
