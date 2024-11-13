@@ -9,18 +9,17 @@ define a = Character("Alex")
 define s = Character("碩碩")
 define b = Character("BoB")
 define player = Character("[name]")
-#image splash = "image file here" 
+image splash = "temp_splash_img.png" 
 #遊戲開始的開場動畫
-"""
 label splashscreen:
     scene black 
     with Pause(1)
     show splash with dissolve 
-    with pause(2)
+    with Pause(2)
     scene black with dissolve
-    with pause(1)
+    with Pause(1)
     return
-"""
+
 # 遊戲從這裡開始。
 label start:
 
