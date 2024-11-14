@@ -305,6 +305,9 @@ screen navigation():
 
         textbutton _("設定") action ShowMenu("preferences")
 
+        if renpy.get_screen("main_menu"):
+            textbutton _("畫廊") action ShowMenu("gallery_a")
+
         if _in_replay:
 
             textbutton _("結束回想") action EndReplay(confirm=True)

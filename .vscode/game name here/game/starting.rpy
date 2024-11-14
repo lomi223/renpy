@@ -1,18 +1,3 @@
-# 遊戲腳本位於此檔案。
-
-# 聲明該遊戲使用的角色。 color 參數
-# 為角色的名稱著色。
-
-define t = Character("澤澤")
-define w = Character("勝勝", image = "w.png")
-define a = Character("Alex")
-define s = Character("碩碩")
-define b = Character("BoB")
-define player = Character("[name]")
-image splash = "temp_splash_img.png" 
-
-    
-#遊戲開始的開場動畫
 label splashscreen:
     scene black 
     with Pause(1)
@@ -22,11 +7,44 @@ label splashscreen:
     with Pause(1)
     return
 
-# 遊戲從這裡開始。
+
 label start:
+
+label cg:
+    menu:
+        "show CG_a":
+            scene CG_a_red with fade
+            scene CG_a_blue with fade
+            scene CG_a_yellow with fade
+            scene CG_a_green with fade
+            scene CG_a_orange with fade
+            scene CG_a_indigo with fade
+            ""
+            jump cg
+        "show CG_b":
+            scene CG_b_red with fade
+            scene CG_b_blue with fade
+            scene CG_b_yellow with fade
+            scene CG_b_green with fade
+            scene CG_b_orange with fade
+            scene CG_b_indigo with fade
+            ""
+            jump cg
+        "show CG_c":
+            scene CG_c_red with fade
+            scene CG_c_blue with fade
+            scene CG_c_yellow with fade
+            scene CG_c_green with fade
+            scene CG_c_orange with fade
+            scene CG_c_indigo with fade
+            ""
+            jump cg
+        "nah":
+            jump inputname
 
     
 label inputname:
+    scene black with fade
     $ name = renpy.input("請在此輸入你的名字",length = 32)
     $ name = name.strip()
     if not name:
