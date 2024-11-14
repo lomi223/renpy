@@ -1,32 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 241, in script call
-    call _splashscreen from _call_splashscreen_1
-  File "game/starting.rpy", line 18, in script
-    with pause(2)
-  File "game/starting.rpy", line 18, in <module>
-    with pause(2)
-NameError: name 'pause' is not defined
+  File "game/act1.rpy", line 11, in script
+    w "{atl=wave}嘿!哥們{/atl}"
+  File "game/atl_text_tag.rpy", line 312, in atl_tag
+    atl_list = arg_handler(arg_list) # Attempt to get a list of atl functions
+  File "game/atl_text_tag.rpy", line 294, in arg_handler
+    return_list.append(globals()[arg])
+KeyError: 'wave'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 241, in script call
-    call _splashscreen from _call_splashscreen_1
-  File "game/starting.rpy", line 18, in script
-    with pause(2)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1354, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/starting.rpy", line 18, in <module>
-    with pause(2)
-NameError: name 'pause' is not defined
+  File "game/act1.rpy", line 11, in script
+    w "{atl=wave}嘿!哥們{/atl}"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 785, in display_say
+    what_text.update()
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 2237, in update
+    tokens = self.apply_custom_tags(tokens)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 2829, in apply_custom_tags
+    new_contents = func(tag, value, contents)
+  File "game/atl_text_tag.rpy", line 312, in atl_tag
+    atl_list = arg_handler(arg_list) # Attempt to get a list of atl functions
+  File "game/atl_text_tag.rpy", line 294, in arg_handler
+    return_list.append(globals()[arg])
+KeyError: 'wave'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Wed Nov 13 23:27:38 2024
+Thu Nov 14 14:22:11 2024

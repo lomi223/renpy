@@ -4,12 +4,14 @@
 # 為角色的名稱著色。
 
 define t = Character("澤澤")
-define w = Character("勝勝")
+define w = Character("勝勝", image = "w.png")
 define a = Character("Alex")
 define s = Character("碩碩")
 define b = Character("BoB")
 define player = Character("[name]")
 image splash = "temp_splash_img.png" 
+image street_scene = "road_scene.jpg"
+    
 #遊戲開始的開場動畫
 label splashscreen:
     scene black 
@@ -28,7 +30,7 @@ label inputname:
     $ name = renpy.input("請在此輸入你的名字",length = 32)
     $ name = name.strip()
     if not name:
-        $ name = "Alex" 
+        $ name = "澤澤" 
     "[name]是你的名字嗎?"
     
 menu:

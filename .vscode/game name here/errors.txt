@@ -2,23 +2,7 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/script.rpyc", line 16:
-
-and File "game/starting.rpy", line 16:
-label start:
-
-
-The label inputname is defined twice, at File "game/script.rpyc", line 38:
-
-and File "game/starting.rpy", line 38:
-label inputname:
-
-
-The label say_my_name is defined twice, at File "game/script.rpyc", line 52:
-
-and File "game/starting.rpy", line 52:
-label say_my_name:
-
+File "game/kinetic_text_tags.rpy", line 1: Line with id 6c0c3176 appears twice. The other line is game/glitch_tag.rpyc:1
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Nov 12 23:09:58 2024
+Thu Nov 14 14:14:27 2024

@@ -353,7 +353,7 @@ screen main_menu():
     ## 這個空框使主選單變暗。
     frame:
         style "main_menu_frame"
-
+    
     ## use 語句在該畫面中包含另一個畫面。主選單的實際內容在導航畫面中。
     use navigation
 
