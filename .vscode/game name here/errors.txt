@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/kinetic_text_tags.rpy", line 1: Line with id 6c0c3176 appears twice. The other line is game/glitch_tag.rpyc:1
+File "game/act1.rpy", line 13: menu statement expects a non-empty block.
+    menu:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 14 14:14:27 2024
+Thu Nov 14 14:38:46 2024

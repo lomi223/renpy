@@ -1,19 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
+While processing text tag {att=bounce} in '{att=bounce}{size=*2}嘿!哥們{/size}{/atl}'.:
   File "game/act1.rpy", line 11, in script
-    w "{atl=wave}嘿!哥們{/atl}"
-  File "game/atl_text_tag.rpy", line 312, in atl_tag
-    atl_list = arg_handler(arg_list) # Attempt to get a list of atl functions
-  File "game/atl_text_tag.rpy", line 294, in arg_handler
-    return_list.append(globals()[arg])
-KeyError: 'wave'
+    w "{att=bounce}{size=*2}嘿!哥們{/size}{/atl}"
+Exception: Unknown text tag 'att=bounce'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/act1.rpy", line 11, in script
-    w "{atl=wave}嘿!哥們{/atl}"
+    w "{att=bounce}{size=*2}嘿!哥們{/size}{/atl}"
   File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
     Say.execute(self)
   File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
@@ -24,19 +20,55 @@ Full traceback:
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
   File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
     display_say(who,
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 785, in display_say
-    what_text.update()
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 2237, in update
-    tokens = self.apply_custom_tags(tokens)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 2829, in apply_custom_tags
-    new_contents = func(tag, value, contents)
-  File "game/atl_text_tag.rpy", line 312, in atl_tag
-    atl_list = arg_handler(arg_list) # Attempt to get a list of atl functions
-  File "game/atl_text_tag.rpy", line 294, in arg_handler
-    return_list.append(globals()[arg])
-KeyError: 'wave'
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1454, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 2540, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 733, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\text\text.py", line 1529, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag 'att=bounce'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Thu Nov 14 14:22:11 2024
+Thu Nov 14 14:34:00 2024
