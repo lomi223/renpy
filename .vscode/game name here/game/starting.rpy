@@ -10,7 +10,7 @@ define s = Character("碩碩")
 define b = Character("BoB")
 define player = Character("[name]")
 image splash = "temp_splash_img.png" 
-image street_scene = "road_scene.jpg"
+
     
 #遊戲開始的開場動畫
 label splashscreen:
