@@ -1,8 +1,8 @@
-define t = Character("澤澤")
-define w = Character("勝勝", image = "w.png")
-define a = Character("Alex")
-define s = Character("碩碩")
-define b = Character("BoB")
+define t = Character("澤澤", image = "t")
+define w = Character("勝勝", image = "w")
+define a = Character("Alex", image = "a")
+define s = Character("碩碩", image = "s")
+define b = Character("BoB", image = "b")
 define player = Character("[name]")
 
 image splash = "temp_splash_img.png" 
