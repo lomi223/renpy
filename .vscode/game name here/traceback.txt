@@ -1,56 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00action_menu.rpy", line 117, in __call__
-    raise Exception("%r is not a screen or a label." % orig_screen)
-Exception: 'gallery_b' is not a screen or a label.
+  File "game/act1.rpy", line 11, in script
+    menu:
+  File "game/act1.rpy", line 12, in <module>
+    "去上學" if played_count < 3:
+NameError: name 'played_count' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 3278, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\transition.py", line 53, in event
-    return self.new_widget.event(ev, x, y, st) # E1101
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 793, in event
-    rv = self.child.event(ev, x, y, st)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 1294, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\behavior.py", line 1180, in event
-    return handle_click(self.clicked)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\behavior.py", line 1101, in handle_click
-    rv = run(action)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\behavior.py", line 401, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 117, in __call__
-    raise Exception("%r is not a screen or a label." % orig_screen)
-Exception: 'gallery_b' is not a screen or a label.
+  File "game/act1.rpy", line 11, in script
+    menu:
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 100, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/act1.rpy", line 12, in <module>
+    "去上學" if played_count < 3:
+NameError: name 'played_count' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Thu Nov 14 23:36:51 2024
+Sat Nov 16 23:44:36 2024

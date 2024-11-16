@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gallery.rpy", line 1: python block expects a non-empty block.
-    init python:
-                ^
+File "game/act1.rpy", line 55: expected 'image_name_component' not found.
+    show 
+         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 14 22:41:05 2024
+Sun Nov 17 00:00:57 2024
