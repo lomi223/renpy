@@ -8,9 +8,11 @@ label splashscreen:
     return
 
 
-label start:
+label start: 
+    play music "11-just-monika.mp3" loop fadein 0.5 volume 0.3
 
 label cg:
+    show black with dissolve
     menu:
         "show CG_a":
             scene CG_a_red with fade
@@ -44,6 +46,7 @@ label cg:
 
     
 label inputname:
+
     scene black with fade
     $ name = renpy.input("請在此輸入你的名字",length = 32)
     $ name = name.strip()
@@ -59,6 +62,7 @@ menu:
         
 label say_my_name:
     player "我的名字是[name]。"
+    stop music fadeout 0.5
     jump act1
     
     return

@@ -1,502 +1,37 @@
-2024-11-16 15:30:08 UTC
+2024-11-18 15:19:11 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
 
-Early init took 0.06s
-Loading error handling took 0.03s
-Loading script took 0.22s
-Loading save slot metadata took 0.03s
+Early init took 0.08s
+Loading error handling took 0.05s
+Loading script took 0.38s
+Loading save slot metadata took 0.16s
 Loading persistent took 0.00s
-Running init code took 0.05s
+Running init code took 0.09s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.19s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1724, 933) drawable=(1724, 933)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1051) drawable=(1920, 1051)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Screen sizes: virtual=(1920, 1080) physical=(1724, 933) drawable=(1724, 933)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 88.86s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.12s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
 Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1658, 932) drawable=(1658, 932)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 95.20s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1656, 931) drawable=(1656, 931)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 107.65s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1653, 930) drawable=(1653, 930)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 133.83s
-Loading error handling took 0.02s
-Loading script took 0.14s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1652, 930) drawable=(1652, 930)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 145.02s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1651, 929) drawable=(1651, 929)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1051) drawable=(1920, 1051)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1651, 929) drawable=(1651, 929)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1650, 928) drawable=(1650, 928)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Screen sizes: virtual=(1920, 1080) physical=(1650, 927) drawable=(1650, 927)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 438.67s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1647, 926) drawable=(1647, 926)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 469.33s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 521.20s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.27s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 670.00s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 720.31s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.26s
+Creating interface object took 0.22s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
+Load screen analysis took 0.01s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.57s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -506,10 +41,34 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/act1.rpy", line 39, in script
+    show w norm at chromatic_offset:
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/act1.rpy", line 39, in <module>
+    show w norm at chromatic_offset:
+NameError: name 'chromatic_offset' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 39, in script
+    show w norm at chromatic_offset:
+  File "game/act1.rpy", line 39, in <module>
+    show w norm at chromatic_offset:
+NameError: name 'chromatic_offset' is not defined
 Resetting cache.
-Early init took 796.43s
+Early init took 73.75s
 Loading error handling took 0.02s
 Loading script took 0.12s
 Loading save slot metadata took 0.02s
@@ -520,10 +79,10 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.05s
+Initial gc took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
@@ -535,116 +94,10 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 857.39s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/act1.rpy", line 11, in script
-    menu:
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 100, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/act1.rpy", line 12, in <module>
-    "去上學" if played_count < 3:
-NameError: name 'played_count' is not defined
-
-While running game code:
-  File "game/act1.rpy", line 11, in script
-    menu:
-  File "game/act1.rpy", line 12, in <module>
-    "去上學" if played_count < 3:
-NameError: name 'played_count' is not defined
-Resetting cache.
-Early init took 916.97s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -654,49 +107,7 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 959.77s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 Cleaning stores took 0.00s
 Init translation took 0.00s
@@ -706,60 +117,18 @@ Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
 Resetting cache.
-Early init took 1049.80s
+Early init took 321.89s
 Loading error handling took 0.02s
 Loading script took 0.13s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.04s
+Running init code took 0.03s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
 Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1071.27s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.05s
@@ -768,16 +137,208 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.21s
 Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/act1.rpy", line 9, in script
+    player "今天天氣真不錯！"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'name' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 9, in script
+    player "今天天氣真不錯！"
+NameError: name 'name' is not defined
+
+Full traceback:
+  File "game/act1.rpy", line 11, in script
+    player "接下來要幹嘛呢？"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'name' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 11, in script
+    player "接下來要幹嘛呢？"
+NameError: name 'name' is not defined
+Resetting cache.
+Early init took 384.71s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 404.65s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 424.58s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.13s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -787,43 +348,18 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 1382.38s
+Early init took 538.54s
 Loading error handling took 0.02s
 Loading script took 0.12s
-Loading save slot metadata took 0.02s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-
-File "game/act1.rpy", line 27: else clause expects a non-empty block.
-    else:
-         ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.33s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1397.60s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.01s
+Running init code took 0.06s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
 Dump and make backups took 0.05s
@@ -841,10 +377,10 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -854,19 +390,12 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
 Resetting cache.
-Early init took 1451.39s
+Early init took 575.21s
 Loading error handling took 0.02s
-Loading script took 0.12s
+Loading script took 0.13s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.04s
@@ -875,25 +404,25 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.06s
+Initial gc took 0.05s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.22s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -903,28 +432,28 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 1466.85s
+Early init took 584.60s
 Loading error handling took 0.02s
-Loading script took 0.14s
+Loading script took 0.13s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.04s
+Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
+Creating interface object took 0.23s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
@@ -935,7 +464,7 @@ Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -945,644 +474,13 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Resetting cache.
-Early init took 1546.35s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.27s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 1576.84s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1592.31s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/act1.rpy", line 51: expected 'label_name_declare' not found.
-    label 
-         ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.39s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1666.25s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1675.61s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1782.04s
-Loading error handling took 0.03s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1849.10s
-Loading error handling took 0.02s
-Loading script took 0.15s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/act1.rpy", line 55: expected 'image_name_component' not found.
-    show 
-         ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.35s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1912.47s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.14s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 1961.44s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 2221.01s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 2263.72s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Resetting cache.
-Early init took 2342.61s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.07s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3226.12s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.08s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.14s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3255.13s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3301.39s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3309.21s
+Early init took 593.97s
 Loading error handling took 0.02s
 Loading script took 0.14s
-Loading save slot metadata took 0.02s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.04s
 Loading analysis data took 0.01s
@@ -1593,22 +491,22 @@ Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\gam
 Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.05s
+Initial gc took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.23s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1618,10 +516,10 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 3317.00s
+Early init took 602.00s
 Loading error handling took 0.02s
 Loading script took 0.11s
 Loading save slot metadata took 0.02s
@@ -1632,151 +530,25 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.12s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3368.81s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3393.29s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Interface start took 0.11s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 3416.22s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.05s
+Initial gc took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.24s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.11s
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1786,12 +558,104 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1644, 925) drawable=(1644, 925)
+Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+
+Full traceback:
+  File "game/act1.rpy", line 9, in script
+    player "今天天氣真不錯！"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'name' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 9, in script
+    player "今天天氣真不錯！"
+NameError: name 'name' is not defined
+
+Full traceback:
+  File "game/act1.rpy", line 11, in script
+    player "接下來要幹嘛呢？"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'name' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 11, in script
+    player "接下來要幹嘛呢？"
+NameError: name 'name' is not defined
+
+Full traceback:
+  File "game/act1.rpy", line 48, in script
+    player "一起走阿"
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
+    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Downloads\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'name' is not defined
+
+While running game code:
+  File "game/act1.rpy", line 48, in script
+    player "一起走阿"
+NameError: name 'name' is not defined

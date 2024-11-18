@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/act1.rpy", line 55: expected 'image_name_component' not found.
-    show 
-         ^
+File "game/act1.rpy", line 33: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 3
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Nov 17 00:00:57 2024
+Mon Nov 18 20:27:05 2024

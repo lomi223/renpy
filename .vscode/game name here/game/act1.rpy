@@ -1,4 +1,5 @@
 label act1:
+    play music "bird-chirping-sound-effect.mp3" loop fadein 0.3 volume 0.3
     scene black with dissolve
     centered "八月的尾聲即將到來，即將邁入秋色的風似乎更加喧囂了。青澀的少年渴望抓住夏天的尾巴、為青春開啟美好的篇章。" with fade
     
@@ -11,8 +12,12 @@ label do_what:
     menu:
         "去上學" if played_count < 3:
             if played_count == 0:
+                stop music
+                play music "birds-flying-away.mp3" noloop
                 jump w_on_street
             else:
+                stop music
+                play music "birds-flying-away.mp3" noloop
                 jump s_wall
 
         "玩會兒遊戲" if played_count < 3:
@@ -25,10 +30,11 @@ label do_what:
             if played_count < 3:
                 jump do_what
             else:
+                stop music
                 jump playing_ending
             
 label w_on_street:
-    scene street_scene with dissolve:
+    scene street_scene with Fade(0.5,1.0,0.5):
         zoom 3
     show w norm with dissolve:
         zoom 0.6
@@ -62,7 +68,7 @@ label s_wall:
     "你們從小便經常玩在一起"
     s "我來助你"
     scene black with dissolve
-    "碩碩表演了一番身法後翻到了牆上，順便也將你拉了上去"
+    centered "碩碩表演了一番身法後翻到了牆上，順便也將你拉了上去"
 
 label classroom:
     scene classroom with dissolve:

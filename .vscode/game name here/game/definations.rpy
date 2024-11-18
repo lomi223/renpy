@@ -1,6 +1,3 @@
-define config.default_music_volume = 0.7
-define config.default_sfx_volume = 0.7
-define config.default_voice_volume = 0.7
 
 define t = Character("澤澤", image = "t")
 define w = Character("勝勝", image = "w")
@@ -8,6 +5,8 @@ define a = Character("Alex", image = "a")
 define s = Character("碩碩", image = "s")
 define b = Character("BoB", image = "b")
 define player = Character("[name]")
+
+default persistent.testflag = 0
 
 image splash = "temp_splash_img.png" 
 image street_scene = "scene/road_scene.jpg"
