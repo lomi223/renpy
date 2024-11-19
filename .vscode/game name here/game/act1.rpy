@@ -1,5 +1,3 @@
-
-
 label act1:
     play music "bird-chirping-sound-effect.mp3" loop fadein 0.3 volume 0.3
     scene black with dissolve
@@ -78,6 +76,7 @@ label w_wall:
     $ ww = "勝勝"
     w "你好！我叫勝勝"
     centered "你們以全速衝往了教室"
+
 label classroom:
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5
@@ -127,7 +126,6 @@ label classroom:
     scene black with dissolve
     centered "隨著時間的推進，教室逐漸充滿了人們"
 
-
 label choose_react:
     scene classroom with dissolve
     player "該找誰聊聊呢？"
@@ -147,12 +145,15 @@ label choose_a:
     ""
     $ a_notreacted = 0
     jump choose_react
+
 label choose_s:
     ""
     $ s_notreacted = 0
     jump choose_react
+
 label choose_w:
     ""
     $ w_notrecated = 0
     jump choose_react
-    return
+    
+return
