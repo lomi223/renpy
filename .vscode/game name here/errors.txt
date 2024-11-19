@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/act1.rpy", line 33: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    zoom 3
+File "game/definations.rpy", line 16: Line is indented, but the preceding image statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom = 2
     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Nov 18 20:27:05 2024
+Tue Nov 19 16:40:22 2024

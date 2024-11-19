@@ -6,11 +6,15 @@ define s = Character("碩碩", image = "s")
 define b = Character("BoB", image = "b")
 define player = Character("[name]")
 
+
+
 default persistent.testflag = 0
 
 image splash = "temp_splash_img.png" 
 image street_scene = "scene/road_scene.jpg"
-image classroom = "scene/classroom.webp"
+image classroom :
+    "scene/classroom.webp"
+    zoom 2.0
 image bedroom = "scene/bedroom.jpg"
 image outside = "scene/school_outside.jpg"
 
@@ -36,3 +40,5 @@ image CG_c_orange = "CGs/c_orange.png"
 image CG_c_indigo = "CGs/c_indigo.png"
 
 default played_count = 0
+default street_flag = 0
+default wall_flag = 0
