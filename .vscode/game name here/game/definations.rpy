@@ -1,12 +1,16 @@
 
-define t = Character("澤澤", image = "t")
-define w = Character("勝勝", image = "w")
-define a = Character("Alex", image = "a")
-define s = Character("碩碩", image = "s")
-define b = Character("BoB", image = "b")
+define t = Character("[tt]", image = "t")
+define w = Character("[ww]", image = "w")
+define a = Character("[aa]", image = "a")
+define s = Character("[ss]", image = "s")
+define b = Character("[bb]", image = "b")
 define player = Character("[name]")
 
-
+default tt = "？？？"
+default ww = "？？？"
+default aa = "？？？"
+default ss = "？？？"
+default bb = "？？？"
 
 default persistent.testflag = 0
 
@@ -42,3 +46,6 @@ image CG_c_indigo = "CGs/c_indigo.png"
 default played_count = 0
 default street_flag = 0
 default wall_flag = 0
+default a_notreacted = 1
+default w_notrecated = 1
+default s_notreacted = 1
