@@ -109,7 +109,7 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## 控制預設文字速度。預設值 0 是無限的，而任何其他數字是每秒鍵入的字元數。
 
-default preferences.text_cps = 0
+default preferences.text_cps = 30
 
 
 ## 預設自動轉送延遲。數字越大，等待時間越長，有效範圍為 0 到 30。

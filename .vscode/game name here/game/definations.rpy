@@ -49,3 +49,7 @@ default wall_flag = 0
 default a_notreacted = 1
 default w_notrecated = 1
 default s_notreacted = 1
+default w_love = 0
+default s_love = 0
+default a_love = 0
+default b_love = 0

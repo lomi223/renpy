@@ -88,7 +88,7 @@ label classroom:
         "發現你的到來，碩碩靦腆的低下了頭"
         $ ss = "碩碩"
         show s shy with dissolve
-        s "早......早阿"
+        s "早......早阿[player]"
         hide s
         scene black with dissolve
 
@@ -119,16 +119,46 @@ label classroom:
         pause 0.5
         hide w
         player "剛剛那是啥？"
+
     elif wall_flag:
         play sound "SFX/door-slam.mp3" noloop volume 0.5
         player "趕上了"
-    
+        s "哇"
+        "突如其來的聲響嚇到了一旁的同學"
+        show s norm with dissolve
+        player "碩碩！"
+        player "沒想到會在這裡遇到妳"
+        "碩碩，你的青梅，你們從小便是看著對方長大"
+        "發現你的到來，碩碩靦腆的低下了頭"
+        $ ss = "碩碩"
+        show s shy with dissolve
+        s "早......早阿[player]"
+        scene black with dissolve
+        centered "環視整間教室，[player]見到了......"
+
+        show a reading with dissolve
+        pause 0.5
+        show a noticed with dissolve
+        pause 0.5
+        show a smile with dissolve
+        pause 0.5
+        hide a 
+        player "啊......啊"
+        player "很美~~~~阿"
+        player "他媽的"
+        player "好美......阿阿"
+        "少女的微笑不斷勾引著[player]"
+        "令[player]目不轉睛"
+
+
+
     scene black with dissolve
     centered "隨著時間的推進，教室逐漸充滿了人們"
 
 label choose_react:
     scene classroom with dissolve
     player "該找誰聊聊呢？"
+    
     menu:
         "街上遇到的少女" if street_flag & a_notreacted:
             jump choose_a
@@ -140,9 +170,39 @@ label choose_react:
             jump choose_w
         "幫了你的勝勝" if wall_flag & w_notrecated:
             jump choose_w
-
+        "還是算了":
+            jump night
+            
 label choose_a:
-    ""
+    scene black with dissolve
+    "你選擇靠近那位少女"
+    scene classroom with dissolve
+    show a reading with dissolve
+    menu:
+        "嘿！同學，你好嗎":
+            a "阿，那個......你好"
+
+        "我愛你！！！":
+            show a shocked
+            a "蛤？"
+            hide a with dissolve
+            "少女害怕地跑開了"
+            jump choose_react
+
+    menu:
+        "聊聊戀愛話題":
+            player "你有喜歡的人嗎？"
+            a "抱歉，我目前沒有戀愛想法"
+
+        "聊聊他看的書":
+            player "你手上那本是最新一集的《鮑伯與你》嗎？"
+            a "你也知道這本書？"
+            player "是阿，我很喜歡"
+            a "是喔"
+            show a smile with dissolve
+            "少女的目光回到了書上，露出了迷人的微笑"
+            player "（他真的好可愛）"
+
     $ a_notreacted = 0
     jump choose_react
 
@@ -155,5 +215,11 @@ label choose_w:
     ""
     $ w_notrecated = 0
     jump choose_react
+
+label choose_b:
+    ""
     
+label night:
+    scene black with dissolve
+    ""
 return

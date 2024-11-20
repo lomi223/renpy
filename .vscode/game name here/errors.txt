@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/definations.rpy", line 49: expected 'word' not found.
-    default 
-            ^
+File "game/act1.rpy", line 193: choice menuitem expects a non-empty block.
+    "":
+       ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 20 00:04:34 2024
+Wed Nov 20 12:51:27 2024
