@@ -21,6 +21,8 @@ image classroom :
     zoom 2.0
 image bedroom = "scene/bedroom.jpg"
 image outside = "scene/school_outside.jpg"
+image bedroom_night = "scene/bedroom_night.jpg"
+image radio = "scene/radio.jpg"
 
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"
@@ -47,9 +49,23 @@ default played_count = 0
 default street_flag = 0
 default wall_flag = 0
 default a_notreacted = 1
-default w_notrecated = 1
+default w_notreacted = 1
 default s_notreacted = 1
+default b_canreact = 0
 default w_love = 0
 default s_love = 0
 default a_love = 0
 default b_love = 0
+default repeat = 0
+init-2:
+    transform zoomedin:
+        zoom 1.5
+screen radio_button:
+    imagebutton:
+        idle "radio_idle.png"
+        xanchor 0.5
+        yanchor 0.5
+        xpos 0.498
+        ypos 0.556
+        at zoomedin
+        action Jump("not_here")

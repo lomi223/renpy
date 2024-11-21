@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/act1.rpy", line 193: choice menuitem expects a non-empty block.
-    "":
-       ^
+File "game/definations.rpy", line 68: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
+    zoom 1.5
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 20 12:51:27 2024
+Thu Nov 21 23:53:21 2024

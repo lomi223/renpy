@@ -1,4 +1,6 @@
-
+"""renpy
+init python:
+"""
 
 
 class glitch(renpy.Displayable):

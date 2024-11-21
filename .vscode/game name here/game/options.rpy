@@ -43,8 +43,8 @@ define build.name = "testfile"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
-
-
+define config.main_menu_music = "audio/doki-doki-literature-club-main-theme.mp3"
+define config.default_music_volume = 0.5
 ## 要允許用戶在聲音或語音通道上播放測試聲音，請取消註釋下面的行並使用它來設定要
 ## 播放的範例聲音。
 
