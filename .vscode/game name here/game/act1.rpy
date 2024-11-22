@@ -349,5 +349,8 @@ label night:
     "澤澤將書包扔到了一旁，以「大」字形的姿勢向後躺到了床上"
     "不知怎地，眼皮越來越沉重，回想著今天發生的一切，澤澤就這麼進入了夢鄉"
     scene black with Fade(1.0,0.0,0.0)
-    call dream
+    if b_love == 1:
+        call dream
+    jump act2
+
 return

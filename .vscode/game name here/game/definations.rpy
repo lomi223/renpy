@@ -57,6 +57,8 @@ default s_love = 0
 default a_love = 0
 default b_love = 0
 default repeat = 0
+default screen_changed = 0
+
 init-2:
     transform zoomedin:
         zoom 1.5
