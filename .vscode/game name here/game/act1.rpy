@@ -3,9 +3,7 @@ label act1:
     scene black with dissolve
     centered "八月的尾聲即將到來，即將邁入秋色的風似乎更加喧囂了。青澀的少年渴望抓住夏天的尾巴、為青春開啟美好的篇章。" with fade
     
-    scene bedroom with dissolve:
-        xzoom 3
-        yzoom 2.5
+    scene bedroom with dissolve
     player "今天天氣真不錯！"
 
 label do_what:
@@ -26,9 +24,7 @@ label do_what:
         "玩會兒遊戲" if played_count < 3:
             scene black with dissolve
             $ played_count += 1
-            scene bedroom with dissolve:
-                xzoom 3
-                yzoom 2.5
+            scene bedroom with dissolve
             player "刺激"
             if played_count < 3:
                 jump do_what
@@ -66,7 +62,10 @@ label w_wall:
 
     player "糟了！"
     player "現在進去肯定會被抓"
-    show w norm with dissolve
+    show w norm with dissolve:
+        zoom 0.6
+        yalign 1.5
+        xalign 0.5
     
     w "你也遲到啦？"
     player "你是！？"
@@ -135,7 +134,7 @@ label classroom:
         s "早......早阿[player]"
         scene black with dissolve
         centered "環視整間教室，[player]見到了......"
-
+        scene classroom with dissolve
         show a reading with dissolve
         pause 0.5
         show a noticed with dissolve
@@ -236,11 +235,11 @@ label choose_s:
             show s happy
             "碩碩低著的頭慢慢抬了起來，緊繃的情緒似乎比較緩和了"
             player "（好像摸太久了，該停下來了）"
-            "當澤澤準備將手收回時，碩碩突然輕輕握住了澤澤的手"
+            "當[player]準備將手收回時，碩碩突然輕輕握住了[player]的手"
             player "！？"
             player "（......好像貓咪）"
             player "還……要再摸一下嗎？"
-            "碩碩撇開的側臉頓時滿臉通紅，他趕緊將澤澤的手放開、再次逃離了現場"
+            "碩碩撇開的側臉頓時滿臉通紅，他趕緊將[player]的手放開、再次逃離了現場"
             player "（......好可愛）"
             $ s_love += 1
 
@@ -308,7 +307,7 @@ label choose_b:
     stop music
     scene black with dissolve
 
-    "你接̷̖̟̝͉̭̝̦̘̥̙̦̗̺̣͕̐̚近̶̢̛̺̞̦̺̣́̿͗̊́͂͑̊̾͘̚͝了̷̨̨̢̝̙̪̙͖̦̤̙͓͖̣̓̏̋͂̓̍̓ͅ.̵̳̏́̾.̷̘̟̠̤̇̔̊̀͑̎͋̚ͅ.̶̤̠̽̽̓̿̾̉̊.̵̛͍̞̜̭̩̫̯̩͌͌̑͛̋̈́ͅ"
+    centered "你接̷̖̟̝͉̭̝̦̘̥̙̦̗̺̣͕̐̚近̶̢̛̺̞̦̺̣́̿͗̊́͂͑̊̾͘̚͝了̷̨̨̢̝̙̪̙͖̦̤̙͓͖̣̓̏̋͂̓̍̓ͅ.̵̳̏́̾.̷̘̟̠̤̇̔̊̀͑̎͋̚ͅ.̶̤̠̽̽̓̿̾̉̊.̵̛͍̞̜̭̩̫̯̩͌͌̑͛̋̈́ͅ"
 
 
     scene classroom with dissolve
@@ -346,8 +345,8 @@ label night:
     scene bedroom_night with dissolve:
         xzoom 3
         yzoom 2.5
-    "澤澤將書包扔到了一旁，以「大」字形的姿勢向後躺到了床上"
-    "不知怎地，眼皮越來越沉重，回想著今天發生的一切，澤澤就這麼進入了夢鄉"
+    "[player]將書包扔到了一旁，以「大」字形的姿勢向後躺到了床上"
+    "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
     scene black with Fade(1.0,0.0,0.0)
     if b_love == 1:
         call dream

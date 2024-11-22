@@ -11,6 +11,7 @@ label dream:
         zoom 1.5
     pause 5.0
     "也許我該讓音樂停下"
+    play sound "fnaf-4-breathing.mp3" loop volume 0.3
     jump the_radio
 
 label the_radio:
@@ -35,6 +36,12 @@ label check_window_focus_label:
 
 label changed:
     scene black
-    "changed"
-    
+    show b glitched
+    pause 20.0
+    stop sound
+    play sound "glitch-from-doors.mp3"
+    show b glitch:
+        linear 0.5 zoom 5
+    pause 2.0
+    stop sound
     return

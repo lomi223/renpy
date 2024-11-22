@@ -10,38 +10,39 @@ label splashscreen:
 
 label start: 
     play music "11-just-monika.mp3" loop fadein 0.5 volume 0.3
-label cg:
-    show black with dissolve
-    menu:
-        "show CG_a":
-            scene CG_a_red with fade
-            scene CG_a_blue with fade
-            scene CG_a_yellow with fade
-            scene CG_a_green with fade
-            scene CG_a_orange with fade
-            scene CG_a_indigo with fade
-            ""
-            jump cg
-        "show CG_b":
-            scene CG_b_red with fade
-            scene CG_b_blue with fade
-            scene CG_b_yellow with fade
-            scene CG_b_green with fade
-            scene CG_b_orange with fade
-            scene CG_b_indigo with fade
-            ""
-            jump cg
-        "show CG_c":
-            scene CG_c_red with fade
-            scene CG_c_blue with fade
-            scene CG_c_yellow with fade
-            scene CG_c_green with fade
-            scene CG_c_orange with fade
-            scene CG_c_indigo with fade
-            ""
-            jump cg
-        "nah":
-            jump inputname
+
+#label cg:
+#    show black with dissolve
+#    menu:
+#        "show CG_a":
+#            scene CG_a_red with fade
+#            scene CG_a_blue with fade
+#            scene CG_a_yellow with fade
+#            scene CG_a_green with fade
+#            scene CG_a_orange with fade
+#            scene CG_a_indigo with fade
+#            ""
+#            jump cg
+#        "show CG_b":
+#            scene CG_b_red with fade
+#            scene CG_b_blue with fade
+#            scene CG_b_yellow with fade
+#            scene CG_b_green with fade
+#            scene CG_b_orange with fade
+#            scene CG_b_indigo with fade
+#            ""
+#            jump cg
+#        "show CG_c":
+#            scene CG_c_red with fade
+#            scene CG_c_blue with fade
+#            scene CG_c_yellow with fade
+#            scene CG_c_green with fade
+#            scene CG_c_orange with fade
+#            scene CG_c_indigo with fade
+#            ""
+#            jump cg
+#        "nah":
+#            jump inputname
 
     
 label inputname:

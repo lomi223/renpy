@@ -19,7 +19,10 @@ image street_scene = "scene/road_scene.jpg"
 image classroom :
     "scene/classroom.webp"
     zoom 2.0
-image bedroom = "scene/bedroom.jpg"
+image bedroom:
+    "scene/bedroom.jpg"
+    xzoom 3
+    yzoom 2.5
 image outside = "scene/school_outside.jpg"
 image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"

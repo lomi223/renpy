@@ -1,30 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/dream.rpy", line 33, in script
-    $ check_window_focus()
-  File "game/dream.rpy", line 33, in <module>
-    $ check_window_focus()
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa4 in position 0: invalid start byte
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+Exception: Could not pickle <module 'webbrowser' from 'C:\\Users\\USER\\Desktop\\renpy-8.3.2-sdk.7z\\renpy-8.3.2-sdk\\lib\\python3.9\\webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from 'C:\\Users\\USER\\Desktop\\renpy-8.3.2-sdk.7z\\renpy-8.3.2-sdk\\lib\\python3.9\\webbrowser.pyc'>)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/dream.rpy", line 33, in script
-    $ check_window_focus()
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/dream.rpy", line 33, in <module>
-    $ check_window_focus()
-  File "game/gscreen_ren.py", line 22, in check_window_focus
-    active_window = get_active_window()
-  File "game/gscreen_ren.py", line 15, in get_active_window
-    return current_window.value.decode('utf-8')
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa4 in position 0: invalid start byte
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 436, in save
+    reraise(t, e, tb)
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 417, in save
+    dump((roots, renpy.game.log), logf)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
+    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1275, in module_pickle
+    raise Exception("Could not pickle {!r}.".format(module))
+Exception: Could not pickle <module 'webbrowser' from 'C:\\Users\\USER\\Desktop\\renpy-8.3.2-sdk.7z\\renpy-8.3.2-sdk\\lib\\python3.9\\webbrowser.pyc'>. (perhaps store.webbrowser = <module 'webbrowser' from 'C:\\Users\\USER\\Desktop\\renpy-8.3.2-sdk.7z\\renpy-8.3.2-sdk\\lib\\python3.9\\webbrowser.pyc'>)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Fri Nov 22 12:50:55 2024
+Sat Nov 23 00:24:11 2024
