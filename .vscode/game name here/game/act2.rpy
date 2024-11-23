@@ -5,7 +5,7 @@ label act2:
     jump morning
 
 label morning:
-    scene bedroom with dissolve
+    scene bedroom with Fade(0.5,1.0,0.5)
     "看來今天也是美好的一天呢！"
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5

@@ -342,9 +342,10 @@ label night:
     scene black with dissolve
     centered "第一天的課程忙碌地度過了，時間飛逝、太陽悄悄地溜向西邊，黃昏時分很快就到來了。"
     player "時間差不多了，回家吧。"
-    scene bedroom_night with dissolve:
-        xzoom 3
-        yzoom 2.5
+    
+    show bedroom:
+        subpixel True 
+        matrixcolor TintMatrix("#18213b")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.5)*HueMatrix(0.0) 
     "[player]將書包扔到了一旁，以「大」字形的姿勢向後躺到了床上"
     "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
     scene black with Fade(1.0,0.0,0.0)

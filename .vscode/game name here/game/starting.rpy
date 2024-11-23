@@ -10,7 +10,13 @@ label splashscreen:
 
 label start: 
     play music "11-just-monika.mp3" loop fadein 0.5 volume 0.3
-
+    camera:
+        perspective True
+    menu:
+        "boss":
+            jump boss_fight
+        "name":
+            jump inputname
 #label cg:
 #    show black with dissolve
 #    menu:
