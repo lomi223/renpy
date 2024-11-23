@@ -10,6 +10,7 @@ label splashscreen:
 
 label start: 
     play music "11-just-monika.mp3" loop fadein 0.5 volume 0.3
+    $ name = "澤澤"
     camera:
         perspective True
     menu:
