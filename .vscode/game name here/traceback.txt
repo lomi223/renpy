@@ -1,34 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 145, in script
-    $ ww.hp += 5
-  File "game/boss_scene.rpy", line 145, in <module>
-    $ ww.hp += 5
-AttributeError: 'str' object has no attribute 'hp'
+  File "game/boss_scene.rpy", line 105, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 175, in script
+    $ principa.hp -= atk
+  File "game/boss_scene.rpy", line 175, in <module>
+    $ principa.hp -= atk
+NameError: name 'principa' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 145, in script
-    $ ww.hp += 5
+  File "game/boss_scene.rpy", line 105, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 175, in script
+    $ principa.hp -= atk
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/boss_scene.rpy", line 145, in <module>
-    $ ww.hp += 5
-AttributeError: 'str' object has no attribute 'hp'
+  File "game/boss_scene.rpy", line 175, in <module>
+    $ principa.hp -= atk
+NameError: name 'principa' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Sun Nov 24 01:04:23 2024
+Sun Nov 24 11:47:18 2024

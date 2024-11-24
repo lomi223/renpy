@@ -1,17 +1,17 @@
-2024-11-23 17:01:47 UTC
+2024-11-24 03:46:17 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
 
-Early init took 0.07s
-Loading error handling took 0.03s
-Loading script took 0.38s
-Loading save slot metadata took 0.03s
+Early init took 0.09s
+Loading error handling took 0.05s
+Loading script took 0.87s
+Loading save slot metadata took 0.17s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.07s
+Running init code took 0.11s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
+Reloading save slot metadata took 0.15s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
 Dump and make backups took 0.07s
@@ -20,21 +20,21 @@ Making clean stores took 0.00s
 Initial gc took 0.05s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.25s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Load screen analysis took 0.01s
+Analyze screens took 0.03s
 Save screen analysis took 0.03s
 Prepare screens took 0.10s
 Save pyanalysis. took 0.03s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
 Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.19s
+Interface start took 0.21s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -46,43 +46,14 @@ Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 73, in script
-    menu:
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 100, in menu
-    condition = renpy.python.py_eval(condition)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/boss_scene.rpy", line 98, in <module>
-    "加油 - 2 靈感" if mc_bufftimmer <= 0:
-NameError: name 'mc_bufftimmer' is not defined
-
-While running game code:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 73, in script
-    menu:
-  File "game/boss_scene.rpy", line 98, in <module>
-    "加油 - 2 靈感" if mc_bufftimmer <= 0:
-NameError: name 'mc_bufftimmer' is not defined
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 86.15s
+Early init took 46.38s
 Loading error handling took 0.03s
-Loading script took 0.16s
+Loading script took 0.19s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -94,19 +65,19 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.06s
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.07s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
+Creating interface object took 0.24s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.03s
 Save screen analysis took 0.03s
 Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
@@ -126,41 +97,92 @@ Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 140, in script
-    $ mc.health += 5
+  File "game/boss_scene.rpy", line 105, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 175, in script
+    $ principa.hp -= atk
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/boss_scene.rpy", line 140, in <module>
-    $ mc.health += 5
-AttributeError: 'fighter' object has no attribute 'health'
+  File "game/boss_scene.rpy", line 175, in <module>
+    $ principa.hp -= atk
+NameError: name 'principa' is not defined
 
 While running game code:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 140, in script
-    $ mc.health += 5
-  File "game/boss_scene.rpy", line 140, in <module>
-    $ mc.health += 5
-AttributeError: 'fighter' object has no attribute 'health'
+  File "game/boss_scene.rpy", line 105, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 175, in script
+    $ principa.hp -= atk
+  File "game/boss_scene.rpy", line 175, in <module>
+    $ principa.hp -= atk
+NameError: name 'principa' is not defined
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+Resetting cache.
+Early init took 83.18s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Running init code took 0.04s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 126.98s
+Early init took 139.66s
 Loading error handling took 0.02s
-Loading script took 0.17s
+Loading script took 0.22s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -172,10 +194,10 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
+Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.08s
+Initial gc took 0.10s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
@@ -186,88 +208,7 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
 Save screen analysis took 0.03s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.13s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 145, in script
-    $ ww.hp += 5
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/boss_scene.rpy", line 145, in <module>
-    $ ww.hp += 5
-AttributeError: 'str' object has no attribute 'hp'
-
-While running game code:
-  File "game/boss_scene.rpy", line 64, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 108, in script call
-    call healthsheild
-  File "game/boss_scene.rpy", line 145, in script
-    $ ww.hp += 5
-  File "game/boss_scene.rpy", line 145, in <module>
-    $ ww.hp += 5
-AttributeError: 'str' object has no attribute 'hp'
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:closing websocket connection :40111
-Resetting cache.
-Early init took 195.04s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.03s
-INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:socket service on :40111 exited
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.08s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
-Prepare screens took 0.10s
+Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -297,6 +238,45 @@ INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
@@ -306,9 +286,9 @@ INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 248.10s
+Early init took 352.54s
 Loading error handling took 0.02s
-Loading script took 0.17s
+Loading script took 0.18s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -350,7 +330,6 @@ Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:closing websocket connection :40111
