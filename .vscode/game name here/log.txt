@@ -1,40 +1,40 @@
-2024-11-24 03:46:17 UTC
+2024-11-24 16:12:59 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
 
-Early init took 0.09s
-Loading error handling took 0.05s
-Loading script took 0.87s
-Loading save slot metadata took 0.17s
+Early init took 0.07s
+Loading error handling took 0.03s
+Loading script took 0.38s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.11s
-Loading analysis data took 0.03s
+Running init code took 0.06s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.15s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.07s
+Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.05s
+Initial gc took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.03s
-Save screen analysis took 0.03s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.03s
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.21s
+Interface start took 0.30s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -48,16 +48,22 @@ Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 46.38s
+Early init took 123.61s
 Loading error handling took 0.03s
-Loading script took 0.19s
+Loading script took 0.18s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.04s
+Running init code took 0.03s
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 Loading analysis data took 0.02s
@@ -72,18 +78,18 @@ Initial gc took 0.07s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.26s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
+Analyze screens took 0.02s
 Save screen analysis took 0.03s
 Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.13s
+Interface start took 0.16s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -95,83 +101,169 @@ Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/boss_scene.rpy", line 105, in script call
-    call ww_attack
-  File "game/boss_scene.rpy", line 175, in script
-    $ principa.hp -= atk
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/boss_scene.rpy", line 175, in <module>
-    $ principa.hp -= atk
-NameError: name 'principa' is not defined
-
-While running game code:
-  File "game/boss_scene.rpy", line 105, in script call
-    call ww_attack
-  File "game/boss_scene.rpy", line 175, in script
-    $ principa.hp -= atk
-  File "game/boss_scene.rpy", line 175, in <module>
-    $ principa.hp -= atk
-NameError: name 'principa' is not defined
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
-INFO:renpy_warp_service:closing websocket connection :40111
-INFO:renpy_warp_service:closing websocket connection :40111
-Resetting cache.
-Early init took 83.18s
-Loading error handling took 0.02s
-Loading script took 0.21s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.04s
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.07s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.03s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.15s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:server closed connection
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+Resetting cache.
+Early init took 443.25s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1051) drawable=(1920, 1051)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:closing websocket connection :40111
@@ -179,10 +271,36 @@ INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 139.66s
+Early init took 860.60s
 Loading error handling took 0.02s
-Loading script took 0.22s
+Loading script took 0.19s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -194,25 +312,25 @@ Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.06s
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.10s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.22s
 Cleaning stores took 0.00s
 Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
+Analyze screens took 0.02s
 Save screen analysis took 0.03s
-Prepare screens took 0.11s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.13s
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -225,6 +343,18 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
@@ -257,13 +387,70 @@ INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
-INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
@@ -286,18 +473,112 @@ INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 Resetting cache.
-Early init took 352.54s
+Early init took 1295.07s
 Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Running init code took 0.03s
+Running init code took 0.09s
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+Resetting cache.
+Early init took 1439.98s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
 Dump and make backups took 0.05s
@@ -318,7 +599,7 @@ Prepare screens took 0.10s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.17s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -330,6 +611,147 @@ Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+Resetting cache.
+Early init took 1451.09s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Running init code took 0.09s
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:server closed connection
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:socket service on :40111 exited
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:closing websocket connection :40111
 INFO:renpy_warp_service:connected to renpy warp socket server on :40111
 INFO:renpy_warp_service:socket service on :40111 exited
