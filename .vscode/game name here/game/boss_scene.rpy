@@ -15,15 +15,19 @@ label the_fight:
 
         call check
 
-        if mc.hp > 0:
+        if mc.hp > 0 & mc_canmove:
             "[player]的回合！"
             call dice
             call mc_attack
-
-        if winwin.hp > 0:
+        elif not mc_canmove:
+            $ mc_canmove = True
+            
+        if winwin.hp > 0 & winwin_canmove:
             "[ww]的回合！"
             call dice
             call ww_attack
+        elif not winwin_canmove:
+            $ winwin_canmove = True
 
         if principal.hp > 0:
             "校長的回合！"
@@ -69,7 +73,7 @@ label mc_attack:
             "[player]和勝勝的說服力上升了"
             $ mc.attack += 2
             $ winwin.attack += 2
-            $ mc_atkbufftimmer = 2
+            $ mc_atkbufftimmer =2
             $ mc.thoughts -= 2
 
         "沒事的 - 3 靈感" if mc_defbufftimmer <= 0 and mc.thoughts >= 3:
@@ -178,6 +182,73 @@ label ww_attack:
     return
 
 label boss_attack:
+
+    if d100 > 75:
+        call choose1
+        if selected_player == 1:
+            "校長對[player]使用記大過"
+            if winwin_bright == False:
+
+                if d20 >= 19:
+                    "效果顯著"
+                    $ atk = d4 + d6 + principal.attack*2 - mc.defence
+                    $ mc.hp -= atk
+                if d20 >=1:
+                    "成效普通"
+                    $ atk = d4 + principal.attack*2 - mc.defence
+                    $ mc.hp -= atk
+                if d20 == 1:
+                    "未命中"
+                    return
+
+            if winwin_bright == True:
+                if d20 == 20:
+                    "成效普通"
+                    $ atk = d4 + principal.attack*2 - mc.defence
+                    $ mc.hp -= atk
+                if d20 <= 19:
+                    "未命中"
+                    return   
+
+        if selected_player == 2:
+            "校長對[ww]使用記大過"
+            if winwin_bright == False:
+
+                if d20 >= 19:
+                    "效果顯著"
+                    $ atk = d4 + d6 + principal.attack*2 - winwin.defence
+                    $ winwin.hp -= atk
+                if d20 >=1:
+                    "成效普通"
+                    $ atk = d4 + principal.attack*2 - winwin.defence
+                    $ winwin.hp -= atk
+                if d20 == 1:
+                    "未命中"
+                    return
+
+            if winwin_bright == True:
+                if d20 == 20:
+                    "成效普通"
+                    $ atk = d4 + principal.attack*2 - winwin.defence
+                    $ winwin.hp -= atk
+                if d20 <= 19:
+                    "未命中"
+                    return
+
+    if d100 > 60:
+        call choose2
+        "校長使用禁言"
+        if selected_player == 1:
+            $ mc_canmove = False
+            "[player]被禁言了"
+            return
+        if selected_player == 2:
+            $ winwin_canmove = False
+            "[ww]被禁言了"
+            return    
+    
+    
+    
     return
 
 label eat:
@@ -200,7 +271,7 @@ label healthsheild:
     menu:
         "[player]":
             "[player]恢復了些許體力並為下一次的攻勢做好了準備"
-            $ mc.hp += 5
+            $ mc.hp += 10
             $ mc.defence += 2
             $ mc_buffed = True
             if mc.hp > mc.max_hp:
@@ -208,7 +279,7 @@ label healthsheild:
 
         "勝勝":
             "勝勝恢復了些許體力並為下一次的攻勢做好了準備"
-            $ winwin.hp += 5
+            $ winwin.hp += 10
             $ winwin.defence += 2
             $ winwin_buffed = True
             if winwin.hp > winwin.max_hp:
@@ -220,7 +291,8 @@ label dice:
     $ d6 = renpy.random.randint(1, 6)
     $ d10 = renpy.random.randint(1, 10)
     $ d20 = renpy.random.randint(1, 20)
-    $ d50 = renpy.random.randint(1,50)
+    $ d50 = renpy.random.randint(1, 50)
+    $ d100 = renpy.random.randint(1,100)
     return
 
 label state_upd:
@@ -241,6 +313,43 @@ label state_upd:
     $ boss_currattack = principal.attack
 
     return
+
+label choose1:
+    if winwin_taunt == False:
+        if mc_buffed:
+            if d50 >= 28:
+                $ selected_player = 1
+            elif d50 <= 27:
+                $ selected_player = 2
+        elif winwin_buffed:
+            if d50 >= 24:
+                $ selected_player = 1
+            elif d50 <= 23:
+                $ selected_player = 2
+        else:
+            if d50 >= 26:
+                $ selected_player = 1
+            elif d50 <= 25:
+                $ selected_player = 2
+    elif winwin_taunt == True:
+        $ selected_player = 2
+    return
+
+label choose2:
+    if winwin_taunt == False:
+        if mc_atkbufftimmer > 0:
+            if d50 >= 31:
+                $ selected_player = 1
+            elif d50 <= 30:
+                $ selected_player = 2
+        else:
+            if d50 >= 26:
+                $ selected_player = 1
+            elif d50 <= 25:
+                $ selected_player = 2
+    elif winwin_taunt == True:
+        $ selected_player = 2
+    return 
 
 label check:
 
@@ -301,8 +410,8 @@ label check:
 
 label initialize:
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
-    $ mc = fighter("[player]", 60, 60, 30, 30, 10, 10, 3, 3)
-    $ winwin = fighter("[ww]", 80, 80, 10, 10, 8, 8, 5, 5)
+    $ mc = fighter("[player]", 60, 60, 30, 30, 8, 8, 3, 3)
+    $ winwin = fighter("[ww]", 80, 80, 10, 10, 10, 10, 5, 5)
     $ principal = fighter("校長", 200, 200, 50, 50, 5, 5, 8, 8)
 
     $ food = 3
@@ -312,6 +421,8 @@ label initialize:
     $ mc_atkbufftimmer = -1
     $ mc_defbufftimmer = -1
     
+    $ selected_player = -1
+    
     $ mc_buffed = False
     $ winwin_buffed = False
 
@@ -319,6 +430,9 @@ label initialize:
     $ principal_angered = False
     $ winwin_taunt = False
     $ winwin_bright = False
+
+    $ mc_canmove = True
+    $ winwin_canmove = True
 
     $ mc.hp = mc.max_hp
     $ mc.thoughts = mc.max_thoughts
