@@ -15,18 +15,18 @@ label the_fight:
 
         call check
 
-        if mc.hp > 0 & mc_canmove:
+        if mc.hp > 0 and mc_canmove == True:
             "[player]的回合！"
             call dice
             call mc_attack
-        elif not mc_canmove:
+        elif mc_canmove == False:
             $ mc_canmove = True
             
-        if winwin.hp > 0 & winwin_canmove:
+        if winwin.hp > 0 and winwin_canmove == True:
             "[ww]的回合！"
             call dice
             call ww_attack
-        elif not winwin_canmove:
+        elif winwin_canmove == False:
             $ winwin_canmove = True
 
         if principal.hp > 0:
@@ -37,68 +37,15 @@ label the_fight:
     return
 
 label mc_attack:
-    show screen mc_state
-    menu:
+    show screen player_state
 
-        "找藉口 - 1 靈感" if mc.thoughts >= 1:
-            hide screen mc_state
-            if d10 > 7:
-                "[player]說了個強而有力的藉口！"
-                "十分有效"
-                $ atk = d4 + d6 + mc.attack*2 - principal.defence
-                if atk < 0:
-                    $ atk = 0
-                $ principal.hp -= atk
-                $ mc.thoughts -= 1
-                call state_upd
-                return
+    call screen mc_attackchoice
 
-            if d10 > 1:
-                "[player]說了個普通的藉口"
-                $ atk = d4 + mc.attack*2 - principal.defence
-                if atk < 0:
-                    $ atk = 0
-                $ principal.hp -= atk
-                $ mc.thoughts -= 1
-                call state_upd
-                return
-            
-            if d10 == 1:
-                "[player]的藉口爛透了！"
-                call state_upd
-                return
-        
-        "加油 - 2 靈感" if mc_atkbufftimmer <= 0 and mc.thoughts >=2:
-            hide screen mc_state
-            "[player]和勝勝的說服力上升了"
-            $ mc.attack += 2
-            $ winwin.attack += 2
-            $ mc_atkbufftimmer =2
-            $ mc.thoughts -= 2
-
-        "沒事的 - 3 靈感" if mc_defbufftimmer <= 0 and mc.thoughts >= 3:
-            hide screen mc_state
-            $ mc.thoughts -= 3
-            $ mc_defbufftimmer = 1
-            call healthsheild
-
-        "吃外賣" if food > 0:
-            hide screen mc_state
-            $ food -= 1
-            call eat
-
-        "休息":
-            hide screen mc_state
-            "[player]選擇休息一會兒，回復些許靈感"
-            $ mc.thoughts += 1
-            if mc.thoughts > mc.max_thoughts:
-                $ mc.thoughts = mc.max_thoughts
-    
     call state_upd
     return
 
 label ww_attack:
-    show screen winwin_state
+    show screen player_state
     menu:
 
         "以理服人":
@@ -199,7 +146,7 @@ label boss_attack:
                     $ mc.hp -= atk
                 if d20 == 1:
                     "未命中"
-                    return
+                return
 
             if winwin_bright == True:
                 if d20 == 20:
@@ -208,7 +155,7 @@ label boss_attack:
                     $ mc.hp -= atk
                 if d20 <= 19:
                     "未命中"
-                    return   
+                return   
 
         if selected_player == 2:
             "校長對[ww]使用記大過"
@@ -224,7 +171,7 @@ label boss_attack:
                     $ winwin.hp -= atk
                 if d20 == 1:
                     "未命中"
-                    return
+                return
 
             if winwin_bright == True:
                 if d20 == 20:
@@ -233,7 +180,7 @@ label boss_attack:
                     $ winwin.hp -= atk
                 if d20 <= 19:
                     "未命中"
-                    return
+                return
 
     if d100 > 60:
         call choose2
@@ -251,40 +198,6 @@ label boss_attack:
     
     return
 
-label eat:
-    menu:
-        "給[player]吃":
-            "[player]吃了一口外賣"
-            "[player]充滿了靈感"
-            $ mc.thoughts = mc.max_thoughts
-        
-        "給勝勝吃":
-            "勝勝吃了一口你的外賣"
-            "勝勝充滿了靈感"
-            $ winwin.thoughts = winwin.max_thoughts
-    if food == 0:
-        "[player]的外賣被吃完了"
-
-    return
-
-label healthsheild:
-    menu:
-        "[player]":
-            "[player]恢復了些許體力並為下一次的攻勢做好了準備"
-            $ mc.hp += 10
-            $ mc.defence += 2
-            $ mc_buffed = True
-            if mc.hp > mc.max_hp:
-                $ mc.hp = mc.max_hp
-
-        "勝勝":
-            "勝勝恢復了些許體力並為下一次的攻勢做好了準備"
-            $ winwin.hp += 10
-            $ winwin.defence += 2
-            $ winwin_buffed = True
-            if winwin.hp > winwin.max_hp:
-                $ winwin.hp = winwin.max_hp
-    return
 
 label dice:
     $ d4 = renpy.random.randint(1, 4)
@@ -449,3 +362,4 @@ label initialize:
     $ principal.defence = principal.max_defence
     $ principal.max_attack = principal.max_attack
     return
+    

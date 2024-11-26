@@ -1,30 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/dream.rpy", line 34, in script
-    $ check_window_focus()
-  File "game/dream.rpy", line 34, in <module>
-    $ check_window_focus()
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa4 in position 0: invalid start byte
+  File "game/boss_scene.rpy", line 21, in script call
+    call mc_attack
+  File "game/boss_scene.rpy", line 42, in script
+    call screen mc_attackchoice
+ScriptError: could not find label 'mc_ChooseCharater'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/dream.rpy", line 34, in script
-    $ check_window_focus()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/dream.rpy", line 34, in <module>
-    $ check_window_focus()
-  File "game/gscreen_ren.py", line 22, in check_window_focus
-    active_window = get_active_window()
-  File "game/gscreen_ren.py", line 15, in get_active_window
-    return current_window.value.decode('utf-8')
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa4 in position 0: invalid start byte
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "game/boss_scene.rpy", line 21, in script call
+    call mc_attack
+  File "game/boss_scene.rpy", line 42, in script
+    call screen mc_attackchoice
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'mc_ChooseCharater'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Mon Nov 25 15:28:50 2024
+Wed Nov 27 00:03:55 2024

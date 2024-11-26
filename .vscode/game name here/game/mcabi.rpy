@@ -1,0 +1,79 @@
+label rest:
+    "[player]選擇休息一會兒，回復些許靈感"
+    $ mc.thoughts += 1
+    if mc.thoughts > mc.max_thoughts:
+        $ mc.thoughts = mc.max_thoughts
+    return
+
+label excuse:
+    if d10 > 7:
+        "[player]說了個強而有力的藉口！"
+        "十分有效"
+        $ atk = d4 + d6 + mc.attack*2 - principal.defence
+        if atk < 0:
+            $ atk = 0
+        $ principal.hp -= atk
+        $ mc.thoughts -= 1
+        call state_upd
+        return
+
+    if d10 > 1:
+        "[player]說了個普通的藉口"
+        $ atk = d4 + mc.attack*2 - principal.defence
+        if atk < 0:
+            $ atk = 0
+        $ principal.hp -= atk
+        $ mc.thoughts -= 1
+        call state_upd
+        return
+    
+    if d10 == 1:
+        "[player]的藉口爛透了！"
+        call state_upd
+        return
+
+label atk_buff:
+
+    "[player]和勝勝的說服力上升了"
+    $ mc.attack += 2
+    $ winwin.attack += 2
+    $ mc_atkbufftimmer =2
+    $ mc.thoughts -= 2
+    
+    return
+
+label eat:
+    
+    if chosen_player == player:
+        "[player]吃了一口外賣"
+        "[player]充滿了靈感"
+        $ mc.thoughts = mc.max_thoughts
+    if chosen_player == ww:
+        "勝勝吃了一口你的外賣"
+        "勝勝充滿了靈感"
+        $ winwin.thoughts = winwin.max_thoughts
+    if food == 0:
+        "[player]的外賣被吃完了"
+
+    return
+
+label healthsheild:
+    if chosen_player == player:
+        "[player]恢復了些許體力並為下一次的攻勢做好了準備"
+        $ mc.hp += 10
+        $ mc.defence += 2
+        $ mc_buffed = True
+        if mc.hp > mc.max_hp:
+            $ mc.hp = mc.max_hp
+
+    if chosen_player == ww:
+        "勝勝恢復了些許體力並為下一次的攻勢做好了準備"
+        $ winwin.hp += 10
+        $ winwin.defence += 2
+        $ winwin_buffed = True
+        if winwin.hp > winwin.max_hp:
+            $ winwin.hp = winwin.max_hp
+
+    $ mc.thoughts -= 3
+    $ mc_defbufftimmer = 1
+    return

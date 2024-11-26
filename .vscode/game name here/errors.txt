@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/player_stateUI.rpy", line 15: expected a keyword argument, colon, or end of line.
-    text "%d / %d" % mc.hp , mc.max_hp
-                           ^
+File "game/boss_scene.rpy", line 449: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    $ mc_defbufftimmer = 1
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Nov 24 23:52:23 2024
+Wed Nov 27 00:03:39 2024
