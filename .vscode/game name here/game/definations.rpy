@@ -62,6 +62,9 @@ default a_love = 0
 default b_love = 0
 default repeat = 0
 default screen_changed = 0
+default jump_label = ""
+default chosen_player = ""
+
 
 init-2:
     transform zoomedin:
