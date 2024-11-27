@@ -1,32 +1,86 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/boss_scene.rpy", line 21, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 42, in script
-    call screen mc_attackchoice
-ScriptError: could not find label 'mc_ChooseCharater'.
+  File "game/boss_scene.rpy", line 28, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 51, in script
+    call screen ww_attackchoice
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/ww_attackchoices.rpy", line 19, in execute
+    screen ww_abi:
+  File "game/ww_attackchoices.rpy", line 19, in execute
+    screen ww_abi:
+  File "game/ww_attackchoices.rpy", line 20, in execute
+    frame:
+  File "game/ww_attackchoices.rpy", line 26, in execute
+    vbox:
+  File "game/ww_attackchoices.rpy", line 37, in execute
+    textbutton "陽光開朗大男孩":
+  File "game/ww_attackchoices.rpy", line 37, in keywords
+    textbutton "陽光開朗大男孩":
+  File "game/ww_attackchoices.rpy", line 40, in keywords
+    if winwin_brightcd < 0:
+  File "game/ww_attackchoices.rpy", line 40, in <module>
+    if winwin_brightcd < 0:
+NameError: name 'winwin_brightcd' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "game/boss_scene.rpy", line 21, in script call
-    call mc_attack
-  File "game/boss_scene.rpy", line 42, in script
-    call screen mc_attackchoice
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'mc_ChooseCharater'.
+  File "game/boss_scene.rpy", line 28, in script call
+    call ww_attack
+  File "game/boss_scene.rpy", line 51, in script
+    call screen ww_attackchoice
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/ww_attackchoices.rpy", line 19, in execute
+    screen ww_abi:
+  File "game/ww_attackchoices.rpy", line 19, in execute
+    screen ww_abi:
+  File "game/ww_attackchoices.rpy", line 20, in execute
+    frame:
+  File "game/ww_attackchoices.rpy", line 26, in execute
+    vbox:
+  File "game/ww_attackchoices.rpy", line 37, in execute
+    textbutton "陽光開朗大男孩":
+  File "game/ww_attackchoices.rpy", line 37, in keywords
+    textbutton "陽光開朗大男孩":
+  File "game/ww_attackchoices.rpy", line 40, in keywords
+    if winwin_brightcd < 0:
+  File "game/ww_attackchoices.rpy", line 40, in <module>
+    if winwin_brightcd < 0:
+NameError: name 'winwin_brightcd' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Wed Nov 27 00:03:55 2024
+Thu Nov 28 00:38:27 2024

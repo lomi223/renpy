@@ -64,7 +64,8 @@ default repeat = 0
 default screen_changed = 0
 default jump_label = ""
 default chosen_player = ""
-
+default target = ""
+default prvscreen = ""
 
 init-2:
     transform zoomedin:

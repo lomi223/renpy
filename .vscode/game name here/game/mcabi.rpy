@@ -1,4 +1,4 @@
-label rest:
+label mcrest:
     "[player]選擇休息一會兒，回復些許靈感"
     $ mc.thoughts += 1
     if mc.thoughts > mc.max_thoughts:
@@ -12,7 +12,8 @@ label excuse:
         $ atk = d4 + d6 + mc.attack*2 - principal.defence
         if atk < 0:
             $ atk = 0
-        $ principal.hp -= atk
+        if target == principal:
+            $ principal.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return
@@ -22,7 +23,8 @@ label excuse:
         $ atk = d4 + mc.attack*2 - principal.defence
         if atk < 0:
             $ atk = 0
-        $ principal.hp -= atk
+        if target == principal:
+            $ principal.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return
@@ -37,9 +39,10 @@ label atk_buff:
     "[player]和勝勝的說服力上升了"
     $ mc.attack += 2
     $ winwin.attack += 2
-    $ mc_atkbufftimmer =2
+    $ mc_atkbufftimmer = 3
     $ mc.thoughts -= 2
-    
+    $ mc_attackbuffcd = 5
+
     return
 
 label eat:
@@ -52,6 +55,7 @@ label eat:
         "勝勝吃了一口你的外賣"
         "勝勝充滿了靈感"
         $ winwin.thoughts = winwin.max_thoughts
+    $ food -= 1
     if food == 0:
         "[player]的外賣被吃完了"
 

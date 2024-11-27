@@ -37,98 +37,29 @@ label the_fight:
     return
 
 label mc_attack:
-    show screen player_state
 
     call screen mc_attackchoice
+
+    show screen player_state
+    show screen boss_state
 
     call state_upd
     return
 
 label ww_attack:
+
+    call screen ww_attackchoice
+    
     show screen player_state
-    menu:
+    show screen boss_state
 
-        "以理服人":
-            hide screen winwin_state
-            if d10 > 8:
-                "勝勝的理由強而有力！"
-                $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
-                $ principal.hp -= atk
-                call state_upd
-                return
-
-            if d10 > 6:
-                "勝勝說了個強大的理由"
-                $ atk = d4 + d6 + winwin.attack*2 - principal.defence
-                $ principal.hp -= atk
-                call state_upd
-                return
-
-            if d10 > 1:
-                "勝勝說了個普通的理由"
-                $ atk = d4 + winwin.attack*2 - principal.defence
-                $ principal.hp -= atk
-                call state_upd
-                return
-
-            if d10 == 1:
-                "勝勝的理由爛透了！"
-                call state_upd
-                return
-
-        "嘴砲 - 2 靈感" if winwin_defdebufftimmer <= 0 and winwin.thoughts >= 2:
-            hide screen winwin_state
-            if d10 == 10:
-                "勝勝把校長說破防了！"
-                $ principal.defence = 0
-                $ principal_break = True
-                $ winwin_defdebufftimmer = 3
-                $ winwin.thoughts -= 2
-                $ principal.hp -= d4
-                call state_upd
-                return
-            
-            if d10 > 3:
-                "校長的心理防線受到勝勝影響"
-                $ principal.defence -= 2
-                $ winwin_defdebufftimmer = 3
-                $ winwin.thoughts -= 2
-                $ principal.hp -= d4
-                call state_upd
-                return
-
-            if d10 <= 3:
-                "勝勝的話語意外地激怒了校長！"
-                $ principal.attack += 2
-                $ principal_angered = True
-                $ winwin_defdebufftimmer = 3
-                $ winwin.thoughts -= 2
-                call state_upd
-                return
-
-        "我來扛":
-            hide screen winwin_state
-            "勝勝擋在了[player]的前面"
-            $ winwin_taunt = True
-
-        "陽光開朗大男孩":
-            hide screen winwin_state
-            "勝勝開始發光發熱"
-            "校長被閃瞎了"
-            "勝勝受到灼傷"
-            $ winwin_bright = True
-            $ winwin_brighttimmer = 3
-
-        "休息":
-            hide screen winwin_state
-            "勝勝選擇休息一會兒，回復些許靈感"
-            $ winwin.thoughts += 1
-            if winwin.thoughts > winwin.max_thoughts:
-                $ winwin.thoughts = winwin.max_thoughts
     call state_upd
     return
 
 label boss_attack:
+
+    show screen player_state
+    show screen boss_state
 
     if d100 > 75:
         call choose1
@@ -139,23 +70,32 @@ label boss_attack:
                 if d20 >= 19:
                     "效果顯著"
                     $ atk = d4 + d6 + principal.attack*2 - mc.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ mc.hp -= atk
+                    return
                 if d20 >=1:
                     "成效普通"
                     $ atk = d4 + principal.attack*2 - mc.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ mc.hp -= atk
+                    return
                 if d20 == 1:
                     "未命中"
-                return
+                    return
 
             if winwin_bright == True:
                 if d20 == 20:
                     "成效普通"
                     $ atk = d4 + principal.attack*2 - mc.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ mc.hp -= atk
+                    return
                 if d20 <= 19:
                     "未命中"
-                return   
+                    return   
 
         if selected_player == 2:
             "校長對[ww]使用記大過"
@@ -164,20 +104,29 @@ label boss_attack:
                 if d20 >= 19:
                     "效果顯著"
                     $ atk = d4 + d6 + principal.attack*2 - winwin.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ winwin.hp -= atk
+                    return
                 if d20 >=1:
                     "成效普通"
                     $ atk = d4 + principal.attack*2 - winwin.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ winwin.hp -= atk
+                    return
                 if d20 == 1:
                     "未命中"
-                return
+                    return
 
             if winwin_bright == True:
                 if d20 == 20:
                     "成效普通"
                     $ atk = d4 + principal.attack*2 - winwin.defence
+                    if atk < 0:
+                        $ atk = 0
                     $ winwin.hp -= atk
+                    return
                 if d20 <= 19:
                     "未命中"
                 return
@@ -197,7 +146,6 @@ label boss_attack:
     
     
     return
-
 
 label dice:
     $ d4 = renpy.random.randint(1, 4)
@@ -266,8 +214,17 @@ label choose2:
 
 label check:
 
+    if mc_attackbuffcd > 0:
+        $ mc_attackbuffcd -= 1
+
+    if winwin_debuffcd > 0:
+        $ winwin_debuffcd -= 1
+
+    if winwin_brightcd > 0:
+        $ winwin_brightcd -= 1
+
     if mc_atkbufftimmer > 0:
-            $ mc_atkbufftimmer -= 1
+        $ mc_atkbufftimmer -= 1
         
     if mc_defbufftimmer > 0:
         $ mc_defbufftimmer -= 1
@@ -278,6 +235,10 @@ label check:
     if winwin_brighttimmer > 0:
         $ winwin_brighttimmer -= 1
         $ winwin.hp -= 1
+
+    if mc_attackbuffcd == 0:
+        "技能：加油 冷卻結束"
+        $ mc_attackbuffcd = -1
 
     if mc_atkbufftimmer == 0:
         $ mc.attack -= 2
@@ -319,9 +280,23 @@ label check:
         $ winwin_bright = False
         $ winwin_brighttimmer = -1
 
+    if winwin_brightcd == 0:
+        "技能：陽光開朗大男孩 冷卻結束"
+        $ winwin_brightcd = -1
+
+    if winwin_debuffcd == 0:
+        "技能：嘴泡 冷卻結束"
+        $ winwin_debuffcd = -1
+
+    if winwin_taunt == True:
+        $ winwin_taunt = False
+    
     return
 
 label initialize:
+
+    show screen player_state
+    show screen boss_state
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
     $ mc = fighter("[player]", 60, 60, 30, 30, 8, 8, 3, 3)
     $ winwin = fighter("[ww]", 80, 80, 10, 10, 10, 10, 5, 5)
@@ -333,7 +308,10 @@ label initialize:
     $ winwin_brighttimmer = -1
     $ mc_atkbufftimmer = -1
     $ mc_defbufftimmer = -1
-    
+    $ mc_attackbuffcd = -1
+    $ winwin_brightcd = -1
+    $ winwin_debuffcd = -1
+
     $ selected_player = -1
     
     $ mc_buffed = False
@@ -361,5 +339,7 @@ label initialize:
     $ principal.thoughts = principal.max_thoughts
     $ principal.defence = principal.max_defence
     $ principal.max_attack = principal.max_attack
+
+    $ eva = 25
     return
     

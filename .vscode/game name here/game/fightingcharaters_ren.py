@@ -1,8 +1,6 @@
 """renpy
 init python:
 """
-
-
 class fighter:
     def __init__(self, name, max_hp, hp, max_thoughts, thoughts, max_defence, defence, max_attack, attack):
         self.name = name
