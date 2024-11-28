@@ -108,46 +108,6 @@ screen mc_ChooseCharater:
                 text_style "mytextbutton"
                 action [ToggleScreen("mc_ChooseCharater"),ToggleScreen("mc_attackchoice")]
 
-screen sk1_desc:
-    frame:
-        xpadding 100
-        ypadding 50
-        xalign 0.5
-        yalign 1.0
-        yoffset -10
-        xoffset 20
-        text "找個藉口，對選定目標造成一定傷害（消耗：1TP）"
-
-screen sk2_desc:
-    frame:
-        xpadding 100
-        ypadding 50
-        xalign 0.5
-        yalign 1.0
-        yoffset -10
-        xoffset 20
-        text "給我方全體加油，提升攻擊力（消耗：2TP）\n（持續3回合）（CD：5回合）"
-
-screen sk3_desc:
-    frame:
-        xpadding 100
-        ypadding 50
-        xalign 0.5
-        yalign 1.0
-        yoffset -10
-        xoffset 20
-        text "給我方選定目標一個呼呼，回復HP並提升防禦（消耗：3TP）\n（只在當前回合奏效）"
-
-screen food_desc:
-    frame:
-        xpadding 100
-        ypadding 50
-        xalign 0.5
-        yalign 1.0
-        yoffset -10
-        xoffset 20
-        text "吃一口外賣，為我方選定目標回復所有TP\n（當前剩餘： %d）" % food
-
 screen choosetarget:
     frame:
         xoffset 40
@@ -160,6 +120,12 @@ screen choosetarget:
                 textbutton "校長":
                     text_style "mytextbutton"
                     action [SetVariable("target",principal),ToggleScreen("choosetarget"),Jump(jump_label)]
+            if Rh.hp > 0:
+                textbutton "右手":
+                    text_style "mytextbutton"
+                    action [SetVariable("target",Rh),ToggleScreen("choosetarget"),Jump(jump_label)]
             textbutton "返回":
                 text_style "mytextbutton"
                 action [ToggleScreen("choosetarget"),ToggleScreen(prvscreen)]
+
+

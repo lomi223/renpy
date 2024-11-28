@@ -1,37 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/boss_scene.rpy", line 28, in script call
-    call ww_attack
-  File "game/boss_scene.rpy", line 51, in script
-    call screen ww_attackchoice
+  File "game/boss_scene.rpy", line 21, in script call
+    call mc_attack
+  File "game/boss_scene.rpy", line 46, in script
+    call screen mc_attackchoice
   File "renpy/common/000statements.rpy", line 671, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/ww_attackchoices.rpy", line 19, in execute
-    screen ww_abi:
-  File "game/ww_attackchoices.rpy", line 19, in execute
-    screen ww_abi:
-  File "game/ww_attackchoices.rpy", line 20, in execute
-    frame:
-  File "game/ww_attackchoices.rpy", line 26, in execute
-    vbox:
-  File "game/ww_attackchoices.rpy", line 37, in execute
-    textbutton "陽光開朗大男孩":
-  File "game/ww_attackchoices.rpy", line 37, in keywords
-    textbutton "陽光開朗大男孩":
-  File "game/ww_attackchoices.rpy", line 40, in keywords
-    if winwin_brightcd < 0:
-  File "game/ww_attackchoices.rpy", line 40, in <module>
-    if winwin_brightcd < 0:
-NameError: name 'winwin_brightcd' is not defined
+  File "game/charater_stateUI.rpy", line 62, in execute
+    screen enemy_state:
+  File "game/charater_stateUI.rpy", line 62, in execute
+    screen enemy_state:
+  File "game/charater_stateUI.rpy", line 63, in execute
+    grid 2 2:
+  File "game/charater_stateUI.rpy", line 113, in execute
+    if Rh.hp > 0:
+  File "game/charater_stateUI.rpy", line 114, in execute
+    grid Rh_effectamount 1 :
+  File "game/charater_stateUI.rpy", line 114, in <module>
+    grid Rh_effectamount 1 :
+NameError: name 'Rh_effectamount' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/boss_scene.rpy", line 28, in script call
-    call ww_attack
-  File "game/boss_scene.rpy", line 51, in script
-    call screen ww_attackchoice
+  File "game/boss_scene.rpy", line 21, in script call
+    call mc_attack
+  File "game/boss_scene.rpy", line 46, in script
+    call screen mc_attackchoice
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
     self.call("execute")
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
@@ -62,25 +58,21 @@ Full traceback:
     self.update()
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/ww_attackchoices.rpy", line 19, in execute
-    screen ww_abi:
-  File "game/ww_attackchoices.rpy", line 19, in execute
-    screen ww_abi:
-  File "game/ww_attackchoices.rpy", line 20, in execute
-    frame:
-  File "game/ww_attackchoices.rpy", line 26, in execute
-    vbox:
-  File "game/ww_attackchoices.rpy", line 37, in execute
-    textbutton "陽光開朗大男孩":
-  File "game/ww_attackchoices.rpy", line 37, in keywords
-    textbutton "陽光開朗大男孩":
-  File "game/ww_attackchoices.rpy", line 40, in keywords
-    if winwin_brightcd < 0:
-  File "game/ww_attackchoices.rpy", line 40, in <module>
-    if winwin_brightcd < 0:
-NameError: name 'winwin_brightcd' is not defined
+  File "game/charater_stateUI.rpy", line 62, in execute
+    screen enemy_state:
+  File "game/charater_stateUI.rpy", line 62, in execute
+    screen enemy_state:
+  File "game/charater_stateUI.rpy", line 63, in execute
+    grid 2 2:
+  File "game/charater_stateUI.rpy", line 113, in execute
+    if Rh.hp > 0:
+  File "game/charater_stateUI.rpy", line 114, in execute
+    grid Rh_effectamount 1 :
+  File "game/charater_stateUI.rpy", line 114, in <module>
+    grid Rh_effectamount 1 :
+NameError: name 'Rh_effectamount' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Thu Nov 28 00:38:27 2024
+Thu Nov 28 14:51:52 2024

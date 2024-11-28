@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/definations.rpy", line 68: expected '=' not found.
-    default prvscreen
-                     ^
+File "game/charater_stateUI.rpy", line 105: expected a keyword argument or child statement.
+    ""
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 28 00:46:58 2024
+Thu Nov 28 14:56:42 2024

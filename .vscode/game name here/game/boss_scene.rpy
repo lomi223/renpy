@@ -30,9 +30,14 @@ label the_fight:
             $ winwin_canmove = True
 
         if principal.hp > 0:
-            "校長的回合！"
             call dice
+            "校長的回合！"
             call boss_attack
+
+        if Rh.hp > 0:
+            call dice
+            "右手的回合！"
+            call Rh_attack
     
     return
 
@@ -40,8 +45,7 @@ label mc_attack:
 
     call screen mc_attackchoice
 
-    show screen player_state
-    show screen boss_state
+    call StateDisplay
 
     call state_upd
     return
@@ -50,16 +54,14 @@ label ww_attack:
 
     call screen ww_attackchoice
     
-    show screen player_state
-    show screen boss_state
+    call StateDisplay
 
     call state_upd
     return
 
 label boss_attack:
 
-    show screen player_state
-    show screen boss_state
+    call StateDisplay
 
     if d100 > 75:
         call choose1
@@ -73,6 +75,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
+                    call StateDisplay
                     return
                 if d20 >=1:
                     "成效普通"
@@ -80,6 +83,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
+                    call StateDisplay
                     return
                 if d20 == 1:
                     "未命中"
@@ -92,6 +96,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
+                    call StateDisplay
                     return
                 if d20 <= 19:
                     "未命中"
@@ -107,6 +112,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
+                    call StateDisplay
                     return
                 if d20 >=1:
                     "成效普通"
@@ -114,6 +120,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
+                    call StateDisplay
                     return
                 if d20 == 1:
                     "未命中"
@@ -126,6 +133,7 @@ label boss_attack:
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
+                    call StateDisplay
                     return
                 if d20 <= 19:
                     "未命中"
@@ -142,8 +150,90 @@ label boss_attack:
             $ winwin_canmove = False
             "[ww]被禁言了"
             return    
+
+    if d100 > 55:
+        "校長招喚了右手"
+        $ Rh.hp = Rh.max_hp
+        return
+    return
+
+label Rh_attack:
     
-    
+    call StateDisplay
+    call choose1
+    if selected_player == 1:
+        "右手對[player]使用正面突襲"
+        if winwin_bright == False:
+
+            if d20 >= 19:
+                "效果顯著"
+                $ atk = d4 + d6 + Rh.attack - mc.defence
+                if atk < 0:
+                    $ atk = 0
+                $ mc.hp -= atk
+                call StateDisplay
+                return
+            if d20 >=1:
+                "成效普通"
+                $ atk = d4 + Rh.attack - mc.defence
+                if atk < 0:
+                    $ atk = 0
+                $ mc.hp -= atk
+                call StateDisplay
+                return
+            if d20 == 1:
+                "未命中"
+                return
+
+        if winwin_bright == True:
+            if d20 == 20:
+                "成效普通"
+                $ atk = d4 + Rh.attack - mc.defence
+                if atk < 0:
+                    $ atk = 0
+                $ mc.hp -= atk
+                call StateDisplay
+                return
+            if d20 <= 19:
+                "未命中"
+                return   
+
+    if selected_player == 2:
+        "右手對[ww]使用正面突襲"
+        if winwin_bright == False:
+
+            if d20 >= 19:
+                "效果顯著"
+                $ atk = d4 + d6 + Rh.attack - winwin.defence
+                if atk < 0:
+                    $ atk = 0
+                $ winwin.hp -= atk
+                call StateDisplay
+                return
+            if d20 >=1:
+                "成效普通"
+                $ atk = d4 + Rh.attack - winwin.defence
+                if atk < 0:
+                    $ atk = 0
+                $ winwin.hp -= atk
+                call StateDisplay
+                return
+            if d20 == 1:
+                "未命中"
+                return
+
+        if winwin_bright == True:
+            if d20 == 20:
+                "成效普通"
+                $ atk = d4 + Rh.attack - winwin.defence
+                if atk < 0:
+                    $ atk = 0
+                $ winwin.hp -= atk
+                call StateDisplay
+                return
+            if d20 <= 19:
+                "未命中"
+            return
     
     return
 
@@ -172,6 +262,11 @@ label state_upd:
     $ boss_currthoughts = principal.thoughts
     $ boss_currdefence = principal.defence
     $ boss_currattack = principal.attack
+
+    $ Rh_currhp = Rh.hp    
+    $ Rh_currthoughts = Rh.thoughts
+    $ Rh_currdefence = Rh.defence
+    $ Rh_currattack = Rh.attack
 
     return
 
@@ -243,6 +338,10 @@ label check:
     if mc_atkbufftimmer == 0:
         $ mc.attack -= 2
         $ winwin.attack -= 2
+        $ mc_effectamount -= 1
+        $ mc_effects.remove("a")
+        $ ww_effectamount -= 1
+        $ ww_effects.remove("a")
         "加油的效果結束了！"
         $ mc_atkbufftimmer = -1
 
@@ -253,10 +352,15 @@ label check:
         if mc_buffed == True:
             $ mc.defence -= 2
             $ mc_buffed = False
+            $ mc_effectamount -= 1
+            $ mc_effects.remove("h")
 
         if winwin_buffed == True:
             $ winwin.defence -= 2
             $ winwin_buffed = False
+            $ ww_effectamount -= 1
+            $ ww_effects.remove("h")
+
 
         $ mc_defbufftimmer = -1
 
@@ -265,20 +369,37 @@ label check:
         if principal_break == True:
             $ principal.defence = principal.max_defence
             $ principal_break = False
-        
+            $ boss_effectamount -= 1
+            $ Rh_effectamount -= 1
+            $ Rh_effects.remove("nd")
+            $ boss_effects.remove("nd")
+
         elif principal_angered == True:
             $ principal.attack -= 2
             $ principal_angered = False
+            $ boss_effectamount -= 1
+            $ Rh_effectamount -= 1
+            $ Rh_effects.remove("a")
+            $ boss_effects.remove("a")
 
         else:
             $ principal.defence += 2
-            
+            $ boss_effectamount -= 1
+            $ Rh_effectamount -= 1
+            $ Rh_effects.remove("rd")
+            $ boss_effects.remove("rd")
         $ winwin_defdebufftimmer = -1
 
     if winwin_brighttimmer == 0:
         "陽光開朗大男孩的效果結束了！"
         $ winwin_bright = False
         $ winwin_brighttimmer = -1
+        $ ww_effectamount -= 1
+        $ boss_effectamount -= 1
+        $ Rh_effectamount -= 1
+        $ Rh_effects.remove("bl")
+        $ boss_effects.remove("bl")
+        $ ww_effects.remove("b")
 
     if winwin_brightcd == 0:
         "技能：陽光開朗大男孩 冷卻結束"
@@ -290,18 +411,20 @@ label check:
 
     if winwin_taunt == True:
         $ winwin_taunt = False
+        $ ww_effectamount -= 1
+        $ ww_effects.remove("t")
     
     return
 
 label initialize:
 
-    show screen player_state
-    show screen boss_state
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
     $ mc = fighter("[player]", 60, 60, 30, 30, 8, 8, 3, 3)
     $ winwin = fighter("[ww]", 80, 80, 10, 10, 10, 10, 5, 5)
     $ principal = fighter("校長", 200, 200, 50, 50, 5, 5, 8, 8)
+    $ Rh = fighter("右手", 15, 0, 5, 5, 0, 0, 20, 20)
 
+    call StateDisplay
     $ food = 3
     $ atk = 0
     $ winwin_defdebufftimmer = -1
@@ -311,7 +434,10 @@ label initialize:
     $ mc_attackbuffcd = -1
     $ winwin_brightcd = -1
     $ winwin_debuffcd = -1
-
+    $ mc_effectamount = 0
+    $ ww_effectamount = 0
+    $ boss_effectamount = 0
+    $ Rh_effectamount = 0
     $ selected_player = -1
     
     $ mc_buffed = False
@@ -340,6 +466,13 @@ label initialize:
     $ principal.defence = principal.max_defence
     $ principal.max_attack = principal.max_attack
 
-    $ eva = 25
+    $ Rh.hp = 0
+    $ Rh.thoughts = Rh.max_thoughts
+    $ Rh.defence = Rh.max_defence
+    $ Rh.max_attack = Rh.max_attack
     return
     
+label StateDisplay:
+    
+    show screen player_state
+    show screen enemy_state

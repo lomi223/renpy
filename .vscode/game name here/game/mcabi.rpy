@@ -14,6 +14,8 @@ label excuse:
             $ atk = 0
         if target == principal:
             $ principal.hp -= atk
+        if target == Rh:
+            $ Rh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return
@@ -25,6 +27,8 @@ label excuse:
             $ atk = 0
         if target == principal:
             $ principal.hp -= atk
+        if target == Rh:
+            $ Rh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return
@@ -42,7 +46,10 @@ label atk_buff:
     $ mc_atkbufftimmer = 3
     $ mc.thoughts -= 2
     $ mc_attackbuffcd = 5
-
+    $ mc_effectamount += 1
+    $ ww_effectamount += 1
+    $ ww_effects.append("a")
+    $ mc_effects.append("a")
     return
 
 label eat:
@@ -67,6 +74,8 @@ label healthsheild:
         $ mc.hp += 10
         $ mc.defence += 2
         $ mc_buffed = True
+        $ mc_effectamount += 1
+        $ mc_effects.append("h")
         if mc.hp > mc.max_hp:
             $ mc.hp = mc.max_hp
 
@@ -75,6 +84,8 @@ label healthsheild:
         $ winwin.hp += 10
         $ winwin.defence += 2
         $ winwin_buffed = True
+        $ ww_effectamount += 1
+        $ ww_effects.append("h")
         if winwin.hp > winwin.max_hp:
             $ winwin.hp = winwin.max_hp
 

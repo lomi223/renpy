@@ -12,7 +12,10 @@ label wwab1:
         $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
         if atk < 0:
             $ atk = 0
-        $ principal.hp -= atk
+        if target == principal:
+            $ principal.hp -= atk
+        if target == Rh:
+            $ Rh.hp -= atk
         call state_upd
         return
 
@@ -21,7 +24,10 @@ label wwab1:
         $ atk = d4 + d6 + winwin.attack*2 - principal.defence
         if atk < 0:
             $ atk = 0
-        $ principal.hp -= atk
+        if target == principal:
+            $ principal.hp -= atk
+        if target == Rh:
+            $ Rh.hp -= atk
         call state_upd
         return
 
@@ -30,7 +36,10 @@ label wwab1:
         $ atk = d4 + winwin.attack*2 - principal.defence
         if atk < 0:
             $ atk = 0
-        $ principal.hp -= atk
+        if target == principal:
+            $ principal.hp -= atk
+        if target == Rh:
+            $ Rh.hp -= atk
         call state_upd
         return
 
@@ -42,47 +51,67 @@ label wwab1:
 label wwab2:
     "勝勝擋在了[player]的前面"
     $ winwin_taunt = True
+    $ ww_effectamount += 1
+    $ ww_effects.append("t")
     call state_upd
     return
 
 label wwab3:
     "勝勝開始發光發熱"
-    "校長被閃瞎了"
+    "對手被閃瞎了"
     "勝勝受到灼傷"
     $ winwin_bright = True
     $ winwin_brighttimmer = 3
     $ winwin_brightcd = 4
+    $ ww_effectamount += 1
+    $ boss_effectamount += 1
+    $ Rh_effectamount += 1
+    $ Rh_effects.append("bl")
+    $ boss_effects.append("bl")
+    $ ww_effects.append("b")
     call state_upd
     return
 
 label wwab4:
     if d10 == 10:
-        "勝勝把校長說破防了！"
+        "勝勝把對方說破防了！"
         $ principal.defence = 0
         $ principal_break = True
         $ winwin_defdebufftimmer = 3
         $ winwin.thoughts -= 2
         $ principal.hp -= d4
         $ winwin_debuffcd = 4
+        $ boss_effectamount += 1
+        $ Rh_effectamount += 1
+        $ Rh_effects.append("nd")
+        $ boss_effects.append("nd")
         call state_upd
         return
     
     if d10 > 3:
-        "校長的心理防線受到勝勝影響"
+        "對方的心理防線受到勝勝影響"
         $ principal.defence -= 2
         $ winwin_defdebufftimmer = 3
         $ winwin.thoughts -= 2
         $ principal.hp -= d4
         $ winwin_debuffcd = 4
+        $ boss_effectamount += 1
+        $ Rh_effectamount += 1
+        $ Rh_effects.append("rd")
+        $ boss_effects.append("rd")
         call state_upd
         return
 
     if d10 <= 3:
-        "勝勝的話語意外地激怒了校長！"
+        "勝勝的話語意外地激怒了對方！"
         $ principal.attack += 2
         $ principal_angered = True
         $ winwin_defdebufftimmer = 3
         $ winwin.thoughts -= 2
         $ winwin_debuffcd = 4
+        $ boss_effectamount += 1
+        $ Rh_effectamount += 1
+        $ Rh_effects.append("a")
+        $ boss_effects.append("a")
         call state_upd
         return

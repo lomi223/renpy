@@ -66,6 +66,10 @@ default jump_label = ""
 default chosen_player = ""
 default target = ""
 default prvscreen = ""
+default mc_effects = []
+default ww_effects = []
+default boss_effects = []
+default Rh_effects = []
 
 init-2:
     transform zoomedin:
