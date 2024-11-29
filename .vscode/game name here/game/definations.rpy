@@ -70,6 +70,7 @@ default mc_effects = []
 default ww_effects = []
 default boss_effects = []
 default Rh_effects = []
+default Lh_effects = []
 
 init-2:
     transform zoomedin:

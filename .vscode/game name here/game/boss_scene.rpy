@@ -19,15 +19,11 @@ label the_fight:
             "[player]的回合！"
             call dice
             call mc_attack
-        elif mc_canmove == False:
-            $ mc_canmove = True
             
         if winwin.hp > 0 and winwin_canmove == True:
             "[ww]的回合！"
             call dice
             call ww_attack
-        elif winwin_canmove == False:
-            $ winwin_canmove = True
 
         if principal.hp > 0:
             call dice
@@ -38,7 +34,12 @@ label the_fight:
             call dice
             "右手的回合！"
             call Rh_attack
-    
+
+        if Lh.hp > 0:
+            call dice
+            "左手的回合！"
+            call Lh_attack
+        $ rd += 1
     return
 
 label mc_attack:
@@ -145,16 +146,32 @@ label boss_attack:
         if selected_player == 1:
             $ mc_canmove = False
             "[player]被禁言了"
+            $ cantmove = 2
+            $ mc_effects.append("q")
+            $ mc_effectamount += 1
             return
         if selected_player == 2:
             $ winwin_canmove = False
             "[ww]被禁言了"
+            $ cantmove = 2
+            $ ww_effects.append("q")
+            $ ww_effectamount += 1
             return    
 
-    if d100 > 55:
+    if d100 > 55 and summoned == False and rd > 2:
         "校長招喚了右手"
         $ Rh.hp = Rh.max_hp
+        $ summoned = True
         return
+
+    if d100 > 50 and summoned == False and rd > 2:
+        "校長招喚了左手"
+        $ Lh.hp = Lh.max_hp
+        $ summoned = True
+        return
+        
+    call dice
+    call boss_attack
     return
 
 label Rh_attack:
@@ -237,6 +254,13 @@ label Rh_attack:
     
     return
 
+label Lh_attack:
+    
+    call StateDisplay
+    "左手對校長使用了回復"
+    $ principal.hp += 5
+    return
+
 label dice:
     $ d4 = renpy.random.randint(1, 4)
     $ d6 = renpy.random.randint(1, 6)
@@ -271,44 +295,70 @@ label state_upd:
     return
 
 label choose1:
-    if winwin_taunt == False:
-        if mc_buffed:
-            if d50 >= 28:
-                $ selected_player = 1
-            elif d50 <= 27:
-                $ selected_player = 2
-        elif winwin_buffed:
-            if d50 >= 24:
-                $ selected_player = 1
-            elif d50 <= 23:
-                $ selected_player = 2
-        else:
-            if d50 >= 26:
-                $ selected_player = 1
-            elif d50 <= 25:
-                $ selected_player = 2
-    elif winwin_taunt == True:
+    if winwin_taunt == True and winwin.hp > 0:
         $ selected_player = 2
+    elif winwin_taunt == False:
+        if mc_buffed:
+            if d50 >= 28 and mc.hp > 0:
+                $ selected_player = 1
+            elif d50 <= 27 and winwin.hp > 0:
+                $ selected_player = 2
+            elif winwin.hp > 0:
+                $ selected_player = 2
+            else:
+                $ selected_player = 1
+        elif winwin_buffed:
+            if d50 >= 24 and mc.hp > 0:
+                $ selected_player = 1
+            elif d50 <= 23 and winwin.hp > 0:
+                $ selected_player = 2
+            elif winwin.hp > 0:
+                $ selected_player = 2
+            else:
+                $ selected_player = 1
+        else:
+            if d50 >= 26 and mc.hp > 0:
+                $ selected_player = 1
+            elif d50 <= 25 and winwin.hp > 0:
+                $ selected_player = 2
+            elif winwin.hp > 0:
+                $ selected_player = 2
+            else:
+                $ selected_player = 1
     return
 
 label choose2:
-    if winwin_taunt == False:
-        if mc_atkbufftimmer > 0:
-            if d50 >= 31:
-                $ selected_player = 1
-            elif d50 <= 30:
-                $ selected_player = 2
-        else:
-            if d50 >= 26:
-                $ selected_player = 1
-            elif d50 <= 25:
-                $ selected_player = 2
-    elif winwin_taunt == True:
+    if winwin_taunt == True and winwin.hp > 0:
         $ selected_player = 2
+    elif winwin_taunt == False:
+        if mc_atkbufftimmer > 0:
+            if d50 >= 31 and mc.hp > 0:
+                $ selected_player = 1
+            elif d50 <= 30 and winwin.hp > 0:
+                $ selected_player = 2
+            elif winwin.hp > 0:
+                $ selected_player = 2
+            else:
+                $ selected_player = 1
+        else:
+            if d50 >= 26 and mc.hp > 0:
+                $ selected_player = 1
+            elif d50 <= 25 and winwin.hp > 0:
+                $ selected_player = 2
+            elif winwin.hp > 0:
+                $ selected_player = 2
+            else:
+                $ selected_player = 1
     return 
 
 label check:
 
+    if cantmove > 0:
+        $ cantmove -= 1
+
+    if Rh.hp <= 0:
+        $ summoned = False
+        
     if mc_attackbuffcd > 0:
         $ mc_attackbuffcd -= 1
 
@@ -371,14 +421,20 @@ label check:
             $ principal_break = False
             $ boss_effectamount -= 1
             $ Rh_effectamount -= 1
+            $ Lh_effectamount -= 1
+            $ Lh_effects.remove("nd")
             $ Rh_effects.remove("nd")
             $ boss_effects.remove("nd")
 
         elif principal_angered == True:
             $ principal.attack -= 2
+            $ Rh.attack -= 2
+            $ Lh.attack -= 2
             $ principal_angered = False
             $ boss_effectamount -= 1
             $ Rh_effectamount -= 1
+            $ Lh_effectamount -= 1
+            $ Lh_effects.remove("a")
             $ Rh_effects.remove("a")
             $ boss_effects.remove("a")
 
@@ -386,6 +442,8 @@ label check:
             $ principal.defence += 2
             $ boss_effectamount -= 1
             $ Rh_effectamount -= 1
+            $ Lh_effectamount -= 1
+            $ Lh_effects.remove("rd")
             $ Rh_effects.remove("rd")
             $ boss_effects.remove("rd")
         $ winwin_defdebufftimmer = -1
@@ -397,6 +455,8 @@ label check:
         $ ww_effectamount -= 1
         $ boss_effectamount -= 1
         $ Rh_effectamount -= 1
+        $ Lh_effectamount -= 1
+        $ Lh_effects.remove("bl")
         $ Rh_effects.remove("bl")
         $ boss_effects.remove("bl")
         $ ww_effects.remove("b")
@@ -414,15 +474,28 @@ label check:
         $ ww_effectamount -= 1
         $ ww_effects.remove("t")
     
+    if cantmove == 0:
+        $ cantmove = -1
+        "禁言 效果結束"
+        if mc_canmove == False:
+            $ mc_canmove = True
+            $ mc_effects.remove("q")
+            $ mc_effectamount -= 1
+        if winwin_canmove == False:
+            $ winwin_canmove = True
+            $ ww_effects.remove("q")
+            $ ww_effectamount -= 1
+
     return
 
 label initialize:
 
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
-    $ mc = fighter("[player]", 60, 60, 30, 30, 8, 8, 3, 3)
-    $ winwin = fighter("[ww]", 80, 80, 10, 10, 10, 10, 5, 5)
-    $ principal = fighter("校長", 200, 200, 50, 50, 5, 5, 8, 8)
+    $ mc = fighter("[player]", 50, 50, 30, 30, 8, 8, 3, 3)
+    $ winwin = fighter("[ww]", 70, 70, 10, 10, 10, 10, 5, 5)
+    $ principal = fighter("校長", 100, 100, 50, 50, 5, 5, 8, 8)
     $ Rh = fighter("右手", 15, 0, 5, 5, 0, 0, 20, 20)
+    $ Lh = fighter("左手", 15, 0, 5, 5, 10, 10, 0, 0)
 
     call StateDisplay
     $ food = 3
@@ -438,8 +511,10 @@ label initialize:
     $ ww_effectamount = 0
     $ boss_effectamount = 0
     $ Rh_effectamount = 0
+    $ Lh_effectamount = 0
     $ selected_player = -1
-    
+    $ cantmove = -1
+
     $ mc_buffed = False
     $ winwin_buffed = False
 
@@ -451,6 +526,9 @@ label initialize:
     $ mc_canmove = True
     $ winwin_canmove = True
 
+    $ summoned = False
+
+    $ rd = 0
     $ mc.hp = mc.max_hp
     $ mc.thoughts = mc.max_thoughts
     $ mc.defence = mc.max_defence
@@ -470,6 +548,12 @@ label initialize:
     $ Rh.thoughts = Rh.max_thoughts
     $ Rh.defence = Rh.max_defence
     $ Rh.max_attack = Rh.max_attack
+
+    $ Lh.hp = 0
+    $ Lh.thoughts = Lh.max_thoughts
+    $ Lh.defence = Lh.max_defence
+    $ Lh.max_attack = Lh.max_attack
+
     return
     
 label StateDisplay:

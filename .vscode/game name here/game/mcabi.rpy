@@ -16,6 +16,8 @@ label excuse:
             $ principal.hp -= atk
         if target == Rh:
             $ Rh.hp -= atk
+        if target == Lh:
+            $ Lh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return
@@ -29,6 +31,8 @@ label excuse:
             $ principal.hp -= atk
         if target == Rh:
             $ Rh.hp -= atk
+        if target == Lh:
+            $ Lh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
         return

@@ -124,6 +124,10 @@ screen choosetarget:
                 textbutton "右手":
                     text_style "mytextbutton"
                     action [SetVariable("target",Rh),ToggleScreen("choosetarget"),Jump(jump_label)]
+            if Lh.hp > 0:
+                textbutton "左手":
+                    text_style "mytextbutton"
+                    action [SetVariable("target",Lh),ToggleScreen("choosetarget"),Jump(jump_label)]
             textbutton "返回":
                 text_style "mytextbutton"
                 action [ToggleScreen("choosetarget"),ToggleScreen(prvscreen)]
