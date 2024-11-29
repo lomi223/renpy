@@ -3,8 +3,12 @@ label boss_fight:
 
     call initialize
 
-    show boss_scene with dissolve:
-        subpixel True 
+    show floor:
+        default
+        subpixel True matrixtransform ScaleMatrix(10.0, 1.0, 7.0)*OffsetMatrix(0.0, 500.0, -100.0)*RotateMatrix(72.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+
+
+
     "試著說服校長吧！"
     call state_upd
     jump the_fight
@@ -64,7 +68,7 @@ label boss_attack:
 
     call StateDisplay
 
-    if d100 > 75:
+    if d100 > 70:
         call choose1
         if selected_player == 1:
             "校長對[player]使用記大過"
@@ -140,7 +144,7 @@ label boss_attack:
                     "未命中"
                 return
 
-    if d100 > 60:
+    if d100 > 50 and cantmove < 0:
         call choose2
         "校長使用禁言"
         if selected_player == 1:
@@ -158,18 +162,81 @@ label boss_attack:
             $ ww_effectamount += 1
             return    
 
-    if d100 > 55 and summoned == False and rd > 2:
+    if d100 > 40 and summoned == False and rd > 2 and principal.hp > 50:
         "校長招喚了右手"
         $ Rh.hp = Rh.max_hp
         $ summoned = True
         return
 
-    if d100 > 50 and summoned == False and rd > 2:
+    if d100 > 30 and summoned == False and rd > 2 and principal.hp > 50:
         "校長招喚了左手"
         $ Lh.hp = Lh.max_hp
         $ summoned = True
         return
+
+    if d100 > 35 and summoned == False and rd > 2 and principal.hp < 50:
+        "校長招喚了左手"
+        $ Lh.hp = Lh.max_hp
+        $ summoned = True
+        return
+
+    if d100 > 30 and summoned == False and rd > 2 and principal.hp < 50:
+        "校長招喚了右手"
+        $ Rh.hp = Rh.max_hp
+        $ summoned = True
+        return
+
+    if d100 > 15 and rd > 3:
+        "範圍"
+        if winwin_bright == False:
+            if d20 > 1:
+                $ atk = d4 + principal.attack*2 
+                if atk - mc.defence > 0:
+                    $ mc.hp -= atk - mc.defence
+                if atk - winwin.defence > 0:
+                    $ winwin.hp -= atk - winwin.defence
+                
+            else:
+                "未命中"
+
+        elif winwin_bright == True:
+            if d20 > 19:
+                $ atk = d4 + principal.attack*2 
+                if atk - mc.defence > 0:
+                    $ mc.hp -= atk - mc.defence
+                if atk - winwin.defence > 0:
+                    $ winwin.hp -= atk - winwin.defence
+                
+            else:
+                "未命中"
         
+        return
+
+    if d100 > 5 and rd > 4 and bosseffecttimmer < 0:
+        "威嚴"
+        $ bosseffecttimmer = 4
+        $ bosseffectcd = 6
+        $ principal.attack += 3
+        $ mc.attack -= 2
+        $ winwin.attack -= 2
+        $ mc.defence -= 2
+        $ winwin.defence -= 2
+
+        $ boss_effectamount += 1
+        $ mc_effectamount += 4
+        $ ww_effectamount += 4
+
+        $ boss_effects.append("a")
+        $ mc_effects.append("rd")
+        $ mc_effects.append("we")
+        $ mc_effects.append("wi")
+        $ mc_effects.append("rt")
+        $ ww_effects.append("rd")
+        $ ww_effects.append("we")
+        $ ww_effects.append("wi")
+        $ ww_effects.append("rt")
+
+        return
     call dice
     call boss_attack
     return
@@ -352,6 +419,46 @@ label choose2:
     return 
 
 label check:
+
+    if bosseffectcd > 0:
+        $ bosseffectcd -= 1
+
+    if bosseffectcd == 0:
+        $ bosseffectcd = -1
+
+    if bosseffecttimmer > 0:
+        $ mc.hp -= 3
+        $ winwin.hp -= 3
+        $ mc.thoughts -= 3
+        if mc.thoughts < 0:
+            $ mc.thoughts = 0
+        $ winwin.thoughts -= 3
+        if winwin.thoughts < 0:
+            $ winwin.thoughts = 0
+        $ bosseffecttimmer -= 1
+
+    if bosseffecttimmer == 0:
+        "威嚴 的效果結束了"
+        $ principal.attack -= 3
+        $ mc.attack += 2
+        $ winwin.attack += 2
+        $ mc.defence += 2
+        $ winwin.defence += 2
+
+        $ boss_effectamount -= 1
+        $ mc_effectamount -= 4
+        $ ww_effectamount -= 4
+
+        $ boss_effects.remove("a")
+        $ mc_effects.remove("rd")
+        $ mc_effects.remove("we")
+        $ mc_effects.remove("wi")
+        $ mc_effects.remove("rt")
+        $ ww_effects.remove("rd")
+        $ ww_effects.remove("we")
+        $ ww_effects.remove("wi")
+        $ ww_effects.remove("rt")
+        $ bosseffecttimmer = -1
 
     if cantmove > 0:
         $ cantmove -= 1
@@ -553,6 +660,9 @@ label initialize:
     $ Lh.thoughts = Lh.max_thoughts
     $ Lh.defence = Lh.max_defence
     $ Lh.max_attack = Lh.max_attack
+
+    $ bosseffectcd = -1
+    $ bosseffecttimmer = -1
 
     return
     

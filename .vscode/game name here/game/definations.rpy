@@ -27,6 +27,7 @@ image outside = "scene/school_outside.jpg"
 image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"
 image boss_scene = "scene/boss_scene.png"
+image bossroom_floor = "scene/floor.jpg"
 
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"

@@ -9,42 +9,60 @@ label wwrest:
 label wwab1:
     if d10 > 8:
         "勝勝的理由強而有力！"
-        $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
-        if atk < 0:
-            $ atk = 0
         if target == principal:
+            $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
+            if atk < 0:
+                $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            $ atk = (d4 + d6)*2 + winwin.attack*3 - Rh.defence
+            if atk < 0:
+                $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            $ atk = (d4 + d6)*2 + winwin.attack*3 - Lh.defence
+            if atk < 0:
+                $ atk = 0
             $ Lh.hp -= atk
         call state_upd
         return
 
     if d10 > 6:
         "勝勝說了個強大的理由"
-        $ atk = d4 + d6 + winwin.attack*2 - principal.defence
-        if atk < 0:
-            $ atk = 0
         if target == principal:
+            $ atk = d4 + d6 + winwin.attack*2 - principal.defence
+            if atk < 0:
+                $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            $ atk = d4 + d6 + winwin.attack*2 - Rh.defence
+            if atk < 0:
+                $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            $ atk = d4 + d6 + winwin.attack*2 - Lh.defence
+            if atk < 0:
+                $ atk = 0
             $ Lh.hp -= atk
         call state_upd
         return
 
     if d10 > 1:
         "勝勝說了個普通的理由"
-        $ atk = d4 + winwin.attack*2 - principal.defence
-        if atk < 0:
-            $ atk = 0
         if target == principal:
+            $ atk = d4 + winwin.attack*2 - principal.defence
+            if atk < 0:
+                $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            $ atk = d4 + winwin.attack*2 - Rh.defence
+            if atk < 0:
+                $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            $ atk = d4 + winwin.attack*2 - Lh.defence
+            if atk < 0:
+                $ atk = 0
             $ Lh.hp -= atk
         call state_upd
         return

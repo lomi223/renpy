@@ -9,14 +9,21 @@ label excuse:
     if d10 > 7:
         "[player]說了個強而有力的藉口！"
         "十分有效"
-        $ atk = d4 + d6 + mc.attack*2 - principal.defence
-        if atk < 0:
-            $ atk = 0
+        
         if target == principal:
+            $ atk = d4 + d6 + mc.attack*2 - principal.defence
+            if atk < 0:
+                $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            $ atk = d4 + d6 + mc.attack*2 - Rh.defence
+            if atk < 0:
+                $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            $ atk = d4 + d6 + mc.attack*2 - Lh.defence
+            if atk < 0:
+                $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
@@ -24,14 +31,20 @@ label excuse:
 
     if d10 > 1:
         "[player]說了個普通的藉口"
-        $ atk = d4 + mc.attack*2 - principal.defence
-        if atk < 0:
-            $ atk = 0
         if target == principal:
+            $ atk = d4 + mc.attack*2 - principal.defence
+            if atk < 0:
+                $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            $ atk = d4 + mc.attack*2 - Rh.defence
+            if atk < 0:
+                $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            $ atk = d4 + mc.attack*2 - Lh.defence
+            if atk < 0:
+                $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
         call state_upd
