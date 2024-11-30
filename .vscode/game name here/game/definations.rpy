@@ -85,5 +85,3 @@ screen radio_button:
         ypos 0.556
         at zoomedin
         action Jump("not_here")
-
-

@@ -1,72 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/boss_scene.rpy", line 19, in script
-    "[player]的回合！"
-  File "game/charater_stateUI.rpy", line 1, in execute
-    screen player_state:
-  File "game/charater_stateUI.rpy", line 1, in execute
-    screen player_state:
-  File "game/charater_stateUI.rpy", line 2, in execute
-    grid 2 2:
-  File "game/charater_stateUI.rpy", line 46, in execute
-    if mc.hp > 0:
-  File "game/charater_stateUI.rpy", line 47, in execute
-    grid mc_effectamount 1 :
-Exception: Grid overfull.
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 33, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  [Previous line repeated 3072 more times]
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 130, in script
+    if d100 > 15 and rd > 3:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 33, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  [Previous line repeated 3072 more times]
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 130, in script
+    if d100 > 15 and rd > 3:
+Exception: Possible infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/boss_scene.rpy", line 19, in script
-    "[player]的回合！"
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/charater_stateUI.rpy", line 1, in execute
-    screen player_state:
-  File "game/charater_stateUI.rpy", line 1, in execute
-    screen player_state:
-  File "game/charater_stateUI.rpy", line 2, in execute
-    grid 2 2:
-  File "game/charater_stateUI.rpy", line 46, in execute
-    if mc.hp > 0:
-  File "game/charater_stateUI.rpy", line 47, in execute
-    grid mc_effectamount 1 :
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\layout.py", line 559, in add
-    raise Exception("Grid overfull.")
-Exception: Grid overfull.
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 33, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  [Previous line repeated 3072 more times]
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 130, in script
+    if d100 > 15 and rd > 3:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 33, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 182, in script call
+    call boss_attack
+  [Previous line repeated 3072 more times]
+  File "game/RPG_fight_scrypt/enemy_round.rpy", line 130, in script
+    if d100 > 15 and rd > 3:
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\execution.py", line 61, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Fri Nov 29 23:56:05 2024
+Sat Nov 30 22:38:21 2024

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/charater_stateUI.rpy", line 105: expected a keyword argument or child statement.
-    ""
-    ^
+File "game/RPG_fight_scrypt/boss_scene.rpy", line 57: scene statement expects a non-empty block.
+    scene black with dissolve:
+                              ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 28 14:56:42 2024
+Sat Nov 30 22:12:13 2024

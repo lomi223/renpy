@@ -26,7 +26,6 @@ label excuse:
                 $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
-        call state_upd
         return
 
     if d10 > 1:
@@ -47,12 +46,10 @@ label excuse:
                 $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
-        call state_upd
         return
     
     if d10 == 1:
         "[player]的藉口爛透了！"
-        call state_upd
         return
 
 label atk_buff:

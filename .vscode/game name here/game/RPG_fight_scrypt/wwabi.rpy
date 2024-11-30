@@ -3,7 +3,6 @@ label wwrest:
     $ mc.thoughts += 1
     if mc.thoughts > mc.max_thoughts:
         $ mc.thoughts = mc.max_thoughts
-    call state_upd
     return
 
 label wwab1:
@@ -24,7 +23,6 @@ label wwab1:
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
-        call state_upd
         return
 
     if d10 > 6:
@@ -44,7 +42,6 @@ label wwab1:
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
-        call state_upd
         return
 
     if d10 > 1:
@@ -64,12 +61,10 @@ label wwab1:
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
-        call state_upd
         return
 
     if d10 == 1:
         "勝勝的理由爛透了！"
-        call state_upd
         return
 
 label wwab2:
@@ -77,7 +72,6 @@ label wwab2:
     $ winwin_taunt = True
     $ ww_effectamount += 1
     $ ww_effects.append("t")
-    call state_upd
     return
 
 label wwab3:
@@ -95,7 +89,6 @@ label wwab3:
     $ Rh_effects.append("bl")
     $ boss_effects.append("bl")
     $ ww_effects.append("b")
-    call state_upd
     return
 
 label wwab4:
@@ -115,7 +108,6 @@ label wwab4:
         $ Lh_effects.append("nd")
         $ Rh_effects.append("nd")
         $ boss_effects.append("nd")
-        call state_upd
         return
     
     if d10 > 3:
@@ -133,7 +125,6 @@ label wwab4:
         $ Lh_effects.append("rd")
         $ Rh_effects.append("rd")
         $ boss_effects.append("rd")
-        call state_upd
         return
 
     if d10 <= 3:
@@ -154,5 +145,4 @@ label wwab4:
         $ Lh_effects.append("a")
         $ Rh_effects.append("a")
         $ boss_effects.append("a")
-        call state_upd
         return
