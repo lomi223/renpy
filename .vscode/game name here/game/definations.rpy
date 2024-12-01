@@ -4,6 +4,9 @@ define w = Character("[ww]", image = "w")
 define a = Character("[aa]", image = "a")
 define s = Character("[ss]", image = "s")
 define b = Character("[bb]", image = "b")
+define npc_black = Character("皮膚黝黑的學生", image = "npc_black")
+define npc_tall = Character("很高的學生", image = "npc_tall")
+define npc_glasses = Character("戴著眼鏡的學生", image = "npc_glasses")
 define player = Character("[name]")
 
 default tt = "？？？"
