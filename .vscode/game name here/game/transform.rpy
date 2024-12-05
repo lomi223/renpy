@@ -18,3 +18,9 @@ transform rotation:
     rotate 0
     linear 10 rotate 360
     repeat
+
+init-2:
+    transform zoomedin:
+        zoom 1.5
+    transform zoomedout:
+        zoom 0.1

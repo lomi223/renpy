@@ -18,6 +18,8 @@ label start:
             jump boss_fight
         "name":
             jump inputname
+        "bob":
+            jump bob_and_seak
 #label cg:
 #    show black with dissolve
 #    menu:

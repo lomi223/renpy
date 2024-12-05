@@ -52,7 +52,6 @@ label check:
     if cantmove > 0:
         $ cantmove -= 1
 
-
     if Rh.hp <= 0 and Lh.hp <= 0 and summontimmer <= 0:
         $ summontimmer = 2  
         $ summoned = False
@@ -262,3 +261,4 @@ label initialize:
     $ bosseffecttimmer = -1
 
     return
+    

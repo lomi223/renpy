@@ -5,6 +5,7 @@ define a = Character("[aa]", image = "a")
 define s = Character("[ss]", image = "s")
 define b = Character("[bb]", image = "b")
 define player = Character("[name]")
+define pr = Character("校長", image = "principal")
 
 default tt = "？？？"
 default ww = "？？？"
@@ -73,9 +74,7 @@ default boss_effects = []
 default Rh_effects = []
 default Lh_effects = []
 
-init-2:
-    transform zoomedin:
-        zoom 1.5
+
 screen radio_button:
     imagebutton:
         idle "radio_idle.png"
