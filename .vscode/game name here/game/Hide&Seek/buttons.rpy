@@ -22,21 +22,30 @@ screen arrow_right:
             xalign 1.0
             yalign 0.5
             idle "arrow right"
-            action [Function(move_player, 1, 0),Jump("pos_check")]
+            if not player_at2:
+                action [Function(move_player, 1, 0),Jump("pos_check")]
+            if player_at2:
+                action [Function(move_player, 1, 0),Jump("pos_check2")]
 
 screen arrow_left:
     if maze_layout[player_y][player_x - 1] != 1:
         imagebutton:
             yalign 0.5
             idle "arrow left"
-            action [Function(move_player, -1, 0),Jump("pos_check")]
+            if not player_at2:
+                action [Function(move_player, -1, 0),Jump("pos_check")]
+            if player_at2:
+                action [Function(move_player, -1, 0),Jump("pos_check2")]
 
 screen arrow_up:
     if maze_layout[player_y - 1][player_x] != 1:
         imagebutton:
             xalign 0.5
             idle "arrow up"
-            action [Function(move_player, 0, -1),Jump("pos_check")]
+            if not player_at2:
+                action [Function(move_player, 0, -1),Jump("pos_check")]
+            if player_at2:
+                action [Function(move_player, 0, -1),Jump("pos_check2")]
 
 screen arrow_down:
     if maze_layout[player_y + 1][player_x] != 1:
@@ -44,7 +53,10 @@ screen arrow_down:
             xalign 0.5
             yalign 1.0
             idle "arrow down"
-            action [Function(move_player, 0, 1),Jump("pos_check")]
+            if not player_at2:
+                action [Function(move_player, 0, 1),Jump("pos_check")]
+            if player_at2:
+                action [Function(move_player, 0, 1),Jump("pos_check2")]
 
 screen closet:
     imagebutton:

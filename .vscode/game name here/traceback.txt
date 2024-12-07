@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/Hide&Seek/scrypt.rpy", line 44, in script
-    python:
-  File "game/Hide&Seek/scrypt.rpy", line 46, in <module>
-    vol = 1/math.sqrt((player_x - 8)**2 + (player_y - 7)**2)
-ZeroDivisionError: float division by zero
+  File "game/Hide&Seek/scrypt.rpy", line 163, in script
+    if player_x != 18 and player_y != 1:
+  File "game/Hide&Seek/scrypt.rpy", line 163, in <module>
+    if player_x != 18 and player_y != 1:
+NameError: name 'player_x' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/Hide&Seek/scrypt.rpy", line 44, in script
-    python:
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/Hide&Seek/scrypt.rpy", line 46, in <module>
-    vol = 1/math.sqrt((player_x - 8)**2 + (player_y - 7)**2)
-ZeroDivisionError: float division by zero
+  File "game/Hide&Seek/scrypt.rpy", line 163, in script
+    if player_x != 18 and player_y != 1:
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/Hide&Seek/scrypt.rpy", line 163, in <module>
+    if player_x != 18 and player_y != 1:
+NameError: name 'player_x' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 not_yet_setted 1.0
-Thu Dec  5 23:14:37 2024
+Sat Dec  7 23:35:14 2024

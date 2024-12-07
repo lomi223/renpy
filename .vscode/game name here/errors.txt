@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Hide&Seek/scrypt.rpy", line 43: expected 'name' not found.
-    hide screen 
-                ^
+File "game/Hide&Seek/scrypt.rpy", line 258: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    subpixel True 
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Dec  5 23:07:49 2024
+Fri Dec  6 09:54:06 2024
