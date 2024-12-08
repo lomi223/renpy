@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Hide&Seek/scrypt.rpy", line 258: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    subpixel True 
-    ^
+File "game/DayWithBob.rpy", line 30: end of line expected.
+    scene classroom with dissolve noloop
+                                  ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Dec  6 09:54:06 2024
+Mon Dec  9 00:51:35 2024

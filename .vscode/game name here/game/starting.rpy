@@ -9,6 +9,9 @@ label splashscreen:
 
 
 label start: 
+    stop music
+    if persistent.bob:
+        jump bob_and_me
     play music "11-just-monika.mp3" loop fadein 0.5 volume 0.3
     $ name = "澤澤"
     camera:

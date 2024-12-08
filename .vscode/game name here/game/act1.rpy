@@ -339,6 +339,7 @@ label choose_b:
 
 label night:
     stop music
+    play music "night.mp3"
     scene black with dissolve
     centered "第一天的課程忙碌地度過了，時間飛逝、太陽悄悄地溜向西邊，黃昏時分很快就到來了。"
     player "時間差不多了，回家吧。"

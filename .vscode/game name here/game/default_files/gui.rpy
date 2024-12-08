@@ -86,6 +86,7 @@ define gui.title_text_size = 75
 
 ## 用於主選單和遊戲選單的圖像
 define gui.main_menu_background = "gui/main_menu.png"
+define gui.bob_menu_background = "gui/bob_menu.jpg"
 define gui.game_menu_background = "gui/game_menu.png"
 
 

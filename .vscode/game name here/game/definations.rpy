@@ -17,6 +17,7 @@ default ss = "？？？"
 default bb = "？？？"
 
 default persistent.testflag = 0
+default persistent.bob = False
 
 image splash = "temp_splash_img.png" 
 image street_scene = "scene/road_scene.jpg"
@@ -27,6 +28,7 @@ image bedroom:
     "scene/bedroom.jpg"
     xzoom 3
     yzoom 2.5
+image bathroom = "scene/bathroom.jpg"
 image outside = "scene/school_outside.jpg"
 image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"
@@ -76,7 +78,7 @@ default ww_effects = []
 default boss_effects = []
 default Rh_effects = []
 default Lh_effects = []
-
+default caught = False
 
 screen radio_button:
     imagebutton:

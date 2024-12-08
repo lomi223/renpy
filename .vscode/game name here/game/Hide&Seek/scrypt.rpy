@@ -44,7 +44,6 @@ label pos_check:
     play sound "SFX/laugh.mp3" volume vol
     if player_x == 8 and player_y == 2:
         scene black
-        "You've reached the goal!"
         jump mend
     if maze_layout[player_y][player_x] == 0:
         call cammove
@@ -74,7 +73,7 @@ label foundu:
     b "哎呀！居然被你發現了嘻嘻"
     b "那麼現在....."
     play sound "SFX/undertale-sound-effect-chara-jumpscare.mp3"
-    b "{sc}{=test_style}{cps=5}{size=*1.5}輪．到．你．啦！{/size}{/cps}{/=test_style}{/sc}"
+    b "{sc}{=test_style}{cps=5}{size=*1.5}輪‧到‧你‧啦！{/size}{/cps}{/=test_style}{/sc}"
     call switch
     
     jump pl_turn
@@ -180,14 +179,73 @@ label fail:
     play sound "<from 0 to 8.5>SFX/heart-beat.mp3" noloop
     $ renpy.pause(1.5,hard=True)
     play audio "SFX/breathing-sound-effect.mp3" noloop volume 0.05
-    $ renpy.pause(9.0, hard=True)
-    
+    $ renpy.pause(8.5, hard=True)
+    stop sound
+    play sound "SFX/scary-girl.mp3"
+    $ renpy.pause(3.2,hard=True)
+    play music "ufail.mp3"
+    $ renpy.pause(5.0,hard=True)
+    $ caught = True
+    $ persistent.bob = True
     $ renpy.quit()
     return
 
 label success:
+    stop music
+    scene black
     hide screen timerFame
-    "hidden"
+    play sound "SFX/53271__the_bizniss__door-close-4.wav"
+    show door with dissolve:
+        default
+        subpixel True xzoom 1.31 zoom 1.75 
+    "你躲進了廁所的儲物間中"
+
+    $ renpy.pause(2.0,hard=True)
+    play sound "SFX/scary-riser_G_major.wav" volume 1.2 fadein 0.3
+    window auto hide
+    show door:
+        subpixel True pos (0.67, 2.4) xzoom 1.71 zoom 6.39 
+        zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 rotate 0.0 
+        linear 5.50 zpos 0.0 xrotate 0.0 yrotate -45.0 zrotate 0.0 rotate 0.0 
+    show frame:
+        default
+        subpixel True ypos -20 anchor (0, 0) matrixanchor (1.0, 1.0) xzoom 14.0 yzoom 3.38 
+        xpos 0 zpos 0.0 
+        linear 5.50 xpos -200 zpos 0.0 
+    with Pause(5.60)
+    show door:
+        zpos 0.0 xrotate 0.0 yrotate -45.0 zrotate 0.0 rotate 0.0 
+    show frame:
+        pos (-200, -20) zpos 0.0 
+    stop sound
+    hide door
+    hide frame
+    
+    play sound "SFX/野兽前辈原版.mp3" noloop
+    $ renpy.pause(0.5)
+    play audio "SFX/Woman Scream Sound Effect.mp3" noloop
+    pause 7.0
+    stop sound
+    stop audio
+    scene bathroom with dissolve:
+        zoom 1.5
+    play music "snowdin-town.mp3" fadein 1.0
+    show s norm with dissolve
+    s "[player]你怎麼在這裡？"
+    s "剛剛真是嚇到我了"
+    player "對......對不起......"
+    scene black with dissolve
+    centered "你尷尬地跑開了"
+    stop music fadeout 1.0
+    play music "night.mp3" fadein 1.0
+    show bedroom with dissolve:
+        subpixel True 
+        matrixcolor TintMatrix("#18213b")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.5)*HueMatrix(0.0) 
+    player "今天究竟是怎麼回事啊？"
+    player "算了，不去想了"
+    player "今天真是累死我了"
+    scene black with dissolve
+    centered "你閉上了沉重的雙眼"
     return
 
 label switch:

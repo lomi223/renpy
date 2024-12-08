@@ -350,8 +350,10 @@ screen main_menu():
 
     ## 這可確保替換任何其他選單畫面。
     tag menu
-
-    add gui.main_menu_background
+    if persistent.bob:
+        add gui.bob_menu_background
+    else:
+        add gui.main_menu_background
 
     ## 這個空框使主選單變暗。
     frame:
@@ -412,8 +414,9 @@ style main_menu_version:
 screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     style_prefix "game_menu"
-
-    if main_menu:
+    if main_menu and persistent.bob:
+        add gui.bob_menu_background
+    elif main_menu:
         add gui.main_menu_background
     else:
         add gui.game_menu_background

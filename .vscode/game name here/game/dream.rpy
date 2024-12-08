@@ -5,7 +5,7 @@ label dream:
         import os
         url = "https://youtu.be/wJWksPWDKOc?t=1802&si=zaqwzP0pAnr9pPdV"
         webbrowser.open(url, new=0, autoraise=True)
-        real_name = os.getlogin()
+        
     "...？"
     scene radio with Dissolve(2.0):
         zoom 1.5
