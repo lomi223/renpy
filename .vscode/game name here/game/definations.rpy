@@ -34,6 +34,9 @@ image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"
 image boss_scene = "scene/boss_scene.png"
 image bossroom_floor = "scene/floor.jpg"
+image static:
+    "scene/static.jpg"
+    zoom 3.5
 
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"
@@ -80,6 +83,10 @@ default Rh_effects = []
 default Lh_effects = []
 default caught = False
 
+default choose_w = True
+default choose_a = True
+default choose_s = True
+
 screen radio_button:
     imagebutton:
         idle "radio_idle.png"
@@ -89,3 +96,8 @@ screen radio_button:
         ypos 0.556
         at zoomedin
         action Jump("not_here")
+
+init python:
+    def delete_all_saves():
+        for savegame in renpy.list_saved_games(fast=True):
+            renpy.unlink_save(savegame)

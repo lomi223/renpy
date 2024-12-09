@@ -22,15 +22,14 @@ label bob_and_seak:
     # Starting position
     $ player_x = 1
     $ player_y = 1
-
+    "他似乎就在前面一點的位置"
     jump maze_loop
 
 label maze_loop:
     show screen arrow_down
     show screen arrow_left
     show screen arrow_right
-    show screen arrow_up
-    call screen maze_game
+    call screen arrow_up
            
 label pos_check:
     hide screen arrow_down
@@ -167,6 +166,7 @@ label hide_check:
 
 label fail:
 
+    $ quick_menu = False
     play sound "SFX/clock-titan-sound.mp3"
     "時間停止的那刻你感覺空氣變得異常沉重{nw=2}"
     "你無法移動你的四肢{nw=1}"
@@ -186,11 +186,13 @@ label fail:
     play music "ufail.mp3"
     $ renpy.pause(5.0,hard=True)
     $ caught = True
+    $ delete_all_saves()
     $ persistent.bob = True
     $ renpy.quit()
     return
 
 label success:
+    $ quick_menu = False
     stop music
     scene black
     hide screen timerFame
@@ -229,6 +231,7 @@ label success:
     stop audio
     scene bathroom with dissolve:
         zoom 1.5
+    $ quick_menu = True
     play music "snowdin-town.mp3" fadein 1.0
     show s norm with dissolve
     s "[player]你怎麼在這裡？"
@@ -236,7 +239,7 @@ label success:
     player "對......對不起......"
     scene black with dissolve
     centered "你尷尬地跑開了"
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     play music "night.mp3" fadein 1.0
     show bedroom with dissolve:
         subpixel True 
@@ -357,4 +360,3 @@ label revcam2:
         linear 0.35 blur 0.0
     with Pause(0.3)
     return
-
