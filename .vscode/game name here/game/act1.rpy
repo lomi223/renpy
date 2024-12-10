@@ -358,6 +358,8 @@ label night:
         linear 0.3 xalign 0.2
     show w norm:
         zoom 0.6
+        xalign 0.5
+        yalign 1.0
     player "帥氣又熱情的[ww]"
     show w norm:
         linear 0.3 xalign 0.8

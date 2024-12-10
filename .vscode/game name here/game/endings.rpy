@@ -19,3 +19,10 @@ label playing_ending:
     "你這被子也就這樣了"
     centered "獲得成就：一被子" with Dissolve(2.0)
     return
+
+label single:
+    scene black with dissolve
+    "不是，哥們"
+    "機會都給你了還不把握？"
+    centered "獲得成就：活該單身" with Dissolve(2.0)
+    return

@@ -238,6 +238,7 @@ label success:
     scene black with dissolve
     centered "你尷尬地跑開了"
     stop music fadeout 2.0
+    centered "傍晚時分"
     play music "night.mp3" fadein 1.0
     show bedroom with dissolve:
         subpixel True 

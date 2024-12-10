@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/puzzle/func.rpy", line 160: invalid syntax
-                            if (block.type == "red" and block2.typr = == "goal") and block.x + block.size[0] == block2.x:
-                                                                     ^
+File "game/act3.rpy", line 2: if statement expects a non-empty block.
+    if w_love <= 0 and s_love <= 0 and  a_love <= 0 and b_love <= 0:
+                                                                    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Dec 10 12:29:11 2024
+Tue Dec 10 23:52:18 2024

@@ -120,7 +120,6 @@ label bob_chosen:
             centered "BOB花了點時間將自己藏好"
             jump bob_and_seak
 
-
 screen dynamic_menu(num_choices):
     vbox:
         xalign 0.5     
@@ -129,7 +128,6 @@ screen dynamic_menu(num_choices):
             textbutton "BOB":
                 style_prefix "btns"
                 action Return()
-
 
 style btns_button:
     background "gui/button/choice_idle_background.png"
