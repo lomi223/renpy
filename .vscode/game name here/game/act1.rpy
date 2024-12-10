@@ -339,7 +339,6 @@ label choose_b:
 
 label night:
     stop music
-    play music "night.mp3"
     scene black with dissolve
     centered "第一天的課程忙碌地度過了，時間飛逝、太陽悄悄地溜向西邊，黃昏時分很快就到來了。"
     player "時間差不多了，回家吧。"
@@ -347,6 +346,7 @@ label night:
     show bedroom:
         subpixel True 
         matrixcolor TintMatrix("#18213b")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.5)*HueMatrix(0.0) 
+    play music "night.mp3"
     $ ww = "勝勝"
     $ ss = "碩碩"
     $ aa = "Alex"
@@ -356,7 +356,7 @@ label night:
     player "可愛又靦腆的[ss]"
     show s norm:
         linear 0.3 xalign 0.2
-    show w norm:
+    show w norm with dissolve:
         zoom 0.6
         xalign 0.5
         yalign 1.0
@@ -368,12 +368,11 @@ label night:
     "想這裡[player]不禁嚥了嚥口水"
     player "他真的好美啊......"
     scene black with Fade(1.0,0.0,0.0)
+    "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
     if b_love == 1:
         player "喔對還有那個人......"
         player "他究竟是誰？"
-        "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
-        call dream
-    "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
+        jump dream
     jump act2
 
 return

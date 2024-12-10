@@ -23,6 +23,8 @@ label start:
             jump inputname
         "bob":
             jump bob_and_seak
+        "test":
+            jump test
 #label cg:
 #    show black with dissolve
 #    menu:
@@ -77,4 +79,9 @@ label say_my_name:
     stop music fadeout 0.5
     jump act1
     
+    return
+
+label test:
+    show b glitched
+    ""
     return
