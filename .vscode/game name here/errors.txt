@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/DayWithBob.rpy", line 30: end of line expected.
-    scene classroom with dissolve noloop
-                                  ^
+File "game/RPG_fight_scrypt/WWD3.rpy", line 59: expected statement.
+    shareice += 1
+             ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Dec  9 00:51:35 2024
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Wed Dec 11 00:19:24 2024

@@ -23,6 +23,10 @@ label start:
             jump inputname
         "bob":
             jump bob_and_seak
+        "day4":
+            jump day4
+        "WWD3":
+            jump WWDay3_morning
 #label cg:
 #    show black with dissolve
 #    menu:

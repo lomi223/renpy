@@ -1,41 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/Hide&Seek/scrypt.rpy", line 244, in script
-    player "今天究竟是怎麼回事啊？"
-NameError: name 'name' is not defined
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 43, in script
+    scene outside with Fade(O.5,1.0,1.5)
+SyntaxError: invalid syntax (WWD3.rpy, line 43)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/Hide&Seek/scrypt.rpy", line 244, in script
-    player "今天究竟是怎麼回事啊？"
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1438, in __call__
-    who = self.prefix_suffix("who", self.who_prefix, who, self.who_suffix)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1354, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1334, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
-    s = interpolate(s, variables) # type: ignore
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 43, in script
+    scene outside with Fade(O.5,1.0,1.5)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1357, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1144, in py_compile
     raise e
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
-    value = renpy.python.py_eval(code, {}, scope)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'name' is not defined
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1081, in py_compile
+    raise orig_e
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (WWD3.rpy, line 43)
 
-Windows-10-10.0.22621 AMD64
-Ren'Py 8.3.2.24090902
+macOS-12.5-arm64-arm-64bit arm64
+Ren'Py 8.3.3.24111502
 not_yet_setted 1.0
-Mon Dec  9 00:28:06 2024
+Tue Dec 10 12:12:07 2024

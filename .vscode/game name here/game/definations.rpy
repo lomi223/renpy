@@ -18,6 +18,7 @@ default bb = "？？？"
 
 default persistent.testflag = 0
 default persistent.bob = False
+default shareice = 0
 
 image splash = "temp_splash_img.png" 
 image street_scene = "scene/road_scene.jpg"
@@ -34,6 +35,10 @@ image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"
 image boss_scene = "scene/boss_scene.png"
 image bossroom_floor = "scene/floor.jpg"
+image Wall = "scene/Wall.png"
+image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
+image icestore = "scene/icestore.png"
+
 
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"

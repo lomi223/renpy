@@ -1,5 +1,4 @@
 label boss_fight:
-    $ ww = "勝勝" 
 
     stop music
     play music "bergentrückung--asgore---epic-orchestral-cover--kāru.mp3" loop fadein 0.5
