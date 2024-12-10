@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Hide&Seek/BOBD3.rpy", line 102: expected statement.
-    for i in range(1,11):
-          ^
+File "game/puzzle/func.rpy", line 160: invalid syntax
+                            if (block.type == "red" and block2.typr = == "goal") and block.x + block.size[0] == block2.x:
+                                                                     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Dec  9 22:32:14 2024
+Tue Dec 10 12:29:11 2024

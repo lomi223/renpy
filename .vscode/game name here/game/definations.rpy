@@ -14,7 +14,7 @@ default tt = "？？？"
 default ww = "？？？"
 default aa = "？？？"
 default ss = "？？？"
-default bb = "？？？"
+default bb = "BOB"
 
 default persistent.testflag = 0
 default persistent.bob = False
@@ -82,6 +82,7 @@ default boss_effects = []
 default Rh_effects = []
 default Lh_effects = []
 default caught = False
+default bob = False
 
 default choose_w = True
 default choose_a = True

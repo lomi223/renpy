@@ -125,7 +125,6 @@ label maze2:
     show screen arrow_right
     call screen arrow_up
     
-
 label pos_check2:
     hide screen arrow_down
     hide screen arrow_left
@@ -153,7 +152,6 @@ label pos_check2:
             matrixcolor TintMatrix("#110257ff")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.3)*HueMatrix(0.0) 
         call revcam2
     jump maze2
-
 
 label hide_check:
     stop music
@@ -249,6 +247,7 @@ label success:
     player "今天真是累死我了"
     scene black with dissolve
     centered "你閉上了沉重的雙眼"
+    jump day4
     return
 
 label switch:
