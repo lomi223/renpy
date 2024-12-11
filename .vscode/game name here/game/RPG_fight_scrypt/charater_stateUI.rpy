@@ -1,4 +1,4 @@
-default hovering = False
+
 screen player_state:
     grid 2 2:
         spacing 20

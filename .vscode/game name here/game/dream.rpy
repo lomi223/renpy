@@ -1,11 +1,10 @@
 label dream:
     stop music
-    python:
+    python hide:
         import webbrowser
         import os
-        url = "https://youtu.be/wJWksPWDKOc?t=1802&si=zaqwzP0pAnr9pPdV"
-        webbrowser.open(url, new=0, autoraise=True)
-        
+        webbrowser.open('https://youtu.be/wJWksPWDKOc?t=1802&si=zaqwzP0pAnr9pPdV', new=0, autoraise=True)
+
     "...？"
     scene radio with Dissolve(2.0):
         zoom 1.5

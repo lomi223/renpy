@@ -1,9 +1,21 @@
 label day4:
-    scene cookieclass with Fade(0.5,1.0,1.5)
+    scene bedroom with Fade(0.5,1.0,1.5)
     w "（炫耀的貼圖）：哥們，你一定不相信，那個（號稱）冰山美人的家政老師竟然給我把到了"
     w "老師同意我使用家政教室了，你不是想追到alex嗎？要不趁這個機會烤個手工餅乾？"
+    "經歷了充實的幾天，你的疲勞感不減反增"
+    "也認識了一些朋友"
+    player "這包餅乾的去處..."
+    player "不知道將會去哪？"
     "睡眼惺忪的你聳了聳肩，答應了勝勝的邀約"
-    "回完訊息後，你再度陷入了沈睡"
+    scene black with dissolve
+    centered "回完訊息後，你再度陷入了沈睡" 
+    player "我還不想做決定啦..."
+    scene bedroom with Fade(0.5,1.0,1.5)
+    "再度醒來，你感覺有哪裡不對勁"
+    player "完了！睡過頭了！"
+    scene black with dissolve
+    scene cookieclass with dissolve
+
     "走進家政教室，勝勝一邊向你揮手，一邊露出不滿的表情"
     w "這次怎麼也遲到了？"
     plyer "睡過頭了，抱歉"
