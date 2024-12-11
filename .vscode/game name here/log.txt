@@ -43,3 +43,5 @@ Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
 Screen sizes: virtual=(1920, 1080) physical=(1440, 798) drawable=(2880, 1596)
 Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 798) drawable=(2880, 1596)
+Maximum texture size: 4096x4096
