@@ -1,75 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-<<<<<<< HEAD
 While running game code:
-  File "game/RPG_fight_scrypt/WWD3.rpy", line 43, in script
-    scene outside with Fade(O.5,1.0,1.5)
-SyntaxError: invalid syntax (WWD3.rpy, line 43)
-=======
-Compiling ATL code at game/transform.rpy:3
-  File "game/starting.rpy", line 85, in script
-    show b glitched
-  File "game/transform.rpy", line 3, in <module>
-    glitch("b happy") # reliable slicing
-NameError: name 'glitch' is not defined
->>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 105, in script
+    scene black with Fade(1,1)
+TypeError: Fade() missing 1 required positional argument: 'in_time'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< HEAD
-  File "game/RPG_fight_scrypt/WWD3.rpy", line 43, in script
-    scene outside with Fade(O.5,1.0,1.5)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1357, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1144, in py_compile
-    raise e
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1081, in py_compile
-    raise orig_e
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (WWD3.rpy, line 43)
-=======
-  File "game/starting.rpy", line 85, in script
-    show b glitched
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 477, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\transform.py", line 1194, in _duplicate
-    rv.take_execution_state(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 551, in take_execution_state
-    block = self.compile()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 723, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 925, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 925, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 1231, in compile
-    child = ctx.eval(expr)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\atl.py", line 387, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/transform.rpy", line 3, in <module>
-    glitch("b happy") # reliable slicing
-NameError: name 'glitch' is not defined
->>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 105, in script
+    scene black with Fade(1,1)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1361, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/exports/statementexports.py", line 257, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 1578, in do_with
+    return self.interact(trans_pause=True,
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2666, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2575, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: Fade() missing 1 required positional argument: 'in_time'
 
 macOS-12.5-arm64-arm-64bit arm64
 Ren'Py 8.3.3.24111502
 not_yet_setted 1.0
-<<<<<<< HEAD
-Tue Dec 10 12:12:07 2024
-=======
-Wed Dec 11 01:05:28 2024
->>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
+Wed Dec 11 09:55:04 2024

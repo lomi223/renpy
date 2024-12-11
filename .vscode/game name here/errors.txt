@@ -2,18 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/RPG_fight_scrypt/WWD3.rpy", line 59: expected statement.
-    shareice += 1
-             ^
+File "game/RPG_fight_scrypt/WWD3.rpy", line 54: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    yalign 1.5
+    ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Dec 11 00:19:24 2024
-=======
-File "game/dream.rpy", line 54: expected an indented block
-    NotSet = object()
-     ^
-
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 00:42:00 2024
->>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
+Wed Dec 11 09:24:41 2024

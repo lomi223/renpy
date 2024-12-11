@@ -46,13 +46,25 @@ label WW_icefeast:
     
     player "真令人著迷啊，牆外的世界"
     player "牆的另一端，是敵..."
+    show w norm with dissolve:
+        zoom 0.6
+        yalign 2
+        xalign 1
     w "別廢話，動身去冰店吧！"
     scene black with dissolve
     
-    scene icestore with dissolve
+    scene icestore with dissolve:
+        zoom 2
+        yalign 1
+        xalign 0.5
+    show w norm with dissolve:
+        zoom 0.6
+        yalign 1.5
+        xalign 0.5
     w "這家很像份量還蠻大的，你不介意共吃一碗吧？"
     menu:
         "還真的蠻介意的？":
+            show w sad with dissolve
             w "真是不留情面..."
         "沒關係，我們就共吃一碗吧！":
             w "那就這麼決定了！"
@@ -60,8 +72,10 @@ label WW_icefeast:
     w "那你有喜歡吃什麼口味嗎?"
     menu:
         "這個看起來不太起眼的黑糖剉冰":
+            show w happy with dissolve
             w "看起來不錯，我也喜歡爆炒黑糖"
-        "這個季節限定的味增湯口味雪花冰":
+        "這個季節限定的醬油蒸蛋口味雪花冰":
+            show w confused with dissolve
             w "雖然是季節限定，但這東西還真倒胃口..."
     "點完餐後，你們走到了旁邊的座位區"
     "店內的空間雖小，卻很熱鬧"
@@ -87,6 +101,52 @@ label WW_icefeast:
             w "謝謝你對我的認可？"
             w "..."
             w "有機會會考慮的"
+    "隨著你們的激辯，冰也送上來了"
+    if(shareice == 1):
+        call shareice_version
+    else:
+        call normalice_version
+    "吃完挫冰之後，你們外帶了一份豆花回去"
+    "冰很美味，翻牆出來的經驗也很新奇"
+    "你好奇今天還會發生什麼有趣的事"
+    w "那我們走原路回去囉？"
+    "第二次的翻牆，你顯得駕輕就熟"
+    w "走吧，還要回去趕-"
+    pr "你們在那邊做什麼！"
+    scene black with Fade(1,1,1)
+    call boss_fight
+
+label shareice_version:
+    w "跟你說了吧，他的量真的很大"
+    menu:
+        "這點量對我來說才不算什麼":
+            w "這麼自信，你等等就不要吃不下"
+        "希望等一下不會吃不完...":
+            w "吃不完還可以打包！不用擔心"
+            player "打包啥...糖水嗎？"
+    "勝勝挖起了一匙冰"
+    "望向了你"
+    "他看起來有什麼話要說"
+    w "呃..."
+    w "[player]"
+    w "啊--"
+    "..."
+    player "（含）"
+    w "好吃嗎"
+    "看起來是第一次餵別人吃冰，勝勝的動作在此時看起來有些僵硬"
+    menu:
+        "好吃":
+            w "就說吧，我推的店準好吃"
+        "讓你喂，變得更好吃了":
+            w "那，要不要再吃一口？"
+            player "不用...剛那口就快把我嚇死了"
+    return
+label normalice_version:
+    "冰上來了，你們很正常的吃著你們自己點的冰"
+    "冰是挺好吃的"
+    "但你總覺得少了什麼"
+    return
+
 
 
 
