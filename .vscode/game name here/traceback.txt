@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/RPG_fight_scrypt/WWD3.rpy", line 105, in script
-    scene black with Fade(1,1)
-TypeError: Fade() missing 1 required positional argument: 'in_time'
+Executing ATL code at game/RPG_fight_scrypt/WWD3.rpy:121
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 118, in script
+    show w chill with dissolve:
+TypeError: cannot unpack non-iterable float object
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/RPG_fight_scrypt/WWD3.rpy", line 105, in script
-    scene black with Fade(1,1)
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 118, in script
+    show w chill with dissolve:
   File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1361, in execute
     renpy.exports.with_statement(trans, paired=paired)
   File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/exports/statementexports.py", line 257, in with_statement
@@ -18,13 +18,52 @@ Full traceback:
     return self.interact(trans_pause=True,
   File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2215, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2666, in interact_core
-    trans = instantiate_transition(None, old_root, layers_root)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2575, in instantiate_transition
-    trans = self.ongoing_transition[layer](
-TypeError: Fade() missing 1 required positional argument: 'in_time'
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/transition.py", line 384, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/transform.py", line 1056, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 994, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 427, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/transform.py", line 1054, in render
+    self.update_state()
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/transform.py", line 1235, in update_state
+    fr = self.execute(self, fst, fat)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/atl.py", line 798, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/atl.py", line 1043, in execute
+    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/atl.py", line 1490, in execute
+    setattr(newts, k, v)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/display/transform.py", line 553, in set_align
+    self.xanchor, self.yanchor = value
+TypeError: cannot unpack non-iterable float object
 
 macOS-12.5-arm64-arm-64bit arm64
 Ren'Py 8.3.3.24111502
 not_yet_setted 1.0
-Wed Dec 11 09:55:04 2024
+Wed Dec 11 19:58:05 2024

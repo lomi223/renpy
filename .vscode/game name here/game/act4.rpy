@@ -14,8 +14,8 @@ label day4:
     "再度醒來，你感覺有哪裡不對勁"
     player "完了！睡過頭了！"
     scene black with dissolve
-    scene cookieclass with dissolve:
-        
+    scene cookieclass with dissolve
+
     "走進家政教室，勝勝一邊向你揮手，一邊露出不滿的表情"
     w "這次怎麼也遲到了？"
     plyer "睡過頭了，抱歉"
