@@ -24,7 +24,7 @@ define config.check_conflicting_properties = True
 ## 介面中文字的顏色
 
 ## 整個介面中使用的強調色，用於標記和突出顯示文字
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#cc00cc'
 
 ## 當文字按鈕既未被選取也未被懸停時所使用的顏色
 define gui.idle_color = '#888888'
@@ -53,7 +53,7 @@ define gui.interface_text_color = '#ffffff'
 
 
 ## 字形和字形大小 #####################################################################
-
+define gui.title_text_font = "Super-Morning.ttf" 
 ## 用於遊戲內文字的字形
 define gui.text_font = "SourceHanSansLite.ttf"
 

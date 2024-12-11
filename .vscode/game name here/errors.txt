@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/dream.rpy", line 54: expected an indented block
-    NotSet = object()
-     ^
+File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
+    if Showing == "a"
+                     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 00:42:00 2024
+Wed Dec 11 12:43:36 2024

@@ -1,11 +1,17 @@
 label splashscreen:
-    scene black 
-    with Pause(1)
-    show splash with dissolve 
-    with Pause(2)
-    scene black with dissolve
-    with Pause(1)
-    return
+    scene starting_image
+    "This game is not suitable for children who are easily disturbed."
+    "Individuals suffering from anxiety or depression may not have a safe experience playing this game.For content warnings, please visit: https://www.youtube.com/watch?v=-HR421cejTM "
+    "By playing Doki Doki Fixed, you agree that you are at least 13 years of age, and you consent to your exposure of highly disturbing content."
+    menu:
+        "I agree":
+            scene black 
+            with Pause(1)
+            show splash with dissolve 
+            with Pause(2)
+            scene black with dissolve
+            with Pause(1)
+            return
 
 
 label start: 

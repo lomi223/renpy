@@ -1,11 +1,11 @@
-2024-12-10 17:07:48 UTC
+2024-12-11 04:20:19 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
 
-Early init took 0.09s
-Loading error handling took 0.05s
-Loading script took 0.20s
-Loading save slot metadata took 0.04s
+Early init took 0.07s
+Loading error handling took 0.04s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.05s
 Loading analysis data took 0.03s
@@ -21,44 +21,795 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.23s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.04s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.12s
+Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.36s
+Interface start took 0.22s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
+Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1711, 962) drawable=(1711, 962)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 3022, in interact_core
+    self.idle_frame(can_block, expensive)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2318, in idle_frame
+    result = self.prediction_coroutine.send(expensive)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\predict.py", line 203, in prediction_coroutine
+    if name.startswith("_"):
+AttributeError: 'RevertableList' object has no attribute 'startswith'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+AttributeError: 'RevertableList' object has no attribute 'startswith'
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 3022, in interact_core
+    self.idle_frame(can_block, expensive)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2318, in idle_frame
+    result = self.prediction_coroutine.send(expensive)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\predict.py", line 203, in prediction_coroutine
+    if name.startswith("_"):
+AttributeError: 'RevertableList' object has no attribute 'startswith'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+AttributeError: 'RevertableList' object has no attribute 'startswith'
 Resetting cache.
-Early init took 120.18s
+Early init took 49.00s
 Loading error handling took 0.04s
 Loading script took 0.22s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.03s
 Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1709, 961) drawable=(1709, 961)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1317.20s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.04s
 Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1707, 960) drawable=(1707, 960)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1355.54s
+Loading error handling took 0.02s
+Loading script took 0.22s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1706, 960) drawable=(1706, 960)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1365.12s
+Loading error handling took 0.02s
+Loading script took 0.22s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.25s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1705, 959) drawable=(1705, 959)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1386.93s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
+    if Showing == "a"
+                     ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.35s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1704, 959) drawable=(1704, 959)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1709, 961) drawable=(1709, 961)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1394.81s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
+    if Showing == "a"
+                     ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1704, 959) drawable=(1704, 959)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1397.38s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
+    if Showing == "a"
+                     ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1704, 959) drawable=(1704, 959)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1423.21s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1704, 959) drawable=(1704, 959)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1496.47s
+Loading error handling took 0.02s
+Loading script took 0.22s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1704, 958) drawable=(1704, 958)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 36, in script call
+    call ww_attack
+  File "game/RPG_fight_scrypt/player_round.rpy", line 11, in script
+    call screen ww_attackchoice
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 36, in script call
+    call ww_attack
+  File "game/RPG_fight_scrypt/player_round.rpy", line 11, in script
+    call screen ww_attackchoice
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+Full traceback:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+
+While running game code:
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
+Resetting cache.
+Early init took 1549.90s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1702, 958) drawable=(1702, 958)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1589.61s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
@@ -69,7 +820,50 @@ Initial gc took 0.08s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
+Creating interface object took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1701, 957) drawable=(1701, 957)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1640.43s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.21s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.00s
@@ -80,30 +874,324 @@ Prepare screens took 0.11s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.18s
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
-Fullscreen mode.
+Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 566.03'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(1700, 956) drawable=(1700, 956)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.00s
-Load screen analysis took 0.04s
+Load screen analysis took 0.06s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+Resetting cache.
+Early init took 1793.83s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
 Cleaning stores took 0.00s
-Init translation took 0.00s
+Init translation took 0.06s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
 Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1930.72s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.21s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 2047.07s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 2275.57s
+Loading error handling took 0.07s
+Loading script took 1.80s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.15s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.09s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 2324.48s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.19s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 2393.35s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 2461.58s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.18s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1698, 955) drawable=(1698, 955)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server

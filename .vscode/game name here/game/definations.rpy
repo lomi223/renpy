@@ -37,7 +37,9 @@ image bossroom_floor = "scene/floor.jpg"
 image static:
     "scene/static.jpg"
     zoom 3.5
-
+image starting_image:
+    "statinimg.jpg"
+    zoom 2.8
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"
 image CG_a_yellow = "CGs/a_yellow.png"

@@ -1,3 +1,4 @@
+default hovering = False
 screen player_state:
     grid 2 2:
         spacing 20
@@ -51,7 +52,10 @@ screen player_state:
                 for i in mc_effects:
                     imagebutton:
                         at zoomedin
+                        hovered Show("efdesc", Showing = i)
+                        unhovered Hide("efdesc")
                         idle "EffectIcon/%s idle.png" % i
+                        action NullAction()
         else:
             text ""
         if winwin.hp > 0:
@@ -61,8 +65,11 @@ screen player_state:
                 spacing 5
                 for i in ww_effects:
                     imagebutton:
+                        hovered Show("efdesc", Showing = i)
+                        unhovered Hide("efdesc")
                         at zoomedin
                         idle "EffectIcon/%s idle.png" % i
+                        action NullAction()
         else:
             text ""
 
@@ -139,8 +146,11 @@ screen enemy_state:
                 spacing 5
                 for i in Rh_effects:
                     imagebutton:
+                        hovered Show("efdesc", Showing = i)
+                        unhovered Hide("efdesc")
                         at zoomedin
                         idle "EffectIcon/%s idle.png" % i
+                        action NullAction()
         elif Lh.hp > 0:
             grid Rh_effectamount 1 :
                 xanchor 0.0
@@ -148,8 +158,11 @@ screen enemy_state:
                 spacing 5
                 for i in Rh_effects:
                     imagebutton:
+                        hovered Show("efdesc", Showing = i)
+                        unhovered Hide("efdesc")
                         at zoomedin
                         idle "EffectIcon/%s idle.png" % i
+                        action NullAction() 
         else:
             text ""
         if principal.hp > 0:
@@ -159,7 +172,10 @@ screen enemy_state:
                 spacing 5
                 for i in boss_effects:
                     imagebutton:
+                        hovered Show("efdesc", Showing = i)
+                        unhovered Hide("efdesc")
                         at zoomedin
                         idle "EffectIcon/%s idle.png" % i
+                        action NullAction()
         else:
             text ""

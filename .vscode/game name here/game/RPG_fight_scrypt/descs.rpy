@@ -78,3 +78,34 @@ screen wwsk4_desc:
         xoffset 20
         text "對對方全體進行嘴砲，有可能降防或激怒對方（消耗：2TP）\n（持續3回合）（CD：4回合）"
 
+screen efdesc:
+    default Showing = ""
+    frame:
+        xpadding 100
+        ypadding 50
+        xalign 0.5
+        yalign 1.0
+        yoffset -10
+        xoffset 20
+        if Showing == "a":
+            text "ATK+2"
+        if Showing == "h":
+            text "DEF+2"
+        if Showing == "bl":
+            text "致盲：命中率下降"
+        if Showing == "b":
+            text "灼燒：每回合HP-1"
+        if Showing == "q":
+            text "禁言：本回合無法行動"
+        if Showing == "rd":
+            text "DEF-2"
+        if Showing == "nd":
+            text "破防：DEF歸0"
+        if Showing == "wi":
+            text "每回合HP-3"
+        if Showing == "t":
+            text "我來扛：必定受到敵方選定"
+        if Showing == "we":
+            text "ATK-2"
+        if Showing == "rt":
+            text "每回合TP-3"
