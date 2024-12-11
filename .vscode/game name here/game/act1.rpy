@@ -191,6 +191,17 @@ label choose_a:
             a "蛤？"
             hide a with dissolve
             "少女害怕地跑開了"
+            "你不小心從他桌上的書知道了他名叫Alex"
+            "不小心的"
+            $ aa = "Alex"
+            $ a_love -= 1
+            $ a_notreacted = 0
+            jump choose_react
+
+    menu:
+        "聊聊戀愛話題":
+            "從對話中，你了解到他名叫Alex"
+            $ aa = "Alex"
             $ a_love -= 1
             $ a_notreacted = 0
             jump choose_react
@@ -216,6 +227,7 @@ label choose_a:
             "少女的目光回到了書上，露出了迷人的微笑"
             a "很高興認識你，我叫Alex"
             $ aa = "Alex"
+            $ a_tellingname = 1
             player "（他真的好可愛）"
             $ a_love += 1
 
