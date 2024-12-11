@@ -1,15 +1,19 @@
 #show glitch effect
 image b glitched:
-    At("b norm",glitch)
+    glitch("b norm")
     pause 0.2
-    At("b norm",glitch)
-    pause 0.1
-    At("b norm",glitch)
-    pause 0.1
-    At("b norm",glitch)
+    glitch("b norm", offset=60, randomkey=None)
     pause 0.3
-    At("b norm")
-    pause 0.5
+    glitch("b norm")
+    pause 0.2
+    glitch("b norm", offset=60, randomkey=None)
+    pause 0.2
+    glitch("b norm")
+    pause 0.1
+    glitch("b norm", offset=60, randomkey=None)
+    pause 0.1
+    "b norm"
+    pause 1.0
     repeat
 transform rotation:
     zoom 0.5

@@ -14,7 +14,7 @@ default tt = "？？？"
 default ww = "？？？"
 default aa = "？？？"
 default ss = "？？？"
-default bb = "？？？"
+default bb = "BOB"
 
 default persistent.testflag = 0
 default persistent.bob = False
@@ -35,10 +35,16 @@ image bedroom_night = "scene/bedroom_night.jpg"
 image radio = "scene/radio.jpg"
 image boss_scene = "scene/boss_scene.png"
 image bossroom_floor = "scene/floor.jpg"
+<<<<<<< HEAD
 image Wall = "scene/Wall.png"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
 
+=======
+image static:
+    "scene/static.jpg"
+    zoom 3.5
+>>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
 
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"
@@ -84,6 +90,11 @@ default boss_effects = []
 default Rh_effects = []
 default Lh_effects = []
 default caught = False
+default bob = False
+
+default choose_w = True
+default choose_a = True
+default choose_s = True
 
 screen radio_button:
     imagebutton:
@@ -94,3 +105,8 @@ screen radio_button:
         ypos 0.556
         at zoomedin
         action Jump("not_here")
+
+init python:
+    def delete_all_saves():
+        for savegame in renpy.list_saved_games(fast=True):
+            renpy.unlink_save(savegame)

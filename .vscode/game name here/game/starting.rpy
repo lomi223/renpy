@@ -23,10 +23,15 @@ label start:
             jump inputname
         "bob":
             jump bob_and_seak
+<<<<<<< HEAD
         "day4":
             jump day4
         "WWD3":
             jump WWDay3_morning
+=======
+        "test":
+            jump test
+>>>>>>> 5ead9be1bb7ee127e202bb75a49ec0f7265413ea
 #label cg:
 #    show black with dissolve
 #    menu:
@@ -81,4 +86,9 @@ label say_my_name:
     stop music fadeout 0.5
     jump act1
     
+    return
+
+label test:
+    show b glitched
+    ""
     return
