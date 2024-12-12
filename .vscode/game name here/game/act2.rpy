@@ -80,15 +80,34 @@ label w_soccer:
     player "不好意思，借我過一下"
     "你使盡全力，才稍微擠進那群學生中"
     show w norm with dissolve:
-        zoom 0.6
+        zoom 0.9
         yalign 1.5
         xalign 0.5
+    show w norm with dissolve:
+        zoom 0.9
+        yalign 1.5
+        xalign 0.5
+        linear 1 xalign 0.2
+    show w norm with dissolve:
+        zoom 0.9
+        yalign 1.5
+        xalign 0.5
+        linear 1 xalign 0.85
     "仔細一看，勝勝正快速地在球場上穿梭"
     player "對面選手的有穿學校球衣，應該都是高年級吧？"
     "儘管對手是高年級，勝勝仍不落下風"
     "他敏捷的動作令所有人為之驚嘆，精準的傳球驚詫了周邊的所有人"
     "很快，勝勝便找到了機會，一發射門——"
     "如此刺激，使你險些忘記了呼吸"
+    show w norm with dissolve:
+        zoom 0.9
+        rotate 0
+        parallel:
+            linear 0.5 yalign 1.5
+        parallel:
+            linear 0.5 xalign 0.5
+        parallel:
+            linear 1 rotate 360
     "完美的倒鉤！全場立刻爆發出歡呼聲"
     player "勝勝！太帥了！"
     "勝勝聽見你的聲音，眼神立即與你對上"
@@ -104,10 +123,30 @@ label w_soccer:
         "還不賴。":
             w "謝啦。"
             w "以後有機會也來踢球吧。"
+    show w norm_2 with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75
+    "勝勝換上了日常服裝，你們在操場上閒聊著"
     "你們之間的話題不斷，大部分是有關運動的"
     "還有肌肉、女僕跟電動"
     "談話間，勝勝突然拉著你往旁邊一步"
+    show w norm_2 with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75
+        linear 0.5 xalign -0.5
     "飛身向前、為你擋住了天外飛來的排球"
+    show strong_guy with dissolve:
+        zoom 3
+        yalign 1.5
+        xalign 0.5
+        ypos 1.85
+        xpos 1.15
+        linear 0.5 xalign 0.8  
+
     npc_black "對不起！沒注意力道"
     w "沒事，我們都沒有受傷"
     "勝勝回頭望向你，似乎在等待著你說些什麼"
@@ -118,12 +157,31 @@ label w_soccer:
             $ w_love += 1
         "我去，這球有夠危險。":
             w "……沒事就好！"
+    hide strong_guy with dissolve
+    show w norm_2 with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75
     "你們一起參觀了許多運動社團"
+    show tall_guy with dissolve:
+        yalign 1.5
+        xalign 0.5
+        ypos 2036
+        xpos 0.8
     npc_tall "歡迎加入籃球隊喔！"
-    npc_glasses "不介意的話，可以來桌球部看看喔……"
+    show weak_guy with dissolve:
+        zoom 2.8
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75
+        xpos 0.2
+    npc_weak "不介意的話，可以來桌球部看看喔……"
     "學生們的吆喝聲此起彼落"
     "勝勝似乎很喜歡這種熱鬧的氣氛"
     "你的嘴角也不自覺上揚了些"
+    hide tall_guy with dissolve
+    hide weak_guy with dissolve
     "你們漫步在運動場上，有時被勝勝拉走、去看看一些有趣的攤子"
     "有時只是單純聊著天"
     "你們最後坐在了足球場旁的板凳上，這時，勝勝不知從哪裡搞來了一顆足球"
@@ -439,7 +497,10 @@ label bob_morning:
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5
     "[player]來到了教室"
-    show s norm with dissolve
+    show s norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     player "碩碩，早安"
     s "！"
     "碩碩突然抬起頭來"
@@ -458,7 +519,10 @@ label bob_morning:
     "勝勝飛快地離開了教室"
     hide w norm
     "此時，那位美女恰巧進來了教室"
-    show a norm with dissolve
+    show a norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     "空氣中彷彿多了一點莓果的香氣，使你整個人都清爽了起來"
     if a_tellingname:
         player "啊，Alex，早安"
