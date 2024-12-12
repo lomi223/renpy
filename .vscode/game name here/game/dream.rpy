@@ -35,11 +35,18 @@ label check_window_focus_label:
 
 label changed:
     scene black
-    show b glitched
+    show b glitched:
+        zoom 0.2
+        xalign 0.5
+        yalign 0.5
     $ renpy.pause(20.0, hard=True)
+    hide b glitched
     stop sound
     play sound "glitch-from-doors.mp3"
-    show b glitch:
+    show bob very:
+        xalign 0.6
+        yalign 0.35
+        zoom 0.1
         linear 0.5 zoom 5
     $ renpy.pause(2.0, hard=True)
     stop sound

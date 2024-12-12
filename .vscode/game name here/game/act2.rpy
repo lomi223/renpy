@@ -9,28 +9,39 @@ label morning:
     player "看來今天也是美好的一天呢！"
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5
+    play sound "SFX/door-slam.mp3" noloop volume 0.3
     "[player]來到了教室"
-    show s norm with dissolve
+    show s norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     player "碩碩，早安"
     s "！"
     "碩碩突然抬起頭來"
     "看到是你，似乎鬆了一口氣"
+    show s happy with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     s "早……早安"
     hide s norm with dissolve
-    show w norm with dissolve:
-            zoom 0.6
+    show w norm at comein(0.5,0.1):
             yalign 1.5
-            xalign 0.5
     w "嘿哥們！早啊！"
     player "勝勝！早啊"
     w "我等等有比賽，等等記得來看我！"
     "經勝勝提醒，你想起來今天上午似乎是校園認識活動"
     "學生們可以到處參觀、走訪校園"
     player "必須的"
+    show w at goout(0.1)
     "勝勝飛快地離開了教室"
-    hide w norm with dissolve
+    hide w norm
     "此時，那位美女恰巧進來了教室"
-    show a norm with dissolve
+    play sound "SFX/door-slam.mp3" noloop volume 0.3
+    show a norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     "空氣中彷彿多了一點莓果的香氣，使你整個人都清爽了起來"
     if a_tellingname:
         player "啊，Alex，早安"
@@ -38,13 +49,16 @@ label morning:
     hide a norm with dissolve
     player "離活動開始還有一段時間，稍微睡一下好了……"
     
-    scene classroom
+    scene classroom with Fade(0.5,1.0,0.5)
+    play music "bird-chirping-sound-effect.mp3" loop fadein 0.3 volume 0.3
     "你睡了一覺，精神似乎變好了"
     "醒來後，教室裡的人已經寥寥無幾"
     player "我也去逛逛學校好了。"
 
 label choose_scene:
+    scene classroom
     if day2_count == 2:
+        "時間很晚了，充實的一天也這麼結束了。"
         jump day2_night
     player "接下來我該去哪呢？"
     menu:
@@ -56,11 +70,19 @@ label choose_scene:
             jump s_cat
 
 label w_soccer:
+    play music "summer_storm.mp3" loop volume 0.5
+    scene sport_field with Fade(0.5,1.0,0.5):
+        zoom 2.70
     "你慢慢靠近球場，人開始多了起來"
     "許多新生聚集到了此處，觀看著高年級的學生們揮灑汗水"
     "不遠處的足球場旁更是擠滿了人"
     player "足球？我記得勝勝好像有比賽的樣子，過去看看吧。"
+    player "不好意思，借我過一下"
     "你使盡全力，才稍微擠進那群學生中"
+    show w norm with dissolve:
+        zoom 0.6
+        yalign 1.5
+        xalign 0.5
     "仔細一看，勝勝正快速地在球場上穿梭"
     player "對面選手的有穿學校球衣，應該都是高年級吧？"
     "儘管對手是高年級，勝勝仍不落下風"
@@ -406,10 +428,79 @@ label s_cat:
 label day2_night:
     scene bedroom
     "一天又這麼過去了，好累啊"
+    scene black with Fade(1.0,0.0,0.0)
+    jump act3
 
 
 label bob_morning:
     scene bedroom
-    "看來今天也是美好的一天呢！"
+    scene bedroom with Fade(0.5,1.0,0.5)
+    player "看來今天也是美好的一天呢！"
+    scene classroom with Fade(0.5,1.0,0.5)
+    play music "snowdin-town.mp3" loop volume 0.5
+    "[player]來到了教室"
+    show s norm with dissolve
+    player "碩碩，早安"
+    s "！"
+    "碩碩突然抬起頭來"
+    "看到是你，似乎鬆了一口氣"
+    s "早……早安"
+    hide s norm with dissolve
+    show w norm at comein(0.5,0.1):
+            yalign 1.5
+    w "嘿哥們！早啊！"
+    player "勝勝！早啊"
+    w "我等等有比賽，等等記得來看我！"
+    "經勝勝提醒，你想起來今天上午似乎是校園認識活動"
+    "學生們可以到處參觀、走訪校園"
+    player "必須的"
+    show w norm at goout(0.1)
+    "勝勝飛快地離開了教室"
+    hide w norm
+    "此時，那位美女恰巧進來了教室"
+    show a norm with dissolve
+    "空氣中彷彿多了一點莓果的香氣，使你整個人都清爽了起來"
+    if a_tellingname:
+        player "啊，Alex，早安"
+        a "早啊，[player]"
+    hide a norm with dissolve
+
+    play sound "SFX/felicia_character_page1_jp.mp3"
+    show bob norm with dissolve:
+        xalign 0.5
+        yalign 1.0
+        zoom 0.3
+    b "早上好啊！[player]"
+    player "早上好，[bb]"
+    player "?"
+    "不知怎麼的{nw=0.1}"
+    "不知怎麼的{fast} 你雖然對[bb]感到陌生"
+    "腦海中卻有許多你們相處的回憶"
+    b "怎麼了嗎？"
+    b "你看上去有點疲憊呢"
+    b "做惡夢了？"
+    player "......"
+    b "過來一點"
+    show bob norm:
+            yalign 0.5
+            linear 1.0 zoom 1.0
+    "[bb]一把把你摟進環中"
+    "隔著他的衣服{nw}"
+    "隔著他的衣服{fast} 你似乎能聽見他的心跳"
+    show bob norm:
+        linear 1.0 zoom 0.5
+    b "好點了嗎？"
+    player "嗯"
+    show bob happy
+    b "沒事就好"
+    hide bob 
+    scene classroom with Fade(0.5,0.0,0.5)
     
+    player "離活動開始還有一段時間，稍微睡一下好了……"
+    
+    
+    scene classroom with Fade(0.5,1.0,0.5)
+    "你睡了一覺，精神似乎變好了"
+    "醒來後，教室裡的人已經寥寥無幾"
+    player "我也去逛逛學校好了。"
     return
