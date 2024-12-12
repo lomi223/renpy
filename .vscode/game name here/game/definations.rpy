@@ -30,6 +30,9 @@ image bedroom:
     "scene/bedroom.jpg"
     xzoom 3
     yzoom 2.5
+image npc_tall = "character/npcs/tall_student.png"
+image npc_strong = "character/npcs/strong_student.png"
+image npc_weak = "character/npcs/weak_student.png"
 image bathroom = "scene/bathroom.jpg"
 image outside = "scene/school_outside.jpg"
 image bedroom_night = "scene/bedroom_night.jpg"
@@ -37,6 +40,9 @@ image radio = "scene/radio.jpg"
 image boss_scene = "scene/boss_scene.png"
 image bossroom_floor = "scene/floor.jpg"
 image Wall = "scene/Wall.png"
+image hallway2 = "scene/hallway2.jpg"
+image sport_field = "scene/sport_field.jpg"
+image library = "scene/library.jpg"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
 image notebook:

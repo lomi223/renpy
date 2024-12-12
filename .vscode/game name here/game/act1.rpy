@@ -38,7 +38,7 @@ label a_on_street:
     scene street_scene with dissolve:
         zoom 3
     show a norm with dissolve:
-        zoom 0.6
+        zoom 0.25
         yalign 1.5
         xalign 0.5
     pause 1.0
@@ -80,13 +80,19 @@ label classroom:
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5
     if street_flag:
-        show s norm with dissolve 
+        show s norm with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         "來到教室，你發現你的青梅碩碩已經座在位子上"
         player "早啊！碩碩"
         player "你也在這間學校啊！"
         "發現你的到來，碩碩靦腆的低下了頭"
         $ ss = "碩碩"
-        show s shy with dissolve
+        show s shy with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         s "早......早阿[player]"
         hide s
         scene black with dissolve
@@ -95,6 +101,7 @@ label classroom:
         scene classroom with dissolve
         play sound "SFX/walking_6QdYC8X.mp3"
         show a norm with dissolve:
+            zoom 0.28
             xpos 0.0
             linear 4.0 xpos 1.0
         pause 4.0
@@ -124,22 +131,37 @@ label classroom:
         player "趕上了"
         s "哇！"
         "突如其來的聲響嚇到了一旁的同學"
-        show s norm with dissolve
+        show s norm with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         player "碩碩！"
         player "沒想到會在這裡遇到妳"
         "碩碩，你的青梅，你們從小便是看著對方長大"
         "發現你的到來，碩碩靦腆的低下了頭"
         $ ss = "碩碩"
-        show s shy with dissolve
+        show s shy with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         s "早......早阿[player]"
         scene black with dissolve
         centered "環視整間教室，[player]見到了......"
         scene classroom with dissolve
-        show a reading with dissolve
+        show a reading with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         pause 0.5
-        show a noticed with dissolve
+        show a noticed with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         pause 0.5
-        show a smile with dissolve
+        show a happy with dissolve:
+            zoom 0.25
+            yalign 1.5
+            xalign 0.5
         pause 0.5
         hide a 
         player "啊......啊"
@@ -178,9 +200,15 @@ label choose_a:
     scene black with dissolve
     "你選擇靠近那位少女"
     scene classroom with dissolve
-    show a reading with dissolve
+    show a reading with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     pause 0.5
-    show a noticed with dissolve
+    show a noticed with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     menu:
         "嘿！同學，你好嗎":
             a "阿，那個......你好"
@@ -202,13 +230,6 @@ label choose_a:
         "聊聊戀愛話題":
             "從對話中，你了解到他名叫Alex"
             $ aa = "Alex"
-            $ a_love -= 1
-            $ a_notreacted = 0
-            $ b_canreact = 1 
-            jump choose_react
-
-    menu:
-        "聊聊戀愛話題":
             player "你有喜歡的人嗎？"
             a "抱歉，我目前沒有戀愛想法"
             $ a_love -= 1
@@ -224,7 +245,7 @@ label choose_a:
             a "話說，你叫甚麼名字"
             player "我叫[player]"
             a "[player]啊......"
-            show a smile with dissolve
+            show a happy with dissolve
             "少女的目光回到了書上，露出了迷人的微笑"
             a "很高興認識你，我叫Alex"
             $ aa = "Alex"
@@ -239,13 +260,19 @@ label choose_s:
     scene black with dissolve
     "你找到了碩碩"
     scene classroom with dissolve
-    show s shy with dissolve
+    show s shy with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     player "剛剛的聲音嚇到你了？"
     s "（微微點頭）"
     menu:
         "（摸摸頭）":
             player "沒事有我在"
-            show s happy
+            show s happy:
+                zoom 0.25
+                yalign 1.5
+                xalign 0.5
             "碩碩低著的頭慢慢抬了起來，緊繃的情緒似乎比較緩和了"
             player "（好像摸太久了，該停下來了）"
             "當[player]準備將手收回時，碩碩突然輕輕握住了[player]的手"
@@ -257,7 +284,10 @@ label choose_s:
             $ s_love += 1
 
         "笑死":
-            show s sad
+            show s sad:
+                zoom 0.25
+                yalign 1.5
+                xalign 0.5
             "碩碩傷心的低下了頭，怎樣都不願理你"
             player "（好像生氣了）"
             $ s_love -= 1
@@ -365,7 +395,10 @@ label night:
     $ aa = "Alex"
     "[player]將書包扔到了一旁，以「大」字形的姿勢向後躺到了床上"
     player "今天見到了好多人啊！"
-    show s norm with dissolve
+    show s norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     player "可愛又靦腆的[ss]"
     show s norm:
         linear 0.3 xalign 0.2
@@ -376,7 +409,10 @@ label night:
     player "帥氣又熱情的[ww]"
     show w norm:
         linear 0.3 xalign 0.8
-    show a norm with dissolve
+    show a norm with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     player "還有[aa]......"
     "想這裡[player]不禁嚥了嚥口水"
     player "他真的好美啊......"
