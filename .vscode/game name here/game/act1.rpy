@@ -113,13 +113,14 @@ label classroom:
         play sound "SFX/door-slam.mp3" noloop volume 0.5
         pause 1.0
         show w norm with dissolve:
-            zoom 0.6
+            zoom 0.95
             yalign 1.5
             xalign 0.5
         w "剛好趕上"
         "突如其來的聲響嚇了你一跳"
         w "早啊！哥們"
         show w norm:
+            zoom 0.95
             xpos 0.5
             linear 0.25 xpos 1.5
         pause 0.5
@@ -303,7 +304,7 @@ label choose_w:
         "你接近了勝勝"
     scene classroom with dissolve
     show w norm with dissolve:
-            zoom 0.6
+            zoom 0.95
             yalign 1.5
             xalign 0.5
     menu:
@@ -354,7 +355,11 @@ label choose_b:
 
 
     scene classroom with dissolve
-    show b norm with dissolve
+    show bob norm with dissolve:
+        zoom 0.3
+        yalign 1.5
+        xalign 0.5
+        ypos 1.6
     label b_c:
         if repeat < 5:
             menu:
@@ -362,7 +367,7 @@ label choose_b:
                     $ repeat += 1
                     jump b_c
         else:
-            hide b
+            hide bob
             show w norm:
                 zoom 2.5
                 xalign 0.5
@@ -370,7 +375,7 @@ label choose_b:
             pause 2.0
             play music "snowdin-town.mp3" loop volume 0.5
             show w norm:
-                zoom 0.6
+                zoom 0.95
                 yalign 1.5
                 xalign 0.5
             
@@ -403,9 +408,9 @@ label night:
     show s norm:
         linear 0.3 xalign 0.2
     show w norm with dissolve:
-        zoom 0.6
+        zoom 0.95
+        yalign 1.5
         xalign 0.5
-        yalign 1.0
     player "帥氣又熱情的[ww]"
     show w norm:
         linear 0.3 xalign 0.8
