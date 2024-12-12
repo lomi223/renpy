@@ -9,6 +9,7 @@ define npc_tall = Character("很高的學生", image = "npc_tall")
 define npc_glasses = Character("戴著眼鏡的學生", image = "npc_glasses")
 define player = Character("[name]")
 define pr = Character("校長", image = "principal")
+define monika = Character("Monika", image = "monika")
 
 default tt = "？？？"
 default ww = "？？？"

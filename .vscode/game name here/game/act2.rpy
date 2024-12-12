@@ -498,7 +498,6 @@ label bob_morning:
     
     player "離活動開始還有一段時間，稍微睡一下好了……"
     
-    
     scene classroom with Fade(0.5,1.0,0.5)
     "你睡了一覺，精神似乎變好了"
     "醒來後，教室裡的人已經寥寥無幾"

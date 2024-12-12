@@ -1,13 +1,41 @@
 label boss_fight:
 
     stop music
-    play music "bergentrückung--asgore---epic-orchestral-cover--kāru.mp3" loop fadein 0.5
+    play music "bergentrückung--asgore---epic-orchestral-cover--kāru.mp3" loop fadein 0.5    
+    
+    
+    show floor
+    show tse idle:
+        subpixel True 
+        pos (-1, 0.4) zpos -700.0 
+    show ww idle:
+        subpixel True 
+        pos (-1, 0.65) zpos -700.0 
+    show pr idle:
+        subpixel True xpos 0.9 ypos 450 zpos -700.0 
+
+    camera:
+        subpixel True zpos 0.0 
+    show floor:
+        subpixel True 
+        yanchor 0.5 zoom 10.0 matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(0.0, 0.0, 0.0)*RotateMatrix(85.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
+    show tse idle:
+        subpixel True
+        xpos -1.0 
+        easein_back 0.60 xpos -0.25
+    show ww idle:
+        subpixel True 
+        parallel:
+            xpos -1.0 
+            easein_back 0.80 xpos -0.2 
+    with Pause(0.90)
+    show tse idle:
+        pos (-0.25, 0.4) 
+    show ww idle:
+        pos (-0.2, 0.65) 
 
     call initialize
     call StateDisplay
-    show floor:
-        default
-        subpixel True matrixtransform ScaleMatrix(10.0, 1.0, 7.0)*OffsetMatrix(0.0, 500.0, -100.0)*RotateMatrix(72.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
 
     pr "來了嗎？"
     pr "我很欣賞你們的能力"
@@ -21,6 +49,8 @@ label boss_fight:
 
 label the_fight:
     while True:
+        camera:
+            subpixel True zpos 0.0 
 
         call check
 
