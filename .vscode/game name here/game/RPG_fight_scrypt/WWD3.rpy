@@ -53,21 +53,25 @@ label WW_icefeast:
     w "別廢話，動身去冰店吧！"
     scene black with dissolve
     
-    scene icestore with dissolve:
-        zoom 2
-        yalign 1
-        xalign 0.5
-    show w norm:
-        subpixel True pos (0.13, 1.44) xzoom 0.5 yzoom 0.5 zoom 1.02 
+    
+    scene icestore at center:
+        xzoom 2.5
+        yzoom 2
+
+
+    show w norm_2 with dissolve:
+        zoom 0.2
+        yalign 1.5
+        xalign 0
     w "這家很像份量還蠻大的，你不介意共吃一碗吧？"
     menu:
         "還真的蠻介意的？":
             w "真是不留情面..."
         "沒關係，我們就共吃一碗吧！":
             show w chill with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
-                xalign 0.5
+                xalign 0
             w "那就這麼決定了！"
             $ shareice += 1
     show w norm_2
@@ -75,25 +79,26 @@ label WW_icefeast:
     menu:
         "這個看起來不太起眼的黑糖剉冰":
             show w chill with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
-                xalign 0.5
+                xalign 0
             w "看起來不錯，我也喜歡爆炒黑糖"
         "這個季節限定的醬油蒸蛋口味雪花冰":
-            show w norm_2 with dissolve:
-                zoom 0.6
+            show w shy with dissolve:
+                zoom 0.2
                 yalign 1.5
-                xalign 0.5
+                xalign 0
             w "雖然是季節限定，但這東西還真倒胃口..."
     scene black with dissolve
-    scene dining_area with Fade(0.5,1.0,1.5):
-        zoom 2
+    scene dining_area at center:
+        xzoom 3.6
+        yzoom 3
     "點完餐後，你們走到了旁邊的座位區"
     "店內的空間雖小，卻很熱鬧"
     "周圍似乎擠滿了也是翻牆出來的人"
     "延續昨天的話題，你在跟勝勝爭論"
     show w norm_2 with dissolve:
-        zoom 0.6
+        zoom 0.2
         yalign 1.5
         xalign 0.5
     "--"
@@ -102,7 +107,7 @@ label WW_icefeast:
     w "我就說了，貓耳戴在女僕的身上根本是對貓咪的褻瀆!"
     player "才不是呢，不覺得多了那副貓耳，讓人有種無法抗拒的魅力嗎？"
     show w mad with dissolve:
-        zoom 0.6
+        zoom 0.2
         yalign 1.5
         xalign 0.5
     w "那[player]你是說，我如果戴上了貓耳，也會讓你招架不住囉？"
@@ -117,16 +122,16 @@ label WW_icefeast:
         "其實那副耳朵也蠻適合你的":
             w "..."
             show w shy with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
                 xalign 0.5
             w "這..."
             w "謝謝你對我的認可？"
             w "..."
             show w chill with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
-                align 0.5
+                xalign 0.5
             w "有機會會考慮的"
     "隨著你們的激辯，冰也送上來了"
     if(shareice == 1):
@@ -137,7 +142,13 @@ label WW_icefeast:
     "冰很美味，翻牆出來的經驗也很新奇"
     "你好奇今天還會發生什麼有趣的事"
     w "那我們走原路回去囉？"
+    scene black with dissolve
+    scene Wall with dissolve
     "第二次的翻牆，你顯得駕輕就熟"
+    show w norm_2 with dissolve:
+        zoom 0.2
+        yalign 1.5
+        xalign 0.5
     w "走吧，還要回去趕-"
     pr "你們在那邊做什麼！"
     scene black with Fade(1,1,1)
@@ -145,7 +156,7 @@ label WW_icefeast:
 
 label shareice_version:
     show w norm_2 with dissolve:
-        zoom 0.6
+        zoom 0.2
         yalign 1.5
         xalign 0.5
     w "跟你說了吧，他的量真的很大"
@@ -158,7 +169,7 @@ label shareice_version:
     "勝勝挖起了一匙冰"
     "望向了你"
     show w shy with dissolve:
-        zoom 0.6
+        zoom 0.2
         yalign 1.5
         xalign 0.5
     "他看起來有什麼話要說"
@@ -172,18 +183,19 @@ label shareice_version:
     menu:
         "好吃":
             show w chill with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
                 xalign 0.5
             w "就說吧，我推的店準好吃"
         "讓你喂，變得更好吃了":
             show w chill with dissolve:
-                zoom 0.6
+                zoom 0.2
                 yalign 1.5
                 xalign 0.5
             w "那，要不要再吃一口？"
             player "不用...剛那口就快把我嚇死了"
     return
+
 label normalice_version:
     "冰上來了，你們很正常的吃著你們自己點的冰"
     "冰是挺好吃的"
