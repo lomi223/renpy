@@ -1,24 +1,87 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/act4.rpy", line 169, in script
-    centerred "彷彿是在抗拒思考一般，你一到家便陷入了沈睡"
-Exception: Sayer 'centerred' is not defined.
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/act4.rpy", line 169, in script
-    centerred "彷彿是在抗拒思考一般，你一到家便陷入了沈睡"
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 2573, in execute
+  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
+    "[ww]的回合！"
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
     Say.execute(self)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'centerred' is not defined.
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
+    screen player_state:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
+    grid 2 2:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
+    if mc.hp > 0:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
+    grid mc_effectamount 1 :
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
+    for i in mc_effects:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
+    imagebutton:
+  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
+    unhovered Hide("efdesc", Showing = "")
+TypeError: __init__() got an unexpected keyword argument 'Showing'
 
-macOS-12.5-arm64-arm-64bit arm64
-Ren'Py 8.3.3.24111502
-not_yet_setted 1.0
-Thu Dec 12 09:23:11 2024
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.2.24090902
+Doki Doki
+Fixed     1.0
+Wed Dec 11 12:45:54 2024

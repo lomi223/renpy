@@ -10,7 +10,7 @@
 ##
 ## 字串周圍的 _() 標記其為符合翻譯條件。
 
-define config.name = _("not_yet_setted")
+define config.name = _("Doki Doki\nFixed    ")
 
 
 ## 決定上面給出的標題是否顯示在主選單畫面上。將其設為 False 以隱藏標題。

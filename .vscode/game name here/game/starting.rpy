@@ -1,7 +1,16 @@
 label splashscreen:
+    if not persistent.agreed:
+        scene starting_image
+        "This game is not suitable for children who are easily disturbed."
+        "Individuals suffering from anxiety or depression may not have a safe experience playing this game.For content warnings, please visit: https://www.youtube.com/watch?v=-HR421cejTM "
+        "By playing Doki Doki Fixed, you agree that you are at least 13 years of age, and you consent to your exposure of highly disturbing content."
+        menu:
+            "I agree":
+                $ persistent.agreed = True
     scene black 
-    with Pause(1)
-    show splash with dissolve 
+    with Pause(0.5)
+    show splash with dissolve:
+        zoom 7.0
     with Pause(2)
     scene black with dissolve
     with Pause(1)
@@ -17,10 +26,10 @@ label start:
     camera:
         perspective True
     menu:
-        "boss":
-            jump boss_fight
         "name":
             jump inputname
+        "boss":
+            jump boss_fight
         "bob":
             jump bob_and_seak
         "day4":

@@ -204,6 +204,7 @@ label choose_a:
             $ aa = "Alex"
             $ a_love -= 1
             $ a_notreacted = 0
+            $ b_canreact = 1 
             jump choose_react
 
     menu:

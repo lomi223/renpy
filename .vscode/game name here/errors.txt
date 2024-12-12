@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/act4.rpy", line 83: expected 'comma or end of line' not found.
-    linear 0.10 zoom 1 with Pause(0.50)
-                       ^
+File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
+    if Showing == "a"
+                     ^
 
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Dec 12 08:51:09 2024
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Wed Dec 11 12:43:36 2024
