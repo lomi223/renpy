@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/act4.rpy", line 17: scene statement expects a non-empty block.
-    scene cookieclass with dissolve:
-                                    ^
+File "game/act4.rpy", line 83: expected 'comma or end of line' not found.
+    linear 0.10 zoom 1 with Pause(0.50)
+                       ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Dec 11 19:06:59 2024
+Thu Dec 12 08:51:09 2024
