@@ -57,7 +57,7 @@ label WW_icefeast:
     scene icestore at center:
         xzoom 2.5
         yzoom 2
-
+    play music "Dating Start!.mp3" loop volume 1.5
 
     show w norm_2 with dissolve:
         zoom 0.2

@@ -1,4 +1,5 @@
 label day4:
+    play music "bird-chirping-sound-effect.mp3" loop fadein 0.3 volume 0.3
     scene bedroom with Fade(0.5,1.0,1.5)
     w "（炫耀的貼圖）：哥們，你一定不相信，那個（號稱）冰山美人的家政老師竟然給我把到了"
     w "老師同意我使用家政教室了，你不是想追到alex嗎？要不趁這個機會烤個手工餅乾？"
@@ -14,18 +15,19 @@ label day4:
     "再度醒來，你感覺有哪裡不對勁"
     player "完了！睡過頭了！"
     scene black with dissolve
-    scene street with dissolve
+    scene street at center:
+        xzoom 2.6
+        yzoom 2.4
     "有別於三天前的陌生，你逐漸熟悉了上學的路線"
     "微風掠過，你很享受這種感覺"
     scene black with Fade(1.5,1.0,0.5)
+    play music "Dating Start!.mp3" loop volume 1.5
     scene cookieclass at center:
         xzoom 3.2
         yzoom 2.6
     "走進家政教室，勝勝一邊向你揮手，一邊露出不滿的表情"
-    show w mad with dissolve:
+    show w mad at left with moveinleft:
         zoom 0.2
-        yalign 1.5
-        xalign 0.5
     w "這次怎麼也遲到了？"
     player "睡過頭了，抱歉..."
     show w norm_2 with dissolve:
@@ -79,6 +81,10 @@ label day4:
                 zoom 1.21 
             window auto show
             "你的視線在勝勝身上遊走，肆無忌憚地將他的肌肉線條盡收眼底。"
+            show w norm_2 with dissolve:
+                zoom 0.2
+                yalign 1.0
+                xalign 0
             camera:
                 linear 0.10 zoom 1 
             with Pause(1.0)
@@ -93,8 +99,8 @@ label day4:
                 xalign 0
             "勝勝沒有開口說話，但臉頰多了一抹紅潤。"
         "男人只會影響我做餅乾的速度。":
-            "你原地lock in，開啟聖人模式，如入無人之境，手速有如阿扁每秒抖6.6次。"
-            "你的速度快到讓勝勝嚇了一跳。"
+            "你原地lock in，開啟聖人模式，如入無人之境，手速有如阿扁每秒抖6.6次。" with hpunch
+            "你的速度快到讓勝勝嚇了一跳。"with vpunch
             show w chill with dissolve:
                 zoom 0.2
                 yalign 1.5
@@ -114,20 +120,19 @@ label day4:
             show w shy with dissolve:
                 zoom 0.2
                 yalign 1.5
-                xalign 0
+                xalign 0 
             w "討厭，人家身上很多汗啦。"
             "勝勝雙手叉腰，嘴巴嘟了起來。"
             "你露出了得意的表情，像是拿逗貓棒在逗貓一般"
     scene black with Fade(1,0.5,1)
+    stop music fadeout 1.0
     scene sunset_road at center:
         xzoom 2.6
         yzoom 2.4
     "做完餅乾，你跟勝勝走出了家政教室"
     player "很扯 竟然已經快要天黑了"
-    show w mad with dissolve:
-            zoom 0.3
-            yalign 2
-            xalign 0.5 
+    show w mad at right with moveinbottom:
+        zoom 0.2
     w "畢竟你睡到下午四點..."
     player "對不起..."
     show w norm_2 with dissolve:
@@ -141,6 +146,10 @@ label day4:
     w "明天就拿去給喜歡的人吧？"
     player "..."
     w "?"
+    show w chill with dissolve:
+        zoom 0.3
+        yalign 2
+        xalign 0.5
     w "你在煩惱要給誰嗎？"
     player "(點頭)" 
     w "原來如此"
@@ -151,7 +160,7 @@ label day4:
     w "要...要給我的話，也不是不行啦"
     w "..."
     w "當...當我沒說！明天見！"
-    hide w with Fade(0.5,0.5,0.5)
+    hide w with Fade(0.3,0,0.3)
     "雖然沒有說出口，你很開心可以遇見這樣的朋友"
     "朋友?"
     "..."

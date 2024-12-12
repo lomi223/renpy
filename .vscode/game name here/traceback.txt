@@ -1,87 +1,29 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
-    "[ww]的回合！"
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
-    grid 2 2:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
-    if mc.hp > 0:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
-    grid mc_effectamount 1 :
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
-    for i in mc_effects:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
-    unhovered Hide("efdesc", Showing = "")
-TypeError: __init__() got an unexpected keyword argument 'Showing'
+  File "game/act4.rpy", line 134, in script
+    show w mad at right with moveindcenter:
+  File "game/act4.rpy", line 134, in <module>
+    show w mad at right with moveindcenter:
+NameError: name 'moveindcenter' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
-    "[ww]的回合！"
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
-    grid 2 2:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
-    if mc.hp > 0:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
-    grid mc_effectamount 1 :
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
-    for i in mc_effects:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
-    unhovered Hide("efdesc", Showing = "")
-TypeError: __init__() got an unexpected keyword argument 'Showing'
+  File "game/act4.rpy", line 134, in script
+    show w mad at right with moveindcenter:
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1357, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/act4.rpy", line 134, in <module>
+    show w mad at right with moveindcenter:
+NameError: name 'moveindcenter' is not defined
 
-Windows-10-10.0.22621 AMD64
-Ren'Py 8.3.2.24090902
+macOS-12.5-arm64-arm-64bit arm64
+Ren'Py 8.3.3.24111502
 Doki Doki
 Fixed     1.0
-Wed Dec 11 12:45:54 2024
+Thu Dec 12 13:11:21 2024

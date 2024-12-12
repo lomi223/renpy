@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
-    if Showing == "a"
-                     ^
+File "game/act4.rpy", line 122: end of line expected.
+    show w shy with zoom 0.2 at right with moveinright
+                         ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 12:43:36 2024
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Thu Dec 12 11:50:53 2024
