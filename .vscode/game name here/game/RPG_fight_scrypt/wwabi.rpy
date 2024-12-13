@@ -7,60 +7,69 @@ label wwrest:
 
 label wwab1:
     if d10 > 8:
-        "勝勝的理由強而有力！"
         if target == principal:
+            call wwAtkPrCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        "勝勝的理由強而有力！"
         return
 
     if d10 > 6:
-        "勝勝說了個強大的理由"
         if target == principal:
+            call wwAtkPrCam
             $ atk = d4 + d6 + winwin.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = d4 + d6 + winwin.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = d4 + d6 + winwin.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        "勝勝說了個強大的理由"
         return
 
     if d10 > 1:
-        "勝勝說了個普通的理由"
         if target == principal:
+            call wwAtkPrCam
             $ atk = d4 + winwin.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = d4 + winwin.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = d4 + winwin.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        "勝勝說了個普通的理由"
         return
 
     if d10 == 1:
@@ -68,13 +77,16 @@ label wwab1:
         return
 
 label wwab2:
+    call wwDefCam
     "勝勝擋在了[player]的前面"
+    $ wwrelocate = False
     $ winwin_taunt = True
     $ ww_effectamount += 1
     $ ww_effects.append("t")
     return
 
 label wwab3:
+    call wwShineCam
     "勝勝開始發光發熱"
     "對手被閃瞎了"
     "勝勝受到灼傷"
@@ -92,6 +104,7 @@ label wwab3:
     return
 
 label wwab4:
+    call wwGuoinnCam
     if d10 == 10:
         "勝勝把對方說破防了！"
         $ principal.defence = 0

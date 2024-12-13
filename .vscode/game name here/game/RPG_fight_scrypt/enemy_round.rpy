@@ -15,22 +15,23 @@ label boss_attack:
         if selected_player == 1:
             "校長對[player]使用記大過"
             if winwin_bright == False:
-
                 if d20 >= 19:
-                    "效果顯著"
+                    call prAtkTseCam
                     $ atk = d4 + d6 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "效果顯著"
                     return
                 if d20 >=1:
-                    "成效普通"
+                    call prAtkTseCam
                     $ atk = d4 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 == 1:
                     "未命中"
@@ -38,12 +39,13 @@ label boss_attack:
 
             if winwin_bright == True:
                 if d20 == 20:
-                    "成效普通"
+                    call prAtkTseCam
                     $ atk = d4 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 <= 19:
                     "未命中"
@@ -52,22 +54,23 @@ label boss_attack:
         if selected_player == 2:
             "校長對[ww]使用記大過"
             if winwin_bright == False:
-
                 if d20 >= 19:
-                    "效果顯著"
+                    call prAtkWwCam
                     $ atk = d4 + d6 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "效果顯著"
                     return
                 if d20 >=1:
-                    "成效普通"
+                    call prAtkWwCam
                     $ atk = d4 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 == 1:
                     "未命中"
@@ -75,12 +78,13 @@ label boss_attack:
 
             if winwin_bright == True:
                 if d20 == 20:
-                    "成效普通"
+                    call prAtkWwCam
                     $ atk = d4 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 <= 19:
                     "未命中"
@@ -111,12 +115,14 @@ label boss_attack:
         return
 
     if d100 > 30 and summoned == False and rd > 2 and principal.hp > 50:
+        call prSummonLhCam
         "校長招喚了左手"
         $ Lh.hp = Lh.max_hp
         $ summoned = True
         return
 
     if d100 > 35 and summoned == False and rd > 2 and principal.hp < 50:
+        call prSummonLhCam
         "校長招喚了左手"
         $ Lh.hp = Lh.max_hp
         $ summoned = True
@@ -132,6 +138,7 @@ label boss_attack:
         "範圍"
         if winwin_bright == False:
             if d20 > 1:
+                call prMulAtkCam
                 $ atk = d4 + principal.attack*2 
                 if atk - mc.defence > 0:
                     $ mc.hp -= atk - mc.defence
@@ -143,6 +150,7 @@ label boss_attack:
 
         elif winwin_bright == True:
             if d20 > 19:
+                call prMulAtkCam
                 $ atk = d4 + principal.attack*2 
                 if atk - mc.defence > 0:
                     $ mc.hp -= atk - mc.defence
@@ -155,6 +163,7 @@ label boss_attack:
         return
 
     if d100 > 10 and rd > 4 and bosseffecttimmer < 0:
+        call prAngerCam
         "威嚴"
         $ bosseffecttimmer = 4
         $ bosseffectcd = 6

@@ -7,45 +7,50 @@ label mcrest:
 
 label excuse:
     if d10 > 7:
-        "[player]說了個強而有力的藉口！"
-        "十分有效"
-        
         if target == principal:
+            call tseAtkPrCam
             $ atk = d4 + d6 + mc.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call tseAtkLhRhCam
             $ atk = d4 + d6 + mc.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call tseAtkLhRhCam
             $ atk = d4 + d6 + mc.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
+        "[player]說了個強而有力的藉口！"
+        "十分有效"
         return
 
     if d10 > 1:
-        "[player]說了個普通的藉口"
         if target == principal:
+            call tseAtkPrCam
             $ atk = d4 + mc.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call tseAtkLhRhCam
             $ atk = d4 + mc.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call tseAtkLhRhCam
             $ atk = d4 + mc.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
         $ mc.thoughts -= 1
+        "[player]說了個普通的藉口"
         return
     
     if d10 == 1:
@@ -53,7 +58,7 @@ label excuse:
         return
 
 label atk_buff:
-
+    call tseCheerCam
     "[player]和勝勝的說服力上升了"
     $ mc.attack += 2
     $ winwin.attack += 2
@@ -83,6 +88,7 @@ label eat:
     return
 
 label healthsheild:
+    call tseChillCam
     if chosen_player == player:
         "[player]恢復了些許體力並為下一次的攻勢做好了準備"
         $ mc.hp += 10
@@ -106,3 +112,4 @@ label healthsheild:
     $ mc.thoughts -= 3
     $ mc_defbufftimmer = 1
     return
+

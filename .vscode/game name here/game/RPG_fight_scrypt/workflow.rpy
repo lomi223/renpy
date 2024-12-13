@@ -173,6 +173,7 @@ label check:
         $ winwin_debuffcd = -1
 
     if winwin_taunt == True:
+        $ wwrelocate = True
         $ winwin_taunt = False
         $ ww_effectamount -= 1
         $ ww_effects.remove("t")
@@ -218,6 +219,14 @@ label initialize:
     $ cantmove = -1
     $ summontimmer = -1
 
+    $ wwrelocate = True
+    $ tseshown = True
+    $ wwshown = True
+    $ prshown = True
+    $ Rhshown = False
+    $ Lhshown = False
+
+
     $ mc_buffed = False
     $ winwin_buffed = False
 
@@ -262,3 +271,7 @@ label initialize:
 
     return
     
+
+
+
+
