@@ -3,13 +3,14 @@ style mytextbutton:
     hover_color "#cde15c"
 style blockedbutton:
     color "#777777"
-
+style GreyText:
+    color "#8d8a8a"
 
 screen mc_attackchoice:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -21,13 +22,15 @@ screen mc_attackchoice:
                 action [ToggleScreen("mc_attackchoice"),ToggleScreen("mc_props")]
             textbutton "休息":
                 text_style "mytextbutton"
-                action [ToggleScreen("mc_attackchoice"),Jump("mcrest")]
+                hovered Show("rest")
+                unhovered Hide("rest")
+                action [ToggleScreen("mc_attackchoice"),Hide("rest"),Jump("mcrest")]
 
 screen mc_abi:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -73,7 +76,7 @@ screen mc_props:
     frame: 
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -83,6 +86,9 @@ screen mc_props:
                     hovered Show("food_desc")
                     unhovered Hide("food_desc")
                     action [SetVariable("jump_label","eat"),Hide("food_desc"),ToggleScreen("mc_props"),ToggleScreen("mc_ChooseCharater")]
+            else:
+                textbutton "（[player]的物品欄空空如也）":
+                    text_style "GreyText"
             textbutton "返回":
                 text_style "mytextbutton"
                 action [ToggleScreen("mc_props"),ToggleScreen("mc_attackchoice")]
@@ -91,7 +97,7 @@ screen mc_ChooseCharater:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -112,7 +118,7 @@ screen choosetarget:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:

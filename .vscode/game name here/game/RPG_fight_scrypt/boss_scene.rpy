@@ -1,10 +1,10 @@
 label boss_fight:
-    
+    default end = False
     $ quick_menu = False
-    scene black:
-        xanchor 0.5
-        yanchor 0.5
-        zoom 5
+    scene boss_scene:
+        xanchor 0.17
+        yanchor 0.30
+        zoom 2
     stop music
     play music "bergentrückung--asgore---epic-orchestral-cover--kāru.mp3" loop fadein 0.5    
     
@@ -18,8 +18,7 @@ label boss_fight:
         subpixel True 
         pos (-1, 0.65) zpos -700.0 
     show pr idle:
-        subpixel True xpos 0.9 ypos 450 zpos -700.0 
-
+        subpixel True xpos 0.9 ypos 450 zpos -700.0
     camera:
         subpixel True zpos 0.0 
     show floor:
@@ -48,7 +47,6 @@ label boss_fight:
     pr "居然能躲過教官們的視線翻出牆外"
     pr "但很可惜"
     pr "你們的旅途到此為止！"
-
     "試著說服校長吧！"
 
     jump the_fight
@@ -58,7 +56,6 @@ label the_fight:
         call check
         call ResetCam
         call Relocate
-
         if mc.hp > 0 and mc_canmove == True:
             "[player]的回合！"
             call tseIdleCam
@@ -66,6 +63,8 @@ label the_fight:
             call mc_attack
         call ResetCam
         call Relocate
+        if principal.hp < 0 or (mc.hp <= 0 and winwin.hp <= 0):
+            jump CheckWL
         if winwin.hp > 0 and winwin_canmove == True:
             "[ww]的回合！"
             call wwIdleCam
@@ -73,18 +72,24 @@ label the_fight:
             call ww_attack
         call ResetCam
         call Relocate
+        if principal.hp < 0 or (mc.hp <= 0 and winwin.hp <= 0):
+            jump CheckWL
         if principal.hp > 0:
             call dice
             "校長的回合！"
             call boss_attack
         call ResetCam
         call Relocate
+        if principal.hp < 0 or (mc.hp <= 0 and winwin.hp <= 0):
+            jump CheckWL
         if Rh.hp > 0:
             call dice
             "右手的回合！"
             call Rh_attack
         call ResetCam
         call Relocate
+        if principal.hp < 0 or (mc.hp <= 0 and winwin.hp <= 0):
+            jump CheckWL
         if Lh.hp > 0:
             call dice
             "左手的回合！"
@@ -92,27 +97,9 @@ label the_fight:
             call Lh_attack
         call ResetCam
         call Relocate
-        $ rd += 1
         if principal.hp < 0 or (mc.hp <= 0 and winwin.hp <= 0):
-            hide screen player_state
-            hide screen enemy_state
-            stop music fadeout 0.3
-            if mc.hp <= 0 and winwin.hp <= 0:
-                jump player_lost
-            if principal.hp < 0 and (mc.hp > 0 and winwin.hp <= 0) or (mc.hp <= 0 and winwin.hp > 0):
-                jump norm_win
-                pr "咳......咳......"
-                $ renpy.pause(3.0, hard=True)
-                pr "我......認可你們"
-                $ renpy.pause(3.0, hard=True)
-
-            if principal.hp < 0 and mc.hp > 0 and winwin.hp > 0:
-                jump perfect_win
-                pr "咳......咳......"
-                $ renpy.pause(3.0, hard=True)
-                pr "我......認可你們"
-                $ renpy.pause(3.0, hard=True)
-    
+            jump CheckWL
+        $ rd += 1
     return
 
 label StateDisplay:
@@ -334,6 +321,10 @@ label prAtkTseCam:
         parallel:
             pos (0.9, 450) 
             linear 0.30 pos (-0.08, 400) 
+    show tse hurt:
+        'tse idle'
+        0.30
+        'tse hurt'
     with Pause(0.90)
     camera:
         subpixel True
@@ -354,6 +345,10 @@ label prAtkWwCam:
             parallel:
                 pos (0.9, 450) 
                 linear 0.30 pos (0.05, 600) zpos -400 
+        show ww hurt:
+            'ww idle'
+            0.30
+            'ww hurt'
     elif winwin_taunt:
         show pr sing_atk:
             subpixel True
@@ -364,6 +359,10 @@ label prAtkWwCam:
             parallel:
                 pos (0.9, 450) 
                 linear 0.30 pos (0.15, 450) zpos -400 
+        show ww hurt:
+            'ww idle'
+            0.30
+            'ww hurt'
     with Pause(0.90)
     camera:
         subpixel True
@@ -405,6 +404,14 @@ label prMulAtkCam:
         parallel:
             xpos 0.9 zpos -700.0 
             linear 0.30 xpos 0.05 zpos -400.0 
+    show ww hurt:
+            'ww idle'
+            0.30
+            'ww hurt'
+    show tse hurt:
+        'tse idle'
+        0.30
+        'tse hurt'
     with Pause(1.75)
     camera:
         subpixel True
@@ -431,12 +438,14 @@ label tseRetreat:
     show tse idle:
         subpixel True
         bop_out_time_warp 0.60 xpos -2000
+    hide tse
     return
 
 label wwRetreat:
     show ww idle:
         subpixel True
         bop_out_time_warp 0.60 xpos -2000
+    hide ww
     return
 
 label LhRetreat:
@@ -445,6 +454,7 @@ label LhRetreat:
         subpixel True  
         bop_out_time_warp 0.60 xpos 3000 
     with Pause(0.70)
+    hide Lh
     return
 
 label ResetCam:
@@ -453,6 +463,8 @@ label ResetCam:
     return
 
 label Relocate:
+    show tse idle
+    show ww idle
     if mc.hp > 0:
         $ tseshown = True
         show tse idle:
@@ -477,3 +489,25 @@ label Relocate:
     elif Lh.hp < 0 and Lhshown:
         $ Lhshown = False
         call LhRetreat
+    return
+
+label CheckWL:
+    hide screen player_state
+    hide screen enemy_state
+    stop music fadeout 0.3
+    if mc.hp <= 0 and winwin.hp <= 0:
+        jump player_lost
+    if principal.hp < 0 and (mc.hp > 0 and winwin.hp <= 0) or (mc.hp <= 0 and winwin.hp > 0):
+        jump norm_win
+        pr "咳......咳......"
+        $ renpy.pause(3.0, hard=True)
+        pr "我......認可你們"
+        $ renpy.pause(3.0, hard=True)
+    if principal.hp < 0 and mc.hp > 0 and winwin.hp > 0:
+        jump perfect_win
+        pr "咳......咳......"
+        $ renpy.pause(3.0, hard=True)
+        pr "我......認可你們"
+        $ renpy.pause(3.0, hard=True)
+    $ end = True
+    return

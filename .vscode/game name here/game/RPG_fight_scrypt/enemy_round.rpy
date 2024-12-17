@@ -153,9 +153,10 @@ label boss_attack:
                 call prMulAtkCam
                 $ atk = d4 + principal.attack*2 
                 if atk - mc.defence > 0:
-                    $ mc.hp -= atk - mc.defence
+                    $ amc = atk - mc.defence
+                    $ mc.hp -= (atk - mc.defence)
                 if atk - winwin.defence > 0:
-                    $ winwin.hp -= atk - winwin.defence
+                    $ winwin.hp -= (atk - winwin.defence)
                 
             else:
                 "未命中"
@@ -277,6 +278,8 @@ label Lh_attack:
     call StateDisplay
     "左手對校長使用了回復"
     $ principal.hp += 5
+    if principal.hp > principal.max_hp:
+        $ principal.hp = principal.max_hp
     return
 
 label choose1:
@@ -335,3 +338,4 @@ label choose2:
             else:
                 $ selected_player = 1
     return 
+    

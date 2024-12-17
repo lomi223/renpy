@@ -112,4 +112,3 @@ label healthsheild:
     $ mc.thoughts -= 3
     $ mc_defbufftimmer = 1
     return
-

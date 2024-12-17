@@ -123,7 +123,7 @@ label wwab4:
         $ boss_effects.append("nd")
         return
     
-    if d10 > 3:
+    if d10 > 2:
         "對方的心理防線受到勝勝影響"
         $ principal.defence -= 2
         $ winwin_defdebufftimmer = 3
@@ -140,7 +140,7 @@ label wwab4:
         $ boss_effects.append("rd")
         return
 
-    if d10 <= 3:
+    if d10 <= 2:
         "勝勝的話語意外地激怒了對方！"
         $ principal.attack += 2
         $ Rh.attack += 2

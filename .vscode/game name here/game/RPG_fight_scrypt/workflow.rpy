@@ -196,7 +196,7 @@ label initialize:
 
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
     $ mc = fighter("[player]", 50, 50, 30, 30, 8, 8, 3, 3)
-    $ winwin = fighter("[ww]", 70, 70, 10, 10, 10, 10, 5, 5)
+    $ winwin = fighter("[ww]", 70, 70, 10, 10, 10, 10, 7, 7)
     $ principal = fighter("校長", 125, 125, 50, 50, 5, 5, 8, 8)
     $ Rh = fighter("右手", 15, 0, 5, 5, 0, 0, 20, 20)
     $ Lh = fighter("左手", 15, 0, 5, 5, 10, 10, 0, 0)
