@@ -95,6 +95,7 @@ label w_soccer:
         xalign 0.5
         linear 1 xalign 0.85
     "仔細一看，勝勝正快速地在球場上穿梭"
+    play sound "SFX/cheering.mp3" noloop volume 0.3
     player "對面選手的有穿學校球衣，應該都是高年級吧？"
     "儘管對手是高年級，勝勝仍不落下風"
     "他敏捷的動作令所有人為之驚嘆，精準的傳球驚詫了周邊的所有人"
@@ -109,6 +110,8 @@ label w_soccer:
             linear 0.5 xalign 0.5
         parallel:
             linear 1 rotate 360
+    play sound "SFX/ball_kick.mp3" noloop volume 0.8
+    play sound "SFX/cheering_2.mp3" noloop volume 1
     "完美的倒鉤！全場立刻爆發出歡呼聲"
     player "勝勝！太帥了！"
     "勝勝聽見你的聲音，眼神立即與你對上"
@@ -145,6 +148,7 @@ label w_soccer:
         ypos 1.75
         linear 0.5 xalign -0.5
     "飛身向前、為你擋住了天外飛來的排球"
+    play sound "SFX/ball_kick.mp3" noloop volume 0.3
     show strong_guy with dissolve:
         zoom 3
         yalign 1.5
@@ -318,6 +322,7 @@ label w_soccer:
             linear 1 rotate 360
     "看起來有些滑稽，但你知道，這些動作絕不是簡簡單單能辦到的"
     w "[player]還有一些時間，你要來體驗一下足球嗎？"
+    play music "flower_dance.mp3" loop volume 0.5
     menu:
         "打！肯定打！":
             w "這就對了！"
@@ -372,6 +377,7 @@ label w_soccer:
             jump choose_scene
 
 label a_reading:
+    play music "Holiday.mp3" loop volume 0.5
     scene stair with dissolve:
         zoom 2.55   
         ypos -0.21    
@@ -517,6 +523,7 @@ label a_reading:
         ypos -216
     "你們之間的火熱氣氛漸漸趨緩，兩人都沒有要開口的意思，而此時…… "
     a "那個，[player]，你要不要來看看這本書，我覺得你可能會喜歡。"
+    play music "AIR_poem_of_birds.mp3" loop volume 0.5
     "Alex坐回木桌，輕輕向你招手。"
     "潔白的窗簾被風吹得輕輕晃動，陽光灑在Alex的臉龐上"
     "「那是天使吧？」你在心中這麼呼喊著"
@@ -599,6 +606,7 @@ label a_reading:
             jump choose_scene
 
 label s_cat:
+    play music "Hotel.mp3" loop volume 0.5
     scene hallway with dissolve
     "你遊蕩在走廊上，漫無目的地在校園中走著"  
     "時而經過社團教室，悠揚的樂音傳入你的耳中" 
@@ -613,6 +621,11 @@ label s_cat:
         zoom 0.25 
         xpos 252 
         ypos 72
+    show cat with dissolve:
+        zoom 1.72
+        xpos 0.53 
+        ypos 0.61
+    play sound "SFX/cat_meow.mp3" noloop volume 0.3
     "碩碩與一隻黑貓正在互相喵喵叫著"
     "碩碩似乎還沒注意到你"
     "應該要怎麼辦？"
@@ -622,6 +635,7 @@ label s_cat:
             s "喵喵喵？喵喵！"
             "可不知怎地，貓咪的眼神竟飄到了你身上"
             "碩碩向後一看"
+            hide cat
             show s sad with dissolve:
                 zoom 0.25 
                 xpos 603 
@@ -637,9 +651,11 @@ label s_cat:
                 ypos 72
         "跟著一起喵喵叫":
             "碩碩背對著你，他嬌小的身軀蹲在了涼亭欄杆旁邊、與貓咪激烈對話著"
+            play sound "SFX/cat_meow.mp3" noloop volume 0.3
             player "喵……喵？"
             "真是一隻蒼老的貓咪"
             "碩碩向後一看"
+            hide cat
             show s sad with dissolve:
                 zoom 0.25 
                 xpos 603 
@@ -668,6 +684,7 @@ label s_cat:
     scene sport_field with Fade(0.5,1.0,0.5):
         zoom 2.70
     "你們先來到了操場，越靠近運動場，人漸漸多了起來"
+    play sound "SFX/crowd_noise.mp3" noloop volume 0.5
     show tall_guy with dissolve:
         yalign 1.5
         xalign 0.5
@@ -724,6 +741,8 @@ label s_cat:
         zoom 0.26
         xpos 558 
         ypos 72
+    stop sound
+    play music "Memory.mp3" loop volume 0.5
     "你們遊蕩在校園的各處，陽光灑落走廊，時空彷彿凝結在此刻"
     "遠方的人聲被你們的腳步聲所覆蓋，只得隱隱地傳到教學樓來"
     "你們之間的距離十分曖昧，你稍微瞄了碩碩一眼。"
@@ -792,11 +811,17 @@ label s_cat:
             player "見到你，我真的很高興，碩碩。"
             "你們就這麼看著彼此的雙眼，持續了好一陣子。"
             "此時"
+            play sound "SFX/cat_meow.mp3" noloop volume 0.3 
             "喵——喵嗚"
             show s shy with dissolve:
                 zoom 0.25 
-                xpos 603 
+                xpos 252 
                 ypos 72
+            show cat with dissolve:
+                zoom 1.72
+                xpos 0.53 
+                ypos 0.61
+            
             s "！？"
             player"！出現了！"
             "貓咪再次出現在你們眼前，就在離你一隻手臂不到的距離"
@@ -808,8 +833,11 @@ label s_cat:
                 xpos 603 
                 ypos 72
             "你與碩碩相視一笑，度過了一段悠閒的時光"
+            "你們相談了許久"
+            "回憶起許多之前的事情"
+            "此刻你感到無比安心"            
             $ s_love += 1
-            player "時間不早了，下次見！"
+            player "啊！時間不早了，我得走了！"
             s "嗯，掰掰。"
             $ day2_count += 1
             $ go_around_reacted = 1
@@ -819,12 +847,18 @@ label s_cat:
         "就這麼看著":
             "你不知道該說些甚麼，就這麼看著碩碩"
             "此時"
+            play sound "SFX/cat_meow.mp3" noloop volume 0.3
             "喵——喵嗚"
             s "！？"
             show s shy with dissolve:
                 zoom 0.25 
-                xpos 603 
+                xpos 252 
                 ypos 72
+            show cat with dissolve:
+                zoom 1.72
+                xpos 0.53 
+                ypos 0.61
+            
             player"！出現了！"
             "貓咪再次出現在你們眼前，就在離你一隻手臂不到的距離"
             s "趁……趁現在！"
@@ -835,7 +869,11 @@ label s_cat:
                 xpos 603 
                 ypos 72
             "你與碩碩相視一笑，度過了一段悠閒的時光"
-            player "時間不早了，下次見！"
+            "你與碩碩相視一笑，度過了一段悠閒的時光"
+            "你們相談了許久"
+            "回憶起許多之前的事情"
+            "此刻你感到無比安心" 
+            player "啊！時間不早了，我得走了！"
             s "嗯，掰掰。"
             $ day2_count += 1
             $ go_around_reacted = 1
