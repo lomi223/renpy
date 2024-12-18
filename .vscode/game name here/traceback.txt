@@ -1,23 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/act2.rpy", line 432, in script
-    jump act3
-ScriptError: could not find label 'act3'.
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 138, in script call
+    call shareice_version
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 178, in script
+    show w shy at bottom
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 178, in <module>
+    show w shy at bottom
+NameError: name 'bottom' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/act2.rpy", line 432, in script
-    jump act3
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'act3'.
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 138, in script call
+    call shareice_version
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 178, in script
+    show w shy at bottom
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/RPG_fight_scrypt/WWD3.rpy", line 178, in <module>
+    show w shy at bottom
+NameError: name 'bottom' is not defined
 
 macOS-12.5-arm64-arm-64bit arm64
 Ren'Py 8.3.3.24111502
 Doki Doki
 Fixed     1.0
-Tue Dec 17 18:31:42 2024
+Thu Dec 19 00:03:24 2024

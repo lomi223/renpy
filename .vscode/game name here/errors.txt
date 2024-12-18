@@ -2,22 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/act4.rpy", line 192: expected statement.
-    for ingredient in ingredients:
-                   ^
-
-File "game/act4_cookie_making.rpy", line 6: 'size' is not a keyword argument or valid child of the frame statement.
-    size (400, 400)
-        ^
+File "game/RPG_fight_scrypt/WWD3.rpy", line 181: expected statement.
+    zoom 0.3
+          ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Dec 12 14:44:25 2024
-=======
-File "game/act2.rpy", line 695: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    hide weak_guy with dissolve
-    ^
-
-Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Dec 18 20:10:52 2024
->>>>>>> 92d562985c4c39deed9f86e3b22e44c10e4b0ee7
+Thu Dec 19 00:02:56 2024

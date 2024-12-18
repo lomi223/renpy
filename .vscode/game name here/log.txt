@@ -1,15 +1,15 @@
-2024-12-17 10:21:11 UTC
+2024-12-18 23:39:49 UTC
 macOS-12.5-arm64-arm-64bit
 Ren'Py 8.3.3.24111502
 
 Early init took 0.04s
 Loading error handling took 0.03s
-Loading script took 0.12s
+Loading script took 0.30s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.03s
+Running init code took 0.04s
 Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
+Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
 Dump and make backups took 0.03s
@@ -24,11 +24,11 @@ Build styles took 0.00s
 Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.19s
+Interface start took 1.50s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -38,36 +38,8 @@ Vendor: "b'Apple'"
 Renderer: b'Apple M1'
 Version: b'2.1 Metal - 76.3'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 797) drawable=(2880, 1594)
+Screen sizes: virtual=(1920, 1080) physical=(1440, 798) drawable=(2880, 1596)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
-Screen sizes: virtual=(1920, 1080) physical=(1440, 797) drawable=(2880, 1594)
+Screen sizes: virtual=(1920, 1080) physical=(1440, 798) drawable=(2880, 1596)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-
-Full traceback:
-  File "game/act2.rpy", line 432, in script
-    jump act3
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'act3'.
-
-While running game code:
-  File "game/act2.rpy", line 432, in script
-    jump act3
-ScriptError: could not find label 'act3'.

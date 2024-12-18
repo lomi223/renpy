@@ -14,8 +14,8 @@ label WW_icefeast:
     scene Wall with dissolve
     "走到牆邊，勝勝在向你招手" 
     show w norm with dissolve:
-        zoom 0.6
-        yalign 1.5
+        zoom 0.9
+        yalign 1.2
         xalign 0.5
 
     w "總算等到你了，幹什麼事情拖那麼久"
@@ -46,10 +46,10 @@ label WW_icefeast:
     
     player "真令人著迷啊，牆外的世界"
     player "牆的另一端，是敵..."
-    show w norm with dissolve:
-        zoom 0.6
-        yalign 2
-        xalign 1
+    show w norm with moveinleft:
+        zoom 0.9
+        yalign 1.0
+        xalign 0.2
     w "別廢話，動身去冰店吧！"
     scene black with dissolve
     
@@ -175,6 +175,9 @@ label shareice_version:
     "他看起來有什麼話要說"
     w "呃..."
     w "[player]"
+    hide w
+    show w mad with moveinbottom
+    pause (1.0)
     w "啊--"
     "..."
     player "（含）"
