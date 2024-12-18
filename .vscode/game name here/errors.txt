@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
-    if Showing == "a"
-                     ^
+File "game/act2.rpy", line 695: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    hide weak_guy with dissolve
+    ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 12:43:36 2024
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Wed Dec 18 20:10:52 2024
