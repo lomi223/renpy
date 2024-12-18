@@ -266,7 +266,23 @@ label initialize:
 
     return
     
-
-
-
-
+label CheckWL:
+    hide screen player_state
+    hide screen enemy_state
+    stop music fadeout 0.3
+    if mc.hp <= 0 and winwin.hp <= 0:
+        jump player_lost
+    if principal.hp < 0 and (mc.hp > 0 and winwin.hp <= 0) or (mc.hp <= 0 and winwin.hp > 0):
+        jump norm_win
+        pr "咳......咳......"
+        $ renpy.pause(3.0, hard=True)
+        pr "我......認可你們"
+        $ renpy.pause(3.0, hard=True)
+    if principal.hp < 0 and mc.hp > 0 and winwin.hp > 0:
+        jump perfect_win
+        pr "咳......咳......"
+        $ renpy.pause(3.0, hard=True)
+        pr "我......認可你們"
+        $ renpy.pause(3.0, hard=True)
+    $ end = True
+    return

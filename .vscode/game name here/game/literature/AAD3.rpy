@@ -1,6 +1,94 @@
 label AAD3:
+    stop music
     scene black with dissolve
-    
+    centered "第三日的早晨 你在進教室前遇到了......"
+    scene staircase with dissolve
+    play music "snowdin-town.mp3"
+    show a norm with dissolve:
+        xalign 0.5
+        yalign 0.5
+        zoom 0.4
+    a "早上好，[player]"
+    player "早上好啊，[aa]......"
+    player "（他真的好美阿......）"
+    "[player]的心臟撲通撲通地跳著"
+    show a noticed
+    a "那個，你想和我去文學部看看嗎？"
+    a "聽說他們今天有展覽"
+    player "！？"
+    a "要嗎？"
+    menu:
+        "去！":
+            pass
+        "必須得去！！！":
+            pass
+    show a happy
+    a "那太好了，我們走吧"
+
+    jump LiteratureClub
+
+label LiteratureClub:
+    scene classroom with Fade(0.5,0.1,0.5)
+    player "這裡就是文學部嗎？"
+    player "看起來跟我們的教室一模一樣"
+    show monika 1 with dissolve
+    monika "早上好呀！兩位客人{nw}"
+    show monika 1d
+    pause 0.5
+    show monika 5
+    monika "看來是兩位十分特別的客人呢！"
+    monika "歡迎二位來到文學部"
+    show monika 2
+    monika "請問二位是來做甚麼的呢？"
+    show monika 2:
+        subpixel True
+        linear 0.3 pos (0.65, 1.0)
+    show a norm:
+        subpixel True
+        zoom 0.4
+        pos (-0.65, -0.25) zpos -300 
+        linear 0.3 pos (-0.05, -0.25) zpos -300 yrotate 18.0
+    a "我們來體驗寫詩的"
+    show monika 1
+    monika "這樣啊"
+    show monika 2
+    monika "那這本單字書先給你們用"
+    show monika 2j
+    monika "我很期待你們的創作喔！"
+    show monika 1
+    monika "對了，[player]你過來一下"
+    show a norm:
+        subpixel True
+        zoom 0.4
+        linear 0.3 pos (-0.65, -0.25) zpos -300 yrotate 18.0
+    show monika 1:
+        subpixel True
+        linear 0.3 pos (0.5, 1.0)
+    monika "這個給你"
+    $ renpy.notify("gift recieved")
+    python:
+        import os
+        import platform
+
+        system_name = platform.system()
+        text = "左上為上，右上為右；\n左下為左，右下為下；\n四十步路，步步不回；\n終點就在前方。"
+        
+        if system_name == "Windows":
+            folder_path = f"C:\\Users\\{real_name}\\Desktop\\GiftForYou;)"
+        else:
+            folder_path = f"/home/{real_name}/example_folder"
+
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+        file_name = os.path.join(folder_path, "hint.txt")
+        with open(file_name, "w") as file:
+            file.write(text)
+
+    player "？"
+    monika "你說不定會用到"
+    show monika 5
+    monika "祝你好運，[real_name]{nw}"
+
     jump poem
 
 label monikas:

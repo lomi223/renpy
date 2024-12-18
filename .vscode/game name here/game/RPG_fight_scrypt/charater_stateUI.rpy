@@ -87,14 +87,12 @@ screen enemy_state:
                     vbox:
                         text "%s" % Rh.name
                         text "HP"
-                        text "TP"
                         text "def"
                         text "atk"
                     
                     vbox:
                         text ""
                         text "%d / %d" % (Rh.hp , Rh.max_hp)
-                        text "%d / %d" % (Rh.thoughts , Rh.max_thoughts)
                         text "%d" % Rh.defence
                         text "%d" % Rh.attack
         elif Lh.hp > 0:
@@ -106,14 +104,12 @@ screen enemy_state:
                     vbox:
                         text "%s" % Lh.name
                         text "HP"
-                        text "TP"
                         text "def"
                         text "atk"
                     
                     vbox:
                         text ""
                         text "%d / %d" % (Lh.hp , Lh.max_hp)
-                        text "%d / %d" % (Lh.thoughts , Lh.max_thoughts)
                         text "%d" % Lh.defence
                         text "%d" % Lh.attack
         else:
@@ -127,14 +123,12 @@ screen enemy_state:
                     vbox:
                         text "%s" % principal.name
                         text "HP"
-                        text "TP"
                         text "def"
                         text "atk"
                     
                     vbox:
                         text ""
                         text "%d / %d" % (principal.hp , principal.max_hp)
-                        text "%d / %d" % (principal.thoughts , principal.max_thoughts)
                         text "%d" % principal.defence
                         text "%d" % principal.attack
         else:

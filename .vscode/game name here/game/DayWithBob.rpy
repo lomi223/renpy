@@ -1,7 +1,4 @@
 label bob_and_me:
-    python:
-        import os
-        real_name = os.getlogin()
     define rp = Character("[real_name]")
     scene black with dissolve
     centered "八月的尾聲即將到來，即將邁入秋色的風似乎更加喧囂了。青澀的少年渴望抓住夏天的尾巴、為青春開啟美好的篇章。" with fade

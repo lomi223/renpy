@@ -1,4 +1,7 @@
 label splashscreen:
+    python:
+        import os
+        real_name = os.getlogin()
     if not persistent.agreed:
         scene starting_image
         "This game is not suitable for children who are easily disturbed."

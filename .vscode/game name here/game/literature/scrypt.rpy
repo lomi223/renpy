@@ -1,11 +1,14 @@
 label poem:
+    play music "03-dreams-of-love-and-literature.mp3"
     scene notebook with dissolve
+    player "來寫一些和[aa]有關的東西吧！"
     $ points = 0
     jump show_words
     return
 
 label show_words:
     if curr_words < 40:
+        show screen pages
         call screen words
     else:
         jump finished
@@ -108,6 +111,14 @@ screen words:
                         text_style "AlexButt"
                         action [SetVariable("points", points + 1), SetVariable("curr_words", curr_words + 1), Jump("show_words")]
                 
+screen pages:
+    hbox:
+        xalign 0.65
+        yalign 0.15
+        if (curr_words + 1) <= 40:
+            textbutton "%d/40" % (curr_words + 1):
+                text_style "AlexButt"
+                action NullAction()
 
 style AlexButt:
     color "#000000ff"
