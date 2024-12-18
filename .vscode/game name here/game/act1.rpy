@@ -63,7 +63,6 @@ label w_wall:
     player "糟了！"
     player "現在進去肯定會被抓"
     show w norm with dissolve:
-        zoom 0.6
         yalign 1.5
         xalign 0.5
     

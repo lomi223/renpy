@@ -14,7 +14,7 @@ label BOBD3:
         xalign 0.0
         yalign 1.0
         linear 0.3 xalign 0.35
-    s "你再說甚麼呢？"
+    s "你在說甚麼呢？"
     s "[player]已經跟我約好要一起玩了"
     show s norm
     s "對吧，[player]"

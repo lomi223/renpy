@@ -1,6 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "renpy/common/00keymap.rpy", line 504, in script
     python hide:
   File "renpy/common/00keymap.rpy", line 504, in <module>
@@ -8,10 +9,16 @@ While running game code:
   File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
     renpy.save("_reload-1", "reload save game")
 TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
+=======
+  File "game/act2.rpy", line 432, in script
+    jump act3
+ScriptError: could not find label 'act3'.
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "renpy/common/00keymap.rpy", line 504, in script
     python hide:
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
@@ -30,9 +37,22 @@ Full traceback:
   File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
     pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
 TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
+=======
+  File "game/act2.rpy", line 432, in script
+    jump act3
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'act3'.
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 
-Windows-10-10.0.22621 AMD64
-Ren'Py 8.3.2.24090902
+macOS-12.5-arm64-arm-64bit arm64
+Ren'Py 8.3.3.24111502
 Doki Doki
 Fixed     1.0
+<<<<<<< HEAD
 Thu Dec 19 00:12:49 2024
+=======
+Tue Dec 17 18:31:42 2024
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289

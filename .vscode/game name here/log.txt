@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-12-18 16:05:02 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
@@ -106,11 +107,26 @@ Running init code took 0.04s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.02s
 Reloading save slot metadata took 0.02s
+=======
+2024-12-17 10:21:11 UTC
+macOS-12.5-arm64-arm-64bit
+Ren'Py 8.3.3.24111502
+
+Early init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\USER\\AppData\\Roaming/RenPy/backups\\game name here':
-Dump and make backups took 0.06s
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
+<<<<<<< HEAD
 Initial gc took 0.11s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
@@ -501,17 +517,32 @@ Save screen analysis took 0.04s
 Prepare screens took 0.14s
 Save pyanalysis. took 0.04s
 Save bytecode. took 0.02s
+=======
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 Running _start took 0.00s
 Interface start took 0.19s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 566.03'
+Vendor: "b'Apple'"
+Renderer: b'Apple M1'
+Version: b'2.1 Metal - 76.3'
 Display Info: None
+<<<<<<< HEAD
 Screen sizes: virtual=(1920, 1080) physical=(1858, 1045) drawable=(1858, 1045)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
@@ -1576,9 +1607,17 @@ DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.22s
+=======
+Screen sizes: virtual=(1920, 1080) physical=(1440, 797) drawable=(2880, 1594)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1440, 797) drawable=(2880, 1594)
+Maximum texture size: 4096x4096
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 Cleaning stores took 0.00s
-Init translation took 0.08s
+Init translation took 0.00s
 Build styles took 0.00s
+<<<<<<< HEAD
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
 Save screen analysis took 0.04s
@@ -2108,3 +2147,30 @@ Load screen analysis took 0.05s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+=======
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "game/act2.rpy", line 432, in script
+    jump act3
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'act3'.
+
+While running game code:
+  File "game/act2.rpy", line 432, in script
+    jump act3
+ScriptError: could not find label 'act3'.
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289

@@ -27,7 +27,8 @@ label bob_and_me:
     scene classroom with dissolve 
     play sound "SFX/door_knock.mp3" noloop
     pause 1.0
-    show b norm with dissolve
+    show bob norm with dissolve:
+        zoom 0.25
     b "早安啊！[real_name]"
     rp "是你啊，bob{nw=0.3}"
     rp "是你啊，bob{fast}，其他人在......{nw}"
