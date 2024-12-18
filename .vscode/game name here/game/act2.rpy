@@ -184,9 +184,122 @@ label w_soccer:
     hide weak_guy with dissolve
     "你們漫步在運動場上，有時被勝勝拉走、去看看一些有趣的攤子"
     "有時只是單純聊著天"
+    scene soccer_field with Fade(0.5,1.0,0.5):
+        zoom 1.5
+    show w norm_2 with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.55
     "你們最後坐在了足球場旁的板凳上，這時，勝勝不知從哪裡搞來了一顆足球"
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.41
+        xpos 937
     "他將球頂在頭上，秀著一些你看不懂的技巧與招式"
+    hide soccer
+    show w norm_2 with dissolve:
+        zoom 0.25
+        rotate 0
+        parallel:
+            linear 0.5 yalign 1.5
+        parallel:
+            linear 0.5 ypos 1.75
+        parallel:
+            linear 0.5 xalign 0.5
+        parallel:
+            linear 1 rotate 360
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.78
+        xpos 955
+        linear 0.2 xpos 2071
+    show w norm_2 with dissolve:
+        rotate 0
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75
+        linear 0.2 xpos 0.85
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.78
+        xpos 2071
+        linear 0.2 xpos -116
+    show w norm_2 with dissolve:
+        rotate 270
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        xpos 0.75
+        ypos 2.00
+        linear 0.1 ypos 1.35
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.78
+        xpos -116
+        linear 0.2 xpos 2071
+    show w norm_2 with dissolve:
+        rotate 180
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        xpos 0.9
+        ypos 1.3
+        linear 0.2 xpos 0.1
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.78
+        xpos 2071
+        linear 0.2 xpos -116
+    show w norm_2 with dissolve:
+        rotate 90
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        xpos 0.1
+        ypos 1.33
+        linear 0.1 ypos 2.0
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.78
+        xpos -116
+        linear 0.2 xpos 2071
+    show w norm_2 with dissolve:
+        zoom 0.25
+        rotate 0
+        parallel:
+            linear 0.5 yalign 1.5
+        parallel:
+            linear 0.5 ypos 1.75
+        parallel:
+            linear 0.5 xalign 0.5
+        parallel:
+            linear 1 rotate 360
+    show soccer with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 0.41
+        xpos 937
+    
+    
+
+
     "看起來有些滑稽，但你知道，這些動作絕不是簡簡單單能辦到的"
+
     w "[player]還有一些時間，你要來體驗一下足球嗎？"
     menu:
         "打！肯定打！":
