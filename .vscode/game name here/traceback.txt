@@ -1,87 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
-    "[ww]的回合！"
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
-    grid 2 2:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
-    if mc.hp > 0:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
-    grid mc_effectamount 1 :
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
-    for i in mc_effects:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
-    unhovered Hide("efdesc", Showing = "")
-TypeError: __init__() got an unexpected keyword argument 'Showing'
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/RPG_fight_scrypt/boss_scene.rpy", line 34, in script
-    "[ww]的回合！"
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 2, in execute
-    screen player_state:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 3, in execute
-    grid 2 2:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 47, in execute
-    if mc.hp > 0:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 48, in execute
-    grid mc_effectamount 1 :
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 52, in execute
-    for i in mc_effects:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in execute
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 53, in keywords
-    imagebutton:
-  File "game/RPG_fight_scrypt/charater_stateUI.rpy", line 56, in <module>
-    unhovered Hide("efdesc", Showing = "")
-TypeError: __init__() got an unexpected keyword argument 'Showing'
+  File "renpy/common/00keymap.rpy", line 504, in script
+    python hide:
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 504, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 436, in save
+    reraise(t, e, tb)
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 417, in save
+    dump((roots, renpy.game.log), logf)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
+    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
+TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 Doki Doki
 Fixed     1.0
-Wed Dec 11 12:45:54 2024
+Thu Dec 19 00:12:49 2024

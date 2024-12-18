@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/RPG_fight_scrypt/descs.rpy", line 90: reached end of line when expecting ':'.
-    if Showing == "a"
-                     ^
+File "game/literature/scrypt.rpy", line 114: 'hbos' is not a keyword argument or valid child of the screen statement.
+    hbos:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec 11 12:43:36 2024
+Thu Dec 19 00:14:21 2024

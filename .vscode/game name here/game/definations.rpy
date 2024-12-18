@@ -54,20 +54,23 @@ image icestore = "scene/icestore.png"
 image notebook:
     "scene/notebook.png"
     zoom 1.5
-
 image static:
     "scene/static.jpg"
     zoom 3.5
 image starting_image:
     "statinimg.jpg"
     zoom 2.8
+image staircase:
+    "scene/vendingmachine.png"
+    zoom 1.5
+
 image CG_a_red = "CGs/a_red.png"
 image CG_a_blue = "CGs/a_blue.png"
 image CG_a_yellow = "CGs/a_yellow.png"
 image CG_a_green = "CGs/a_green.png"
 image CG_a_orange = "CGs/a_orange.png"
 image CG_a_indigo = "CGs/a_indigo.png"
- 
+
 image CG_b_red = "CGs/b_red.png"
 image CG_b_blue = "CGs/b_blue.png"
 image CG_b_yellow = "CGs/b_yellow.png"
