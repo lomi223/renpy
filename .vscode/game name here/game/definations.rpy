@@ -48,6 +48,7 @@ image soccer = "soccer_ball.png"
 image bench = "scene/bench.jpg"
 image corner = "scene/corner.jpg"
 image library = "scene/library.jpg"
+image library_2 = "scene/library_2.jpg"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
 image notebook:

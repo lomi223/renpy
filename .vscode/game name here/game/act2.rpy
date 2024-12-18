@@ -56,7 +56,8 @@ label morning:
     player "我也去逛逛學校好了。"
 
 label choose_scene:
-    scene classroom
+    play music "snowdin-town.mp3" loop volume 0.5
+    scene classroom with dissolve
     if day2_count == 2:
         "時間很晚了，充實的一天也這麼結束了。"
         jump day2_night
@@ -123,12 +124,17 @@ label w_soccer:
         "還不賴。":
             w "謝啦。"
             w "以後有機會也來踢球吧。"
+    show w chill with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
+        ypos 1.75        
+    "勝勝換上了日常服裝，你們在操場上閒聊著"
     show w norm_2 with dissolve:
         zoom 0.25
         yalign 1.5
         xalign 0.5
         ypos 1.75
-    "勝勝換上了日常服裝，你們在操場上閒聊著"
     "你們之間的話題不斷，大部分是有關運動的"
     "還有肌肉、女僕跟電動"
     "談話間，勝勝突然拉著你往旁邊一步"
@@ -217,7 +223,7 @@ label w_soccer:
         xalign 0.5
         ypos 0.78
         xpos 955
-        linear 0.2 xpos 2071
+        linear 0.3 xpos 2071
     show w norm_2 with dissolve:
         rotate 0
         zoom 0.25
@@ -231,7 +237,7 @@ label w_soccer:
         xalign 0.5
         ypos 0.78
         xpos 2071
-        linear 0.2 xpos -116
+        linear 0.3 xpos -116
     show w norm_2 with dissolve:
         rotate 270
         zoom 0.25
@@ -246,7 +252,7 @@ label w_soccer:
         xalign 0.5
         ypos 0.78
         xpos -116
-        linear 0.2 xpos 2071
+        linear 0.3 xpos 2071
     show w norm_2 with dissolve:
         rotate 180
         zoom 0.25
@@ -261,7 +267,7 @@ label w_soccer:
         xalign 0.5
         ypos 0.78
         xpos 2071
-        linear 0.2 xpos -116
+        linear 0.3 xpos -116
     show w norm_2 with dissolve:
         rotate 90
         zoom 0.25
@@ -276,7 +282,7 @@ label w_soccer:
         xalign 0.5
         ypos 0.78
         xpos -116
-        linear 0.2 xpos 2071
+        linear 0.3 xpos 2071
     show w norm_2 with dissolve:
         zoom 0.25
         rotate 0
@@ -292,38 +298,58 @@ label w_soccer:
         zoom 0.25
         yalign 1.5
         xalign 0.5
-        ypos 0.41
-        xpos 937
-    
-    
-
-
+        parallel:
+            linear 0.5 ypos 0.48
+        parallel:
+            linear 0.5 xpos 937
+        parallel:
+            linear 1 rotate 360
     "看起來有些滑稽，但你知道，這些動作絕不是簡簡單單能辦到的"
-
     w "[player]還有一些時間，你要來體驗一下足球嗎？"
     menu:
         "打！肯定打！":
             w "這就對了！"
             "勝勝將你一把拉起，興高采烈地跟你介紹起了簡單的動作與腳法"
             "你有些不適應，但勝勝耐心地在一旁指導你"
+            hide soccer with dissolve
             "過了一段時間，你也開始能夠做出基本的踢、傳球了"
             "你與勝勝在炎熱的太陽下踢著球"
             "彷彿忽視了旁人"
             "世界好像只剩下你們兩人"
+            scene black with dissolve
+            centered "經費不足，所以沒有cg"
+            scene bench with dissolve:
+                zoom 2.5
             "不知過了多久，你們兩個都累壞了"
             "你坐在板凳上喘著氣，此時勝勝向你遞來了飲料"
+            show w norm_2 with dissolve:
+                zoom 0.4
+                yalign 1.5
+                xalign 0.5
+                ypos 2.25
             w "我喝過了，你用倒的吧"
             player "沒事，我不介意"
             "你們兩人坐在球場旁，就著麼看著場上的運動員們"
             "勝勝的肌膚輕貼著你，你沒有開口說話"
-            "就著麼持續著好一陣子"
+            "你們保持著曖昧的距離，就這麼持續著好一陣子"
             w "時間差不多了，我得去找球隊朋友吃飯！"
+            "勝勝撇過頭去，你卻能清楚地看見他泛紅的臉頰"
+            show w shy with dissolve:
+                zoom 0.4
+                yalign 1.5
+                xalign 0.5
+                ypos 2.25
             player "嗯！路上小心，掰掰！"
             $ w_love += 1
             $ day2_count += 1
             $ sportfield_reacted = 1
             jump choose_scene
         "先不要……":
+            show w mad with dissolve:
+                zoom 0.4
+                yalign 1.5
+                xalign 0.5
+                ypos 2.25
             w "……好吧，以後有機會也是可以。"
             player "嗯。"
             "你們之間的氣氛變得有些尷尬"
@@ -334,16 +360,29 @@ label w_soccer:
             jump choose_scene
 
 label a_reading:
+    scene stair with dissolve:
+        zoom 2.55   
+        ypos -0.21    
     "你來到了另一棟教學大樓"
     "這裡大部分是社團教室、老師辦公室"
     "也許是新生歡迎活動的緣故，這裡的人非常少"
     "一陣風吹過，微風挾帶著花瓣迎面而來"
     "帶來一股清新的香氣，這讓你想到了Alex"
+    scene hallway with dissolve
     "這時，你注意到了一間門打開的教室"
     "上頭的牌子寫著「圖書室」"
     "你好奇地往裡頭走去"
+    scene library with dissolve:
+        zoom 2.55  
+        ypos -0.21
     "進入了一個由書香與文藝氣息充斥的空間，你的心情似乎寧靜了下來"
     "又一股風吹過，你向前一看，那柔順的秀髮飄逸著、熟悉的莓果香氣再次出現"
+    scene library_2 with dissolve:
+        zoom 2.8
+        ypos -522
+    show a reading with dissolve:
+        zoom 0.33
+        xpos 486
     "是Alex，他端正地坐在窗戶旁的那木桌旁"
     "他的裙襬微微被風吹地搖動，你被他的美貌驚詫到了"
     "他正專注地看著手上的書，似乎沒注意到你的到來"
@@ -351,11 +390,27 @@ label a_reading:
     menu:
         "先靜靜地等著，不要打斷他" :
             "你就這麼靜靜地看著，你在這裡觀察到了他不同於平時的表情"
+            show a happy with dissolve:
+                zoom 0.33
+                xpos 486
+                ypos -216
             "他時而抿起嘴、似乎感到憤懣"
+            show a noticed with dissolve:
+                zoom 0.33
+                xpos 486
+                ypos -225
             "又時而露出淺淺地微笑"
             "過了一陣子，他總算暫時停下手邊的動作"
             "他終於注意到了你，一瞬間，他露出了驚訝的表情"
+            show a shocked with dissolve:
+                zoom 0.33
+                xpos 486
+                ypos -225 
             a "啊？"
+            show a norm with dissolve:
+                zoom 0.33
+                xpos 423
+                ypos -216
             if a_tellingname:
                 a "[player]？你怎麼在這裡……不，你不會一直站在那邊看我吧！！"
             else:
@@ -364,11 +419,19 @@ label a_reading:
             player "我想說不要打擾到你……"
             "聽到你這麼說，Alex的表情僵了一下"
             a "噗哧"
+            show a noticed with dissolve:
+                zoom 0.33
+                xpos 486
+                ypos -225
             player "！？"
             a "哈……哈哈哈！"
             "Alex突然笑了起來，他美麗動人的笑容讓你的心跳加速"
             a "你也太可愛了吧！直接叫我不就好了嗎？"
             "你羞紅了臉，有些說不出話來"
+            show a norm with dissolve:
+                zoom 0.33
+                xpos 423
+                ypos -216
             a "不過這邊的劇情的確很精彩，謝謝你啦！"
             if a_tellingname == 0:
                 a "你真有趣！叫我Alex就可以了！"
@@ -386,16 +449,32 @@ label a_reading:
                 "Alex被突然的聲音嚇了一跳"
                 player "啊，不好意思，我還沒自我介紹。"
                 player "我是[player]，請多多指教！"
+                show a noticed with dissolve:
+                    zoom 0.33
+                    xpos 486
+                    ypos -225
                 "Alex深吸了一口氣，臉上綻開了燦爛的微笑。"
                 a "你真有趣！叫我Alex就可以了！"
+                show a norm with dissolve:
+                    zoom 0.33
+                    xpos 423
+                    ypos -216
                 a "話說，你找我有什麼事嗎？"
     player "那本書……是？"
+    show a reading with dissolve:
+        zoom 0.33
+        xpos 486
+        ypos -27
     a "是《喃喃戀愛奇譚》喔，我很喜歡這本書的作者。"
     a "他的作品還有《大綱紅閃耀的鸚鵡》、《鮑勃！！！》"
     a "我特別喜歡後者的其中一篇小說，叫做〈捲乙己〉"
     a "裡面的寓意與巧思很令人驚嘆呢！"
     a "啊啊，記得念《鮑勃！！！》書名的時候要用喊的喔，這是讀者們的共識呢！"
     "Alex滔滔不絕地說著，你努力記住了其中的細節"
+    show a norm with dissolve:
+        zoom 0.33
+        xpos 423
+        ypos -216
     "在一陣資訊轟炸後，Alex停了下來，看著你的眼睛"
     "他似乎在等著你說些什麼"
     menu:
@@ -405,13 +484,25 @@ label a_reading:
             player "雖然沒有完整看過《鮑勃！！！》，但〈捲乙己〉的故事很有名！"
             "在唸出《鮑勃！！！》的時候，你努力地用接近吶喊的方式喊出"
             "Alex摀住了嘴巴，但藏不住他眼中的笑意"
+            show a noticed with dissolve:
+                    zoom 0.33
+                    xpos 486
+                    ypos -225
             a "你該不會都偷偷把我的話記起來了吧？"
             player "這個……不能算偷！讀書人的事，能算偷麼？"
             "Alex終於掩蓋不住笑容，輕聲地笑了起來"
+            show a happy with dissolve:
+                zoom 0.33
+                xpos 486
+                ypos -216
             $ a_love += 1
         "誠實告訴Alex你啥都沒聽懂":
             player "抱歉，其實我沒有全部聽懂"
             a "嗯嗯，沒關係。"
+    show a norm with dissolve:
+        zoom 0.33
+        xpos 423
+        ypos -216
     "你們之間的火熱氣氛漸漸趨緩，兩人都沒有要開口的意思，而此時…… "
     a "那個，[player]，你要不要來看看這本書，我覺得你可能會喜歡。"
     "Alex坐回木桌，輕輕向你招手。"
@@ -420,6 +511,10 @@ label a_reading:
     "而「天使」正在等待你的答覆"
     menu:
         "坐到Alex的旁邊":
+            show a reading with dissolve:
+                zoom 0.47
+                xpos 279
+                ypos -135
             "你戰戰兢兢地坐到了Alex旁邊的位置，他身上的梅果氣味更加明顯了"
             "圖書室很安靜，安靜到你能清楚地聽見Alex的呼吸"
             "心跳聲正在加速，希望Alex不會聽見"
@@ -434,19 +529,34 @@ label a_reading:
             "你意識到不能這樣發呆了，開始加速閱讀《喃喃戀愛奇譚》"
             "這本書是關於一個封閉自己內心多年的男孩的故事"
             "他對班上的一位女孩子心生情愫，卻因為同學的嘲弄與玩笑而隱藏起來"
-            "當他終於鼓起勇氣、像女孩表達了自己的愛意"
+            "當他終於鼓起勇氣、對女孩表達了自己的愛意"
             "卻換來性騷擾警告與社會性死亡"
             "最終被孤立、發誓再也不會喜歡上女生"
             player "（？？？這三小劇情）"
             "此時，一旁隱隱約約傳來啜泣聲，你撇眼一看，Alex的眼淚悄然從臉頰滑落"
+            show cry with dissolve:
+                zoom 0.14
+                ypos 0.33
+                xpos 0.48
             "他的肩膀輕輕依靠著你，他自己卻沒有自覺"
             "你仔細一看，Alex竟靠在你的肩膀上睡著了"
             "你決定不多說什麼，就這麼靜靜地待在他身邊"    
             "這時，你的眼皮也開始沉重了起來……"
+            scene library_2 with Fade(0.5,1.0,0.5):
+                zoom 2.8
+                ypos -522
+            show a reading with dissolve:
+                zoom 0.47
+                xpos 279
+                ypos -135
             "過了一段時間，你終於醒了過來"
             "Alex仍然坐在那邊，翻動著書頁"
             "你的肩膀上卻多出了一件外套"
             player "香香的……"
+            show a happy with dissolve:
+                zoom 0.75
+                xpos -198
+                ypos -738
             a "[player]！你醒了啊！"
             "醒來後迎接你的是Alex美麗動人的微笑"
             a "時間不早囉，也差不多該離開了"
@@ -459,6 +569,10 @@ label a_reading:
             jump choose_scene
 
         "坐到Alex的對面":
+            show a reading with dissolve:
+                zoom 0.27
+                xpos 522
+                ypos 18
             a "啊，那就……"
             "Alex把書轉了一邊，你們一人一邊、扶著書的兩側"
             "圖書室很安靜，安靜到你能清楚地聽見Alex的呼吸"
@@ -600,7 +714,7 @@ label day2_night:
     scene bedroom
     "一天又這麼過去了，好累啊"
     scene black with Fade(1.0,0.0,0.0)
-    jump act3
+    jump D3
 
 
 label bob_morning:
