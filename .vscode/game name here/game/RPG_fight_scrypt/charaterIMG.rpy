@@ -237,6 +237,50 @@ image Rh atk:
     "character/Lhand_Rhand_rpg/Rhand_atk4.png"
     pause 0.25
 
+image pr hurt:
+    "character/boss_rpg/boss_hurt1.png"
+    pause 0.1
+    "character/boss_rpg/boss_hurt2.png"
+    pause 0.1
+    "character/boss_rpg/boss_hurt3.png"
+    pause 0.1
+    "character/boss_rpg/boss_hurt4.png"
+    pause 0.1
+    "character/boss_rpg/boss_hurt5.png"
+    pause 0.1
+
+image Rh hurt:
+    "character/Lhand_Rhand_rpg/Rhand_hurt1.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Rhand_hurt2.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Rhand_hurt3.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Rhand_hurt4.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Rhand_hurt5.png"
+    pause 0.1
+
+image Lh hurt:
+    "character/Lhand_Rhand_rpg/Lhand_hurt1.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Lhand_hurt2.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Lhand_hurt3.png"
+    pause 0.1
+    "character/Lhand_Rhand_rpg/Lhand_hurt4.png"
+    pause 0.1
+
+image pr ban:
+    "character/boss_rpg/boss_ban1.png"
+    pause 0.1
+    "character/boss_rpg/boss_ban2.png"
+    pause 0.1
+    "character/boss_rpg/boss_ban3.png"
+    pause 0.1
+    "character/boss_rpg/boss_ban4.png"
+    pause 0.1
+
 label testshow:
     scene bossroom_floor
     show Rh atk:
