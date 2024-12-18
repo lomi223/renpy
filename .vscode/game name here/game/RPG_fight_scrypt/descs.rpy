@@ -109,3 +109,13 @@ screen efdesc:
             text "ATK-2"
         if Showing == "rt":
             text "每回合TP-3"
+
+screen rest:
+    frame:
+        xpadding 100
+        ypadding 50
+        xalign 0.5
+        yalign 1.0
+        yoffset -10
+        xoffset 20
+        text "休息一回合，回復1TP"

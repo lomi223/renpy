@@ -2,7 +2,7 @@ screen ww_attackchoice:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -14,13 +14,15 @@ screen ww_attackchoice:
                 action [ToggleScreen("ww_attackchoice"),ToggleScreen("ww_props")]
             textbutton "休息":
                 text_style "mytextbutton"
-                action [ToggleScreen("ww_attackchoice"),Jump("wwrest")]
+                hovered Show("rest")
+                unhovered Hide("rest")
+                action [ToggleScreen("ww_attackchoice"),Hide("rest"),Jump("wwrest")]
 
 screen ww_abi:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
@@ -63,10 +65,12 @@ screen ww_props:
     frame:
         xoffset 40
         yoffset -30
-        xpadding 50
+        xpadding 75
         xalign 0.0
         yalign 1.0
         vbox:
+            textbutton "（[ww]的物品欄空空如也）":
+                text_style "GreyText"
             textbutton "返回":
                 text_style "mytextbutton"
                 action [ToggleScreen("ww_props"),ToggleScreen("ww_attackchoice")]

@@ -6,7 +6,7 @@ label boss_attack:
         if summoned == False and rd == 3 and principal.hp > 70:
             $ d100 = 45
         if summoned == False and rd == 3 and principal.hp < 70:
-            $ d100 = 35
+            $ d100 = 36
         if bosseffecttimmer < 0 and (rd == 5 or rd % 10 == 0):
             $ d100 = 11
 
@@ -15,81 +15,97 @@ label boss_attack:
         if selected_player == 1:
             "校長對[player]使用記大過"
             if winwin_bright == False:
-
                 if d20 >= 19:
-                    "效果顯著"
+                    call prAtkTseCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + d6 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "效果顯著"
                     return
                 if d20 >=1:
-                    "成效普通"
+                    call prAtkTseCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 == 1:
+                    play sound "SFX/movie_1_C2K5NH0.mp3"
                     "未命中"
                     return
 
             if winwin_bright == True:
                 if d20 == 20:
-                    "成效普通"
+                    call prAtkTseCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + principal.attack*2 - mc.defence
                     if atk < 0:
                         $ atk = 0
                     $ mc.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 <= 19:
+                    play sound "SFX/movie_1_C2K5NH0.mp3"
                     "未命中"
                     return   
 
         if selected_player == 2:
             "校長對[ww]使用記大過"
             if winwin_bright == False:
-
                 if d20 >= 19:
-                    "效果顯著"
+                    call prAtkWwCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + d6 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "效果顯著"
                     return
                 if d20 >=1:
-                    "成效普通"
+                    call prAtkWwCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 == 1:
+                    play sound "SFX/movie_1_C2K5NH0.mp3"
                     "未命中"
                     return
 
             if winwin_bright == True:
                 if d20 == 20:
-                    "成效普通"
+                    call prAtkWwCam
+                    play sound "SFX/wrong-buzzer-sound-effect.mp3"
                     $ atk = d4 + principal.attack*2 - winwin.defence
                     if atk < 0:
                         $ atk = 0
                     $ winwin.hp -= atk
                     call StateDisplay
+                    "成效普通"
                     return
                 if d20 <= 19:
+                    play sound "SFX/movie_1_C2K5NH0.mp3"
                     "未命中"
                 return
 
-    if d100 > 50 and cantmove < 0:
+    elif d100 > 50 and cantmove < 0:
         call choose2
         "校長使用禁言"
         if selected_player == 1:
+            call prBanTseCam
+            play sound "SFX/ban-sound-effect.mp3"
             $ mc_canmove = False
             "[player]被禁言了"
             $ cantmove = 2
@@ -97,6 +113,8 @@ label boss_attack:
             $ mc_effectamount += 1
             return
         if selected_player == 2:
+            call prBanWwCam
+            play sound "SFX/ban-sound-effect.mp3"
             $ winwin_canmove = False
             "[ww]被禁言了"
             $ cantmove = 2
@@ -104,57 +122,71 @@ label boss_attack:
             $ ww_effectamount += 1
             return    
 
-    if d100 > 40 and summoned == False and rd > 2 and principal.hp > 50:
+    elif d100 > 40 and summoned == False and rd > 2 and principal.hp > 50:
+        play sound "SFX/summon.mp3"
+        call prSummonRhCam
         "校長招喚了右手"
         $ Rh.hp = Rh.max_hp
         $ summoned = True
         return
 
-    if d100 > 30 and summoned == False and rd > 2 and principal.hp > 50:
+    elif d100 > 30 and summoned == False and rd > 2 and principal.hp > 50:
+        play sound "SFX/summon.mp3"
+        call prSummonLhCam
         "校長招喚了左手"
         $ Lh.hp = Lh.max_hp
         $ summoned = True
         return
 
-    if d100 > 35 and summoned == False and rd > 2 and principal.hp < 50:
+    elif d100 > 35 and summoned == False and rd > 2 and principal.hp < 50:
+        play sound "SFX/summon.mp3"
+        call prSummonLhCam
         "校長招喚了左手"
         $ Lh.hp = Lh.max_hp
         $ summoned = True
         return
 
-    if d100 > 30 and summoned == False and rd > 2 and principal.hp < 50:
+    elif d100 > 30 and summoned == False and rd > 2 and principal.hp < 50:
+        play sound "SFX/summon.mp3"
+        call prSummonRhCam
         "校長招喚了右手"
         $ Rh.hp = Rh.max_hp
         $ summoned = True
         return
 
-    if d100 > 15 and rd > 3:
+    elif d100 > 15 and rd > 3:
         "範圍"
         if winwin_bright == False:
             if d20 > 1:
+                call prMulAtkCam
                 $ atk = d4 + principal.attack*2 
                 if atk - mc.defence > 0:
                     $ mc.hp -= atk - mc.defence
                 if atk - winwin.defence > 0:
                     $ winwin.hp -= atk - winwin.defence
-                
             else:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
 
         elif winwin_bright == True:
             if d20 > 19:
+                call prMulAtkCam
                 $ atk = d4 + principal.attack*2 
                 if atk - mc.defence > 0:
-                    $ mc.hp -= atk - mc.defence
+                    $ amc = atk - mc.defence
+                    $ mc.hp -= (atk - mc.defence)
                 if atk - winwin.defence > 0:
-                    $ winwin.hp -= atk - winwin.defence
+                    $ winwin.hp -= (atk - winwin.defence)
                 
             else:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
         
         return
 
-    if d100 > 10 and rd > 4 and bosseffecttimmer < 0:
+    elif d100 > 10 and rd > 4 and bosseffecttimmer < 0:
+        call prAngerCam
+        play sound "SFX/ping.mp3"
         "威嚴"
         $ bosseffecttimmer = 4
         $ bosseffectcd = 6
@@ -179,6 +211,7 @@ label boss_attack:
         $ ww_effects.append("rt")
 
         return
+    
     call dice
     call boss_attack
     return
@@ -192,35 +225,43 @@ label Rh_attack:
         if winwin_bright == False:
 
             if d20 >= 19:
-                "效果顯著"
+                call RhAtkTseCam
                 $ atk = d4 + d6 + Rh.attack - mc.defence
                 if atk < 0:
                     $ atk = 0
                 $ mc.hp -= atk
                 call StateDisplay
+                play sound "SFX/smal-crit.mp3"
+                "效果顯著"
                 return
             if d20 >=1:
-                "成效普通"
+                call RhAtkTseCam
                 $ atk = d4 + Rh.attack - mc.defence
                 if atk < 0:
                     $ atk = 0
                 $ mc.hp -= atk
                 call StateDisplay
+                play sound "SFX/meteor-smash.mp3"
+                "成效普通"
                 return
             if d20 == 1:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
                 return
 
         if winwin_bright == True:
             if d20 == 20:
-                "成效普通"
+                call RhAtkTseCam
                 $ atk = d4 + Rh.attack - mc.defence
                 if atk < 0:
                     $ atk = 0
                 $ mc.hp -= atk
                 call StateDisplay
+                play sound "SFX/meteor-smash.mp3"
+                "成效普通"
                 return
             if d20 <= 19:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
                 return   
 
@@ -229,35 +270,43 @@ label Rh_attack:
         if winwin_bright == False:
 
             if d20 >= 19:
-                "效果顯著"
+                call RhAtkWwCam
                 $ atk = d4 + d6 + Rh.attack - winwin.defence
                 if atk < 0:
                     $ atk = 0
                 $ winwin.hp -= atk
                 call StateDisplay
+                play sound "SFX/smal-crit.mp3"
+                "效果顯著"
                 return
             if d20 >=1:
-                "成效普通"
+                call RhAtkWwCam
                 $ atk = d4 + Rh.attack - winwin.defence
                 if atk < 0:
                     $ atk = 0
                 $ winwin.hp -= atk
+                play sound "SFX/meteor-smash.mp3"
                 call StateDisplay
+                "成效普通"
                 return
             if d20 == 1:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
                 return
 
         if winwin_bright == True:
             if d20 == 20:
-                "成效普通"
+                call RhAtkWwCam
                 $ atk = d4 + Rh.attack - winwin.defence
                 if atk < 0:
                     $ atk = 0
                 $ winwin.hp -= atk
                 call StateDisplay
+                play sound "SFX/meteor-smash.mp3"
+                "成效普通"
                 return
             if d20 <= 19:
+                play sound "SFX/movie_1_C2K5NH0.mp3"
                 "未命中"
             return
     
@@ -266,8 +315,11 @@ label Rh_attack:
 label Lh_attack:
     
     call StateDisplay
+    play sound "SFX/111-pokemon-recovery.mp3"
     "左手對校長使用了回復"
     $ principal.hp += 5
+    if principal.hp > principal.max_hp:
+        $ principal.hp = principal.max_hp
     return
 
 label choose1:
@@ -326,3 +378,4 @@ label choose2:
             else:
                 $ selected_player = 1
     return 
+    

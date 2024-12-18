@@ -4,11 +4,12 @@ define w = Character("[ww]", image = "w")
 define a = Character("[aa]", image = "a")
 define s = Character("[ss]", image = "s")
 define b = Character("[bb]", image = "bob")
-define npc_black = Character("皮膚黝黑的學生", image = "npc_black")
-define npc_tall = Character("很高的學生", image = "npc_tall")
-define npc_glasses = Character("戴著眼鏡的學生", image = "npc_glasses")
+define npc_black = Character("皮膚黝黑的學生")
+define npc_tall = Character("很高的學生")
+define npc_weak = Character("看起來很害羞的學生")
 define player = Character("[name]")
 define pr = Character("校長", image = "principal")
+define monika = Character("Monika", image = "monika")
 
 default tt = "？？？"
 default ww = "？？？"
@@ -30,9 +31,9 @@ image bedroom:
     "scene/bedroom.jpg"
     xzoom 3
     yzoom 2.5
-image npc_tall = "character/npcs/tall_student.png"
-image npc_strong = "character/npcs/strong_student.png"
-image npc_weak = "character/npcs/weak_student.png"
+image tall_guy = "character/npcs/tall_student.png"
+image strong_guy = "character/npcs/strong_student.png"
+image weak_guy = "character/npcs/weak_student.png"
 image bathroom = "scene/bathroom.jpg"
 image outside = "scene/school_outside.jpg"
 image bedroom_night = "scene/bedroom_night.jpg"
@@ -42,7 +43,12 @@ image bossroom_floor = "scene/floor.jpg"
 image Wall = "scene/Wall.png"
 image hallway2 = "scene/hallway2.jpg"
 image sport_field = "scene/sport_field.jpg"
+image soccer_field = "scene/soccer_field.jpg"
+image soccer = "soccer_ball.png"
+image bench = "scene/bench.jpg"
+image corner = "scene/corner.jpg"
 image library = "scene/library.jpg"
+image library_2 = "scene/library_2.jpg"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
 image notebook:

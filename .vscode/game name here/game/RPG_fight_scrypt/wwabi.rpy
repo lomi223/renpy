@@ -6,75 +6,93 @@ label wwrest:
     return
 
 label wwab1:
-    if d10 > 8:
-        "勝勝的理由強而有力！"
+    if d10 > 9:
         if target == principal:
+            call wwAtkPrCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = (d4 + d6)*2 + winwin.attack*3 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        play sound "SFX/finishing-hit-super-smash-bros-ultimate.mp3"
+        "勝勝的理由強而有力！"
         return
 
     if d10 > 6:
-        "勝勝說了個強大的理由"
         if target == principal:
+            call wwAtkPrCam
             $ atk = d4 + d6 + winwin.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = d4 + d6 + winwin.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = d4 + d6 + winwin.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        play sound "SFX/smal-crit.mp3"
+        "勝勝說了個強大的理由"
         return
 
     if d10 > 1:
-        "勝勝說了個普通的理由"
         if target == principal:
+            call wwAtkPrCam
             $ atk = d4 + winwin.attack*2 - principal.defence
             if atk < 0:
                 $ atk = 0
             $ principal.hp -= atk
         if target == Rh:
+            call wwAtkLhRhCam
             $ atk = d4 + winwin.attack*2 - Rh.defence
             if atk < 0:
                 $ atk = 0
             $ Rh.hp -= atk
         if target == Lh:
+            call wwAtkLhRhCam
             $ atk = d4 + winwin.attack*2 - Lh.defence
             if atk < 0:
                 $ atk = 0
             $ Lh.hp -= atk
+        play sound "SFX/meteor-smash.mp3"
+        "勝勝說了個普通的理由"
         return
 
     if d10 == 1:
+        play sound "SFX/movie_1_C2K5NH0.mp3"
         "勝勝的理由爛透了！"
         return
 
 label wwab2:
+    call wwDefCam
+    play sound "SFX/bat_hit.mp3"
     "勝勝擋在了[player]的前面"
+    $ wwrelocate = False
     $ winwin_taunt = True
     $ ww_effectamount += 1
     $ ww_effects.append("t")
     return
 
 label wwab3:
+    call wwShineCam
+    play sound "SFX/anime-shine-sound-effect_QP4mAaX.mp3"
     "勝勝開始發光發熱"
     "對手被閃瞎了"
     "勝勝受到灼傷"
@@ -92,6 +110,7 @@ label wwab3:
     return
 
 label wwab4:
+    call wwGuoinnCam
     if d10 == 10:
         "勝勝把對方說破防了！"
         $ principal.defence = 0
@@ -110,7 +129,7 @@ label wwab4:
         $ boss_effects.append("nd")
         return
     
-    if d10 > 3:
+    if d10 > 2:
         "對方的心理防線受到勝勝影響"
         $ principal.defence -= 2
         $ winwin_defdebufftimmer = 3
@@ -127,7 +146,7 @@ label wwab4:
         $ boss_effects.append("rd")
         return
 
-    if d10 <= 3:
+    if d10 <= 2:
         "勝勝的話語意外地激怒了對方！"
         $ principal.attack += 2
         $ Rh.attack += 2

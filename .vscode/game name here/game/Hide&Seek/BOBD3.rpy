@@ -30,7 +30,7 @@ label BOBD3:
         linear 0.3 xalign 0.25
     w "不對！"
     w "[player]已經跟我約好要去愛買了"
-    show b norm:
+    show bob norm:
         xalign 0.0
         yalign 1.0
         linear 0.5 xalign 0.05
@@ -95,7 +95,7 @@ label bob_chosen:
     stop sound
     hide static
     play music "snowdin-town.mp3"
-    show b norm:
+    show bob norm:
         xalign 0.05
     show w norm:
         zoom 0.5

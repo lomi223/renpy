@@ -68,8 +68,7 @@ label foundu:
     scene black with dissolve
     centered "你打開了櫃子"
     scene class with dissolve
-    show bob very with dissolve:
-        zoom  0.25
+    show bob norm with dissolve
     b "哎呀！居然被你發現了嘻嘻"
     b "那麼現在....."
     play sound "SFX/undertale-sound-effect-chara-jumpscare.mp3"
@@ -268,7 +267,7 @@ label switch:
         subpixel True 
         matrixcolor TintMatrix("#fff")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)  
     pause 1.0
-    show bob sexy
+    show bob scary
     pause 0.1
     hide bob
     stop sound

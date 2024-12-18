@@ -173,6 +173,7 @@ label check:
         $ winwin_debuffcd = -1
 
     if winwin_taunt == True:
+        $ wwrelocate = True
         $ winwin_taunt = False
         $ ww_effectamount -= 1
         $ ww_effects.remove("t")
@@ -195,8 +196,8 @@ label initialize:
 
     #(name,Mhp,hp,Mmp,mp,Mdef,def,Matk,atk)
     $ mc = fighter("[player]", 50, 50, 30, 30, 8, 8, 3, 3)
-    $ winwin = fighter("[ww]", 70, 70, 10, 10, 10, 10, 5, 5)
-    $ principal = fighter("校長", 125, 125, 50, 50, 5, 5, 8, 8)
+    $ winwin = fighter("[ww]", 70, 70, 10, 10, 10, 10, 6, 6)
+    $ principal = fighter("校長", 125, 125, 50, 50, 6, 6, 8, 8)
     $ Rh = fighter("右手", 15, 0, 5, 5, 0, 0, 20, 20)
     $ Lh = fighter("左手", 15, 0, 5, 5, 10, 10, 0, 0)
 
@@ -218,17 +219,20 @@ label initialize:
     $ cantmove = -1
     $ summontimmer = -1
 
+    $ wwrelocate = True
+    $ tseshown = True
+    $ wwshown = True
+    $ prshown = True
+    $ Rhshown = False
+    $ Lhshown = False
     $ mc_buffed = False
     $ winwin_buffed = False
-
     $ principal_break = False
     $ principal_angered = False
     $ winwin_taunt = False
     $ winwin_bright = False
-
     $ mc_canmove = True
     $ winwin_canmove = True
-
     $ summoned = False
 
     $ rd = 0
@@ -262,3 +266,7 @@ label initialize:
 
     return
     
+
+
+
+
