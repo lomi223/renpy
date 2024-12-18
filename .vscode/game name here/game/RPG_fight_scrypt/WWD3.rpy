@@ -152,7 +152,7 @@ label WW_icefeast:
     w "走吧，還要回去趕-"
     pr "你們在那邊做什麼！"
     scene black with Fade(1,1,1)
-    call boss_fight
+    jump boss_fight
 
 label shareice_version:
     show w norm_2 with dissolve:

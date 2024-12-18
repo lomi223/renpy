@@ -1,29 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/act4.rpy", line 134, in script
-    show w mad at right with moveindcenter:
-  File "game/act4.rpy", line 134, in <module>
-    show w mad at right with moveindcenter:
-NameError: name 'moveindcenter' is not defined
+  File "game/act2.rpy", line 432, in script
+    jump act3
+ScriptError: could not find label 'act3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/act4.rpy", line 134, in script
-    show w mad at right with moveindcenter:
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1357, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/act4.rpy", line 134, in <module>
-    show w mad at right with moveindcenter:
-NameError: name 'moveindcenter' is not defined
+  File "game/act2.rpy", line 432, in script
+    jump act3
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'act3'.
 
 macOS-12.5-arm64-arm-64bit arm64
 Ren'Py 8.3.3.24111502
 Doki Doki
 Fixed     1.0
-Thu Dec 12 13:11:21 2024
+Tue Dec 17 18:31:42 2024

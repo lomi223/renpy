@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/act4.rpy", line 122: end of line expected.
-    show w shy with zoom 0.2 at right with moveinright
-                         ^
+File "game/act4.rpy", line 192: expected statement.
+    for ingredient in ingredients:
+                   ^
+
+File "game/act4_cookie_making.rpy", line 6: 'size' is not a keyword argument or valid child of the frame statement.
+    size (400, 400)
+        ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Dec 12 11:50:53 2024
+Thu Dec 12 14:44:25 2024
