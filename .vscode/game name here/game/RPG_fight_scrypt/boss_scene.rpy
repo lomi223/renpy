@@ -8,7 +8,6 @@ label boss_fight:
     stop music
     play music "bergentrückung--asgore---epic-orchestral-cover--kāru.mp3" loop fadein 0.5    
     
-    
     call ResetCam
     show floor
     show tse idle:
@@ -163,6 +162,10 @@ label tseAtkPrCam:
         parallel:
             pos (-0.25, 0.4) zpos -700.0 
             linear 0.10 pos (0.6, 0.4) zpos -500.0 
+    show pr hurt:
+        'pr idle'
+        0.60
+        'pr hurt'
     with Pause(0.70)
     camera:
         subpixel True
@@ -182,6 +185,16 @@ label tseAtkLhRhCam:
             'tse atk'
         parallel: 
             linear 0.30 pos (0.65, 0.6) 
+    if Rh.hp > 0:
+        show Rh hurt:
+            'Rh idle'
+            0.30
+            'Rh hurt'
+    if Lh.hp > 0:
+        show Lh hurt:
+            'Lh idle'
+            0.30
+            'Lh hurt'
     with Pause(0.40)
     camera:
         subpixel True
@@ -203,6 +216,10 @@ label wwAtkPrCam:
         parallel:
             pos (-0.2, 0.65) zpos -700.0 
             linear 0.10 pos (0.6, 0.4) zpos -500.0 
+    show pr hurt:
+        'pr idle'
+        0.70
+        'pr hurt'
     with Pause(0.70)
     camera:
         subpixel True
@@ -331,6 +348,26 @@ label prAtkTseCam:
         easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
     return
 
+label prBanTseCam:
+    window auto hide
+    camera:
+        subpixel True 
+        linear 0.30 pos (-350, -300) zpos -300.0 xrotate 18.0 yrotate 9.0 zrotate 0.0 
+    show pr Ban:
+        subpixel True 
+        parallel:
+            'pr idle'
+            0.30
+            'pr ban'
+        parallel:
+            pos (0.9, 450) 
+            linear 0.30 pos (-0.08, 400) 
+    with Pause(0.90)
+    camera:
+        subpixel True
+        easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+    return
+
 label prAtkWwCam:
     camera:
         subpixel True 
@@ -345,10 +382,6 @@ label prAtkWwCam:
             parallel:
                 pos (0.9, 450) 
                 linear 0.30 pos (0.05, 600) zpos -400 
-        show ww hurt:
-            'ww idle'
-            0.30
-            'ww hurt'
     elif winwin_taunt:
         show pr sing_atk:
             subpixel True
@@ -359,10 +392,40 @@ label prAtkWwCam:
             parallel:
                 pos (0.9, 450) 
                 linear 0.30 pos (0.15, 450) zpos -400 
-        show ww hurt:
-            'ww idle'
-            0.30
-            'ww hurt'
+    show ww hurt:
+        'ww idle'
+        0.30
+        'ww hurt'
+    with Pause(0.90)
+    camera:
+        subpixel True
+        easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+    return
+
+label prBanWwCam:
+    camera:
+        subpixel True 
+        linear 0.30 pos (-450, 350) zpos -300.0 xrotate -9.0 yrotate 0.0 zrotate -9.0
+    if not winwin_taunt:
+        show pr ban:
+            subpixel True
+            parallel:
+                'pr idle'
+                0.30
+                'pr ban'
+            parallel:
+                pos (0.9, 450) 
+                linear 0.30 pos (0.05, 600) zpos -400 
+    elif winwin_taunt:
+        show pr ban:
+            subpixel True
+            parallel:
+                'pr idle'
+                0.30
+                'pr ban'
+            parallel:
+                pos (0.9, 450) 
+                linear 0.30 pos (0.15, 450) zpos -400 
     with Pause(0.90)
     camera:
         subpixel True
@@ -376,6 +439,26 @@ label prSummonLhCam:
         pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
         linear 0.30 pos (100, 100) zpos -200.0 xrotate 4.0 yrotate -4.0 zrotate -2.0 
     show Lh idle:
+        default
+        subpixel True 
+        parallel:
+            xpos 3000 
+            easein_back 0.80 xpos 1900 
+        parallel:
+            ypos 1300 zpos -700.0 
+            linear 0.80 ypos 1300 zpos -700.0 
+    with Pause(0.90)
+    camera:
+        linear 0.1 subpixel True pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+    return
+
+label prSummonRhCam:
+    window auto hide
+    camera:
+        subpixel True 
+        pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+        linear 0.30 pos (100, 100) zpos -200.0 xrotate 4.0 yrotate -4.0 zrotate -2.0 
+    show Rh idle:
         default
         subpixel True 
         parallel:
@@ -404,14 +487,18 @@ label prMulAtkCam:
         parallel:
             xpos 0.9 zpos -700.0 
             linear 0.30 xpos 0.05 zpos -400.0 
-    show ww hurt:
-            'ww idle'
+    pause 0.3
+    play sound "SFX/thunder-crack.mp3"
+    if winwin.hp > 0:
+        show ww hurt:
+                'ww idle'
+                0.30
+                'ww hurt'
+    if mc.hp > 0:
+        show tse hurt:
+            'tse idle'
             0.30
-            'ww hurt'
-    show tse hurt:
-        'tse idle'
-        0.30
-        'tse hurt'
+            'tse hurt'
     with Pause(1.75)
     camera:
         subpixel True
@@ -434,10 +521,66 @@ label prAngerCam:
         easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
     return
 
+label RhAtkTseCam:
+    window auto hide
+    camera:
+        subpixel True 
+        linear 0.30 pos (-350, -300) zpos -300.0 xrotate 18.0 yrotate 9.0 zrotate 0.0 
+    show Rh atk:
+        subpixel True 
+        parallel:
+            'Rh idle'
+            0.30
+            'Rh atk'
+        parallel:
+            linear 0.30 pos (100, 1050) 
+    show tse hurt:
+        'tse idle'
+        0.30
+        'tse hurt'
+    with Pause(0.90)
+    camera:
+        subpixel True
+        easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+    return
+
+label RhAtkWwCam:
+    camera:
+        subpixel True 
+        linear 0.30 pos (-450, 350) zpos -300.0 xrotate -9.0 yrotate 0.0 zrotate -9.0
+    if not winwin_taunt:
+        show Rh atk:
+            subpixel True
+            parallel:
+                'Rh idle'
+                0.30
+                'Rh atk'
+            parallel:
+                linear 0.30 pos (200, 1325) zpos -700 
+    elif winwin_taunt:
+        show Rh atk:
+            subpixel True
+            parallel:
+                'Rh idle'
+                0.30
+                'Rh atk'
+            parallel: 
+                linear 0.30 pos (400, 1150) zpos -700 
+    show ww hurt:
+        'ww idle'
+        0.30
+        'ww hurt'
+    with Pause(0.90)
+    camera:
+        subpixel True
+        easeout 15 pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
+    return
+
 label tseRetreat:
     show tse idle:
         subpixel True
         bop_out_time_warp 0.60 xpos -2000
+    pause (0.70)
     hide tse
     return
 
@@ -445,6 +588,7 @@ label wwRetreat:
     show ww idle:
         subpixel True
         bop_out_time_warp 0.60 xpos -2000
+    pause (0.70)
     hide ww
     return
 
@@ -457,19 +601,31 @@ label LhRetreat:
     hide Lh
     return
 
+label RhRetreat:
+    window auto hide
+    show Rh idle:
+        subpixel True  
+        bop_out_time_warp 0.60 xpos 3000 
+    with Pause(0.70)
+    hide Rh
+    return
+
 label ResetCam:
     camera:
         linear 0.1 subpixel True pos (0, 0) zpos 0.0 xrotate 0.0 yrotate 0.0 zrotate 0.0 
     return
 
 label Relocate:
-    show tse idle
-    show ww idle
+    stop sound
+    if mc.hp > 0:
+        show tse idle
+    if winwin.hp > 0 and wwrelocate:
+        show ww idle
     if mc.hp > 0:
         $ tseshown = True
         show tse idle:
             linear 0.1 pos (-0.25, 0.4) zpos -700.0 
-    if mc.hp < 0:
+    elif mc.hp <= 0 and tseshown:
         $ tseshown = False
         call tseRetreat
     if winwin.hp > 0:
@@ -477,7 +633,7 @@ label Relocate:
         if wwrelocate:
             show ww idle:
                 linear 0.1 pos (-0.2, 0.65) zpos -700.0 
-    if winwin.hp < 0:
+    elif winwin.hp <= 0 and wwshown:
         $ wwshown = False
         call wwRetreat
     if principal.hp > 0:
@@ -486,9 +642,16 @@ label Relocate:
     if Lh.hp > 0:
         $ Lhshown = True
         show Lh idle
-    elif Lh.hp < 0 and Lhshown:
+    elif Lh.hp <= 0 and Lhshown:
         $ Lhshown = False
         call LhRetreat
+    if Rh.hp > 0:
+        $ Rhshown = True
+        show Rh idle:
+            linear 0.1 pos (1900, 1300) zpos -700.0
+    elif Rh.hp <= 0 and Rhshown:
+        $ Rhshown = False
+        call RhRetreat
     return
 
 label CheckWL:
@@ -510,4 +673,46 @@ label CheckWL:
         pr "我......認可你們"
         $ renpy.pause(3.0, hard=True)
     $ end = True
+    return
+
+label heal:
+    $ mc.hp = mc.max_hp
+    $ winwin.hp = winwin.max_hp
+    call StateDisplay
+    return
+
+label OnePunch:
+    $ mc.max_attack = mc.max_attack * 1000
+    $ winwin.max_attack = winwin.max_attack * 1000
+    $ mc.attack = mc.max_attack
+    $ winwin.attack = winwin.max_attack
+    play sound "SFX/one-punch.mp3"
+    call StateDisplay
+    return
+
+label DEF:
+    $ mc.max_defence = mc.max_defence * 1000
+    $ winwin.max_defence = winwin.max_defence * 1000
+    $ mc.defence = mc.max_defence
+    $ winwin.defence = winwin.max_defence
+    call StateDisplay
+    return
+
+label OverFlowTP:
+    $ mc.max_thoughts = mc.max_thoughts * 1000
+    $ winwin.max_thoughts = winwin.max_thoughts * 1000
+    $ mc.thoughts = mc.max_thoughts
+    $ winwin.thoughts = winwin.max_thoughts
+    call StateDisplay
+    return
+
+label ResetTimmer:
+    $ winwin_defdebufftimmer = -1
+    $ winwin_brighttimmer = -1
+    $ mc_atkbufftimmer = -1
+    $ mc_defbufftimmer = -1
+    $ mc_attackbuffcd = -1
+    $ winwin_brightcd = -1
+    $ winwin_debuffcd = -1
+    call StateDisplay
     return
