@@ -43,7 +43,7 @@ label start:
         "test":
             jump test
         "end_test":
-            jump s_love
+            jump a_love
 #label cg:
 #    show black with dissolve
 #    menu:

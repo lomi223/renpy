@@ -108,8 +108,37 @@ label w_love:
     "牽起了勝勝的手"
     scene black with dissolve
     "勝勝結局"
+    return
 label a_love:
+    scene black with dissolve
+    centered "你來到了約定的地點，Alex正在天臺等著你"
+    scene top_floor with dissolve:
+        zoom 2.65
+        ypos -0.24
+    show a norm with dissolve:
+        zoom 0.25
+        xpos 567
+        ypos 81
+    "他的髮絲被風吹得飄逸"
+    "他的手輕輕抬起、將一縷頭髮撩到耳後"
+    a "你來了。"
+    player "是的，我做好準備了。"
+    show a happy with dissolve:
+        zoom 0.25
+        xpos 567
+        ypos 81
+    "你此刻心情複雜，不敢相信這種事情會發生在自己身上"
+    "也許他下一秒會脖子折斷成九十度向你衝來"
+    "但是並沒有，你確信了這並不是惡夢"
+    "你與Alex談了很多，也了解了他的許多過去"
+    "與Alex的對話是如此令人舒服"
+    "你們或許認識不久"
+    "但你相信愛情能夠帶著你們走向未來"
     
+    scene black with dissolve
+    "Alex結局"
+    return
+
 label s_love:
     scene black with dissolve
     centered "約定的日子到來了，你帶著忐忑的心來到了碩碩的家門前"
@@ -177,3 +206,6 @@ label s_love:
     "而你們知道，這種日子將會持續下去"
     s "[player]......謝謝你"
     player "嗯，今後也請多多指教囉？"
+    scene black with dissolve
+    "碩碩結局"
+    return
