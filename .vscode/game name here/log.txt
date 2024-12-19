@@ -549,3 +549,26 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
 INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Resetting cache.
+Early init took 1273.97s
+Loading error handling took 0.04s
+Loading script took 0.50s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/RPG_fight_scrypt/WWD3.rpy", line 25: Indentation mismatch.
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.44s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 566.03'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
