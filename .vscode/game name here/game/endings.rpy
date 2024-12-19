@@ -119,6 +119,7 @@ label a_love:
         zoom 0.25
         xpos 567
         ypos 81
+    play music "AIR_poem_of_birds.mp3" loop volume 0.5
     "他的髮絲被風吹得飄逸"
     "他的手輕輕抬起、將一縷頭髮撩到耳後"
     a "你來了。"
@@ -130,6 +131,10 @@ label a_love:
     "你此刻心情複雜，不敢相信這種事情會發生在自己身上"
     "也許他下一秒會脖子折斷成九十度向你衝來"
     "但是並沒有，你確信了這並不是惡夢"
+    show a norm with dissolve:
+        zoom 0.25
+        xpos 567
+        ypos 81
     "你與Alex談了很多，也了解了他的許多過去"
     "與Alex的對話是如此令人舒服"
     "你們或許認識不久"
