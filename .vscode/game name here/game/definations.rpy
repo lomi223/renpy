@@ -50,6 +50,7 @@ image corner = "scene/corner.jpg"
 image cat = "black_cat.png"
 image library = "scene/library.jpg"
 image library_2 = "scene/library_2.jpg"
+image enterance = "scene/enterance.jpg"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
 image notebook:
