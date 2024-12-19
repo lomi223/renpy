@@ -28,7 +28,7 @@ label start:
     $ name = "澤澤"
     camera:
         perspective True
-    play music "Start Menu.mp3" loop fadein 0.3 volume 1.5
+    play music "Start Menu.mp3" loop fadein 0.3 volume 2
     menu:
         "name":
             jump inputname
@@ -42,6 +42,8 @@ label start:
             jump WWDay3_morning
         "test":
             jump test
+        "end_test":
+            jump a_love
 #label cg:
 #    show black with dissolve
 #    menu:
