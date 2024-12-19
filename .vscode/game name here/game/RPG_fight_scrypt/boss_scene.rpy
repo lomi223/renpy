@@ -109,17 +109,17 @@ label StateDisplay:
 label player_lost:
     scene black with dissolve
     "成就：共患難"
-    return
+    jump lose
 
 label norm_win:
     scene black with dissolve
     "成就：險象環生"
-    return
+    jump win
     
 label perfect_win:
     scene black with dissolve
     "成就：欸！小恙"
-    return
+    jump win
 
 #cheats for testing
 label heal:
@@ -163,3 +163,46 @@ label ResetTimmer:
     $ winwin_debuffcd = -1
     call StateDisplay
     return
+
+label win:
+    scene classroom with dissolve
+    show w norm with dissolve:
+        zoom 0.9
+        xalign 0.5
+        yalign 1.0
+    w "剛剛還真是驚險"
+    w "你還好嗎，哥們？"
+    jump ok
+
+label lose:
+    scene classroom with dissolve
+    show w norm with dissolve:
+        zoom 0.9
+        xalign 0.5
+        yalign 1.0
+    w "哎呀，吃了一支大過"
+    w "你還好嗎，哥們？"
+    jump ok
+
+label ok:
+    menu:
+        "我沒事":
+            w "沒事就好"
+        "差點就沒啦":
+            w "這樣啊"
+            scene black with dissolve
+            "勝勝突然靠近 舔了一下你的傷口"
+            centered "沒有CG QAQ"
+            player "！？"
+            scene classroom with dissolve
+            show w chill with dissolve:
+                zoom 0.9
+                xalign 0.5
+                yalign 1.0
+            w "聽說這樣會好比較快"
+        "謝謝你，[ww]":
+            show w shy
+            w "你沒事就好"
+    scene black with dissolve
+    jump day4
+            

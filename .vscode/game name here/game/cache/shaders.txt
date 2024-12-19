@@ -1,6 +1,6 @@
 renpy.texture
-renpy.matrixcolor renpy.alpha renpy.solid
 renpy.mask renpy.mask
+renpy.matrixcolor renpy.alpha renpy.solid
 >>>>>>> e7935fb878a9c3ff65b60c30ff91a41d6b97b1e6
 renpy.texture -renpy.texture renpy.blur renpy.texture -renpy.texture renpy.blur
 renpy.dissolve renpy.dissolve
@@ -13,8 +13,8 @@ renpy.geometry renpy.matrixcolor renpy.solid
 renpy.alpha renpy.geometry renpy.matrixcolor renpy.texture
 renpy.geometry renpy.solid
 renpy.alpha renpy.geometry renpy.matrixcolor renpy.solid
->>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 renpy.matrixcolor renpy.matrixcolor renpy.texture -renpy.texture renpy.blur renpy.texture -renpy.texture renpy.blur
+>>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
 renpy.matrixcolor renpy.matrixcolor renpy.texture
 renpy.matrixcolor renpy.texture
 renpy.geometry renpy.mask

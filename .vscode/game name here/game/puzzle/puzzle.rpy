@@ -47,4 +47,4 @@ label solved_puzzle:
     play sound "SFX/footstepps-2.mp3"
     "碩碩害羞地跑開了"
     player "碩碩......"
-    return
+    jump day4

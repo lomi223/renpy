@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/act4.rpy", line 197: expected statement.
-    for ingredient in ingredients:
-                   ^
+File "game/RPG_fight_scrypt/WWD3.rpy", line 25: Indentation mismatch.
 
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Dec 19 13:30:36 2024
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Thu Dec 19 14:27:06 2024

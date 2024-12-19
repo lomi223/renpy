@@ -28,21 +28,7 @@ label start:
     camera:
         perspective True
     play music "Start Menu.mp3" loop fadein 0.3 volume 2
-    menu:
-        "name":
-            jump inputname
-        "boss":
-            jump boss_fight
-        "bob":
-            jump bob_and_seak
-        "day4":
-            jump day4
-        "WWD3":
-            jump WWDay3_morning
-        "test":
-            jump test
-        "end_test":
-            jump a_love
+    jump inputname
 #label cg:
 #    show black with dissolve
 #    menu:
