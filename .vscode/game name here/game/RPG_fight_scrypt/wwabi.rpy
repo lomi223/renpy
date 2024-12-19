@@ -111,6 +111,7 @@ label wwab3:
 
 label wwab4:
     call wwGuoinnCam
+    play sound "SFX/guoinn.mp3" 
     if d10 == 10:
         "勝勝把對方說破防了！"
         $ principal.defence = 0

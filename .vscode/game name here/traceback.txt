@@ -1,58 +1,31 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-<<<<<<< HEAD
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
-=======
-  File "game/act2.rpy", line 432, in script
-    jump act3
-ScriptError: could not find label 'act3'.
->>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
+  File "game/Hide&Seek/BOBD3.rpy", line 118, in script
+    show b norm with dissolve
+Exception: Image 'b' does not accept attributes 'norm'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< HEAD
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 436, in save
-    reraise(t, e, tb)
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\loadsave.py", line 417, in save
-    dump((roots, renpy.game.log), logf)
-  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\compat\pickle.py", line 107, in dump
-    pickle.dump(o, f, pickle.HIGHEST_PROTOCOL if highest else PROTOCOL)
-TypeError: cannot pickle '_io.TextIOWrapper' object (perhaps store.file = <_io.TextIOWrapper name='C:\\Users\\USER\\Desktop\\GiftForYou;)\\hint.txt' mode='w' encoding='UTF-8'>)
-=======
-  File "game/act2.rpy", line 432, in script
-    jump act3
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Applications/renpy-8.3.3-sdk/renpy-8.3.3-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'act3'.
->>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
+  File "game/Hide&Seek/BOBD3.rpy", line 118, in script
+    show b norm with dissolve
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'b' does not accept attributes 'norm'.
 
-macOS-12.5-arm64-arm-64bit arm64
-Ren'Py 8.3.3.24111502
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.2.24090902
 Doki Doki
 Fixed     1.0
-<<<<<<< HEAD
-Thu Dec 19 00:12:49 2024
-=======
-Tue Dec 17 18:31:42 2024
->>>>>>> a1e694a6cd761e1c08e81a080a66d67f685ca289
+Thu Dec 19 12:56:17 2024

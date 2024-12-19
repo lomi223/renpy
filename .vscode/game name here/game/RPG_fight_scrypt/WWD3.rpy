@@ -14,7 +14,7 @@ label WW_icefeast:
     scene Wall with dissolve
     "走到牆邊，勝勝在向你招手" 
     show w norm with dissolve:
-        zoom 0.6
+        zoom 0.9
         yalign 1.5
         xalign 0.5
 
@@ -151,7 +151,21 @@ label WW_icefeast:
         xalign 0.5
     w "走吧，還要回去趕-"
     pr "你們在那邊做什麼！"
-    scene black with Fade(1,1,1)
+    pr "給我去校長室報到"
+    scene FogWall with Fade(1,1,1)
+    stop music
+    play music "barrier.mp3"
+    show w norm with dissolve:
+        zoom 0.9
+        xalign 0.5
+        yalign 1.0
+    w "哥們，這看起來十分不妙"
+    w "你準備好了嗎？"
+    menu:
+        "走吧":
+            $ quick_menu = False
+            scene black with Fade(1,1,1)
+            pass
     jump boss_fight
 
 label shareice_version:
@@ -201,10 +215,3 @@ label normalice_version:
     "冰是挺好吃的"
     "但你總覺得少了什麼"
     return
-
-
-
-
-    
-
-

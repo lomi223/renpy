@@ -22,6 +22,7 @@ default persistent.bob = False
 default persistent.agreed = False
 default shareice = 0
 
+image FogWall = "scene/Elden-Ring-Fog-Wall.avif"
 image splash = "temp_splash_img.png" 
 image street_scene = "scene/road_scene.jpg"
 image classroom :

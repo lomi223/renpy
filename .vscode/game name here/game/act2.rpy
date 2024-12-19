@@ -26,7 +26,8 @@ label morning:
     s "早……早安"
     hide s norm with dissolve
     show w norm at comein(0.5,0.1):
-            yalign 1.5
+        yalign 1.5
+        zoom 0.9
     w "嘿哥們！早啊！"
     player "勝勝！早啊"
     w "我等等有比賽，等等記得來看我！"
@@ -882,15 +883,17 @@ label s_cat:
     return
 
 label day2_night:
-    scene bedroom
+    scene bedroom with dissolve:
+        subpixel True 
+        matrixcolor TintMatrix("#18213b")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.5)*HueMatrix(0.0) 
+    play music "night.mp3"
     "一天又這麼過去了，好累啊"
-    scene black with Fade(1.0,0.0,0.0)
+    scene black with Fade(0.5,1.0,0.5)
     jump D3
 
 
 label bob_morning:
     scene bedroom
-    scene bedroom with Fade(0.5,1.0,0.5)
     player "看來今天也是美好的一天呢！"
     scene classroom with Fade(0.5,1.0,0.5)
     play music "snowdin-town.mp3" loop volume 0.5
@@ -899,24 +902,28 @@ label bob_morning:
         zoom 0.25
         yalign 1.5
         xalign 0.5
-    player "碩碩，早安"
-    s "！"
     "碩碩突然抬起頭來"
     "看到是你，似乎鬆了一口氣"
+    show s happy with dissolve:
+        zoom 0.25
+        yalign 1.5
+        xalign 0.5
     s "早……早安"
     hide s norm with dissolve
     show w norm at comein(0.5,0.1):
-            yalign 1.5
+        yalign 1.5
+        zoom 0.9
     w "嘿哥們！早啊！"
     player "勝勝！早啊"
     w "我等等有比賽，等等記得來看我！"
     "經勝勝提醒，你想起來今天上午似乎是校園認識活動"
     "學生們可以到處參觀、走訪校園"
     player "必須的"
-    show w norm at goout(0.1)
+    show w at goout(0.1)
     "勝勝飛快地離開了教室"
     hide w norm
     "此時，那位美女恰巧進來了教室"
+    play sound "SFX/door-slam.mp3" noloop volume 0.3
     show a norm with dissolve:
         zoom 0.25
         yalign 1.5
@@ -962,6 +969,19 @@ label bob_morning:
     
     scene classroom with Fade(0.5,1.0,0.5)
     "你睡了一覺，精神似乎變好了"
-    "醒來後，教室裡的人已經寥寥無幾"
-    player "我也去逛逛學校好了。"
+    "醒來後，教室裡只剩[bb]和你"
+    show bob norm:
+        zoom 0.3
+    b "醒來啦？"
+    show bob happy
+    b "你看上去清爽多了"
+    b "過來吧！"
+    scene black with dissolve
+    "[bb]將你抱在懷中 溫柔的撫摸著你的頭"
+    b "把全部都交給我就好"
+    "[bb]溫柔的話語令你感到十分安全"
+    "......"
+    player "對了！今天還有活動呢！"
+    jump choose_scene
+
     return

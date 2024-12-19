@@ -1,7 +1,7 @@
 label boss_fight:
     default end = False
     $ quick_menu = False
-    scene boss_scene:
+    scene boss_scene with dissolve:
         xanchor 0.17
         yanchor 0.30
         zoom 2
@@ -108,17 +108,17 @@ label StateDisplay:
 
 label player_lost:
     scene black with dissolve
-    "玩家失敗"
+    "成就：共患難"
     return
 
 label norm_win:
     scene black with dissolve
-    "勝利"
+    "成就：險象環生"
     return
     
 label perfect_win:
     scene black with dissolve
-    "完美勝利"
+    "成就：欸！小恙"
     return
 
 #cheats for testing
