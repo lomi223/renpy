@@ -36,7 +36,7 @@ label day4:
         xalign 0.5
     w "沒事，趕快上工吧！"
     show w norm with dissolve:
-        zoom 0.55
+        zoom 0.9
         yalign 1.0
         xalign 0.7
     "勝勝露出了一個「你肯定不知道我有多牛」的表情"
@@ -61,7 +61,14 @@ label day4:
                 yalign 1.5
                 xalign 0.5
             w "我的話喜歡巧克力口味，我們就做這兩個口味吧"
+            w "你先來決定要放什麼配料吧？"
             hide w
+    scene black with Fade(1.0,1.0,1.0)
+    call cookie
+    scene cookieclass at center:
+        xzoom 3.2
+        yzoom 2.6
+    play music "Dating Start!.mp3" loop volume 1.5
     "軟化奶油並加入糖粉攪拌，你的工作有點過於容易"    
     "處理完手邊的工作，你望向勝勝"
     show w sided with dissolve:
@@ -177,7 +184,71 @@ label day4:
     scene black with dissolve
     centered "彷彿是在抗拒思考一般，你一到家便陷入了沈睡"
 
-    
-    
+label cookie:
+    default ingredients = []
+    scene precookie at center:
+        xzoom 2.2
+        yzoom 2.2
+    call screen make_cookie_UI
+    if ingredients:
+        play music "complete.mp3" volume 0.3 
+        "你做出了一個有特色的餅乾"
+    else:
+        "你選擇不加任何配料，這是一塊普通的餅乾"
+    scene black with Fade(0.5,0.5,0.5)
+    return
+screen make_cookie_UI:
+    # 背景
+    frame:
+        align (1.0, 0.0)  # 置中
+        xsize 600
+        ysize 600
+        background "#ffc4e5"
+        vbox:
+            spacing 10
+            align (1.0, 0.5)
+            
+            # 標題
+            text "選擇你想加入餅乾麵糊的配料：" size 30
+            # 顯示可選擇的配料按鈕
+            hbox:
+                spacing 10
+                add "images/chocolate.jpg" size (100, 100)
+                textbutton "巧克力" action Function(add_ingredient, "巧克力","images/chocolate.jpg")
+            hbox:
+                spacing 10
+                add "images/mom.png" size (100, 100)
+                textbutton "你媽" action Function(add_ingredient, "你媽","images/mom.png")
+            hbox:
+                spacing 10
+                add "images/Yajusanpai.jpg" size (100, 100)
+                textbutton "野獸前輩" action Function(add_ingredient, "野獸前輩", "images/Yajusanpai.jpg")
+            hbox:
+                spacing 10
+                add "images/sugar.jpg" size (100, 100)
+                textbutton "糖霜" action Function(add_ingredient, "糖霜","images/sugar.jpg")
+            if ingredients:
+                text "已選擇的配料：" size 20
+                text  " \n".join(ingredients)    
+            # 完成按鈕
+            textbutton "完成製作" action Return()
+init python:
+    def add_ingredient(name, image):
+        if name not in renpy.store.ingredients:
+            renpy.store.ingredients.append(name)
 
+# Define styles
+init:
+    style ingredient_button:
+        size 20
+        background "#d4a373"
+        hover_background "#f6c89f"
+        insensitive_background "#aaaaaa"
+        padding (10, 10)
 
+    style done_button:
+        size 24
+        background "#9dc6a7"
+        hover_background "#add4b5"
+        insensitive_background "#aaaaaa"
+        padding (15, 15)

@@ -52,6 +52,7 @@ image library = "scene/library.jpg"
 image library_2 = "scene/library_2.jpg"
 image world_OutsideTheWall = "scene/world_OutsideTheWall.png"
 image icestore = "scene/icestore.png"
+image precookie = "scene/cookie_pre.jpg"
 image notebook:
     "scene/notebook.png"
     zoom 1.5
