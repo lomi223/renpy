@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 renpy.texture
 renpy.alpha renpy.geometry renpy.matrixcolor renpy.texture
 renpy.matrixcolor renpy.alpha renpy.matrixcolor renpy.solid
@@ -36,6 +37,8 @@ renpy.alpha renpy.texture
 renpy.geometry renpy.matrixcolor renpy.solid
 renpy.matrixcolor renpy.solid
 =======
+=======
+>>>>>>> 07f6d7fc5acdb10b0ab5c5d1ac8759cecc788e90
 renpy.texture
 renpy.mask renpy.mask
 renpy.matrixcolor renpy.alpha renpy.solid
@@ -75,4 +78,7 @@ renpy.matrixcolor renpy.dissolve renpy.dissolve
 >>>>>>> cc6e379b35ad1798ad904df88ed402f86dc1a370
 renpy.ftl
 renpy.matrixcolor renpy.alpha renpy.texture
+<<<<<<< HEAD
+>>>>>>> 07f6d7fc5acdb10b0ab5c5d1ac8759cecc788e90
+=======
 >>>>>>> 07f6d7fc5acdb10b0ab5c5d1ac8759cecc788e90
