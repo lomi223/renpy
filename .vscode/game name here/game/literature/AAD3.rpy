@@ -7,7 +7,7 @@ label AAD3:
     show a norm with dissolve:
         xalign 0.5
         yalign 0.5
-        zoom 0.4
+        zoom 0.25
     a "早上好，[player]"
     player "早上好啊，[aa]......"
     player "（他真的好美阿......）"
@@ -31,7 +31,10 @@ label LiteratureClub:
     scene classroom with Fade(0.5,0.1,0.5)
     player "這裡就是文學部嗎？"
     player "看起來跟我們的教室一模一樣"
-    show monika 1 with dissolve
+    show monika 1 with dissolve:
+        zoom 0.85
+        xalign 0.5
+        yalign 1.0
     monika "早上好呀！兩位客人{nw}"
     show monika 1d
     pause 0.5
@@ -46,20 +49,20 @@ label LiteratureClub:
     show a norm:
         subpixel True
         zoom 0.4
-        pos (-0.65, -0.25) zpos -300 
-        linear 0.3 pos (-0.05, -0.25) zpos -300 yrotate 18.0
+        pos (-0.65, -0.20) zpos -300 
+        linear 0.3 pos (-0.05, -0.20) zpos -300 yrotate 18.0
     a "我們來體驗寫詩的"
     show monika 1
     monika "這樣啊"
-    show monika 2
+    show monika 3
     monika "那這本單字書先給你們用"
-    show monika 2j
+    show monika 3j
     monika "我很期待你們的創作喔！"
     show monika 1
     monika "對了，[player]你過來一下"
     show a norm:
         subpixel True
-        zoom 0.4
+        zoom 0.5
         linear 0.3 pos (-0.65, -0.25) zpos -300 yrotate 18.0
     show monika 1:
         subpixel True

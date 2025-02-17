@@ -4,23 +4,25 @@ label BOBD3:
     centered "你來到了教室"
     scene classroom with dissolve
 
-    show a norm with dissolve
+    show a norm with dissolve:
+        zoom 0.25
     a "早安阿[player]"
     a "你要不要跟我一起去圖書館？"
     player "我......{nw}"
     show a norm:
         linear 0.3 xalign 0.65
-    show s angered:
+    show s norm:
+        zoom 0.25
         xalign 0.0
         yalign 1.0
         linear 0.3 xalign 0.35
     s "你在說甚麼呢？"
     s "[player]已經跟我約好要一起玩了"
-    show s norm
+    show s shy
     s "對吧，[player]"
     player "......我{nw}"
     show w norm:
-        zoom 0.5
+        zoom 0.9
         xalign 1.0 
         yalign 1.0
         linear 0.3 xalign 0.75
@@ -31,6 +33,7 @@ label BOBD3:
     w "不對！"
     w "[player]已經跟我約好要去愛買了"
     show bob norm:
+        zoom 0.27
         xalign 0.0
         yalign 1.0
         linear 0.5 xalign 0.05
@@ -98,22 +101,28 @@ label bob_chosen:
     show bob norm:
         xalign 0.05
     show w norm:
-        zoom 0.5
+        zoom 0.9
         yalign 1.0
         xalign 0.95
     show a norm:
+        zoom 0.25
         xalign 0.65
     show s norm:
+        zoom 0.25
         xalign 0.35
 
     b "我就知道你會選擇我[player]"
     b "我們走吧！"
     scene black with dissolve
     scene classroom with dissolve
-    show b norm with dissolve
+    show bob norm with dissolve:
+        xalign 0.5
+        yalign 1.0
+        zoom 0.3
     b "該做甚麼呢？"
     menu:
         "來玩躲貓貓吧！":
+            show bob happy
             b "好啊！"
             b "我先躲，你要來找我喔！"
             scene black with dissolve

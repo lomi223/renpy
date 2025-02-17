@@ -37,11 +37,27 @@ label a_on_street:
     centered "行走於繁華的街道中，[player]見到了......"
     scene street_scene with dissolve:
         zoom 3
-    show a norm with dissolve:
-        zoom 0.25
-        yalign 1.5
+    window auto hide
+    camera:
+        subpixel True 
+        parallel:
+            pos (-150, 170) 
+            linear 1.00 pos (-120, -120) 
+            linear 0.60 pos (150, -70) 
+            linear 0.80 pos (15, 100) 
+        parallel:
+            zpos -1100.0 
+            linear 1.00 zpos -1100.0 
+            linear 0.60 zpos -1100.0 
+            linear 0.80 zpos -1100.0 
+            linear 0.80 zpos -300.0 
+    show a norm:
+        zoom 0.2 
         xalign 0.5
-    pause 1.0
+        yalign 1.0
+    with Pause(3.30)
+    camera:
+        pos (0, 0) zpos 0.0
     hide a norm with dissolve
     player "啊......啊"
     player "很美~~~~阿"
@@ -99,12 +115,24 @@ label classroom:
         centered "正當你和碩碩聊得正歡時"
         scene classroom with dissolve
         play sound "SFX/walking_6QdYC8X.mp3"
-        show a norm with dissolve:
+        show a noticed with dissolve:
+            subpixel True 
+            matrixtransform ScaleMatrix(1.0, 1.0, 1.0)*OffsetMatrix(0.0, 0.0, 0.0)*RotateMatrix(0.0, 180.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0)*OffsetMatrix(0.0, 0.0, 0.0) 
             zoom 0.28
             xpos 0.0
-            linear 4.0 xpos 1.0
+            parallel:
+                linear 4.0 xpos 1.0
+            parallel:
+                linear 0.5 ypos -30
+                pause 0.5
+                linear 0.5 ypos 0
+                pause 0.5
+                linear 0.5 ypos -30
+                pause 0.5
+                linear 0.5 ypos 0
+                pause 0.5
         pause 4.0
-        hide a norm with dissolve
+        hide a with dissolve
         pause 0.5
         player "是早上那個女孩！"
         player "他也在這裡"
@@ -112,15 +140,13 @@ label classroom:
         play sound "SFX/door-slam.mp3" noloop volume 0.5
         pause 1.0
         show w norm with dissolve:
-            zoom 0.95
+            zoom 0.9
             yalign 1.5
             xalign 0.5
         w "剛好趕上"
         "突如其來的聲響嚇了你一跳"
         w "早啊！哥們"
         show w norm:
-            zoom 0.95
-            xpos 0.5
             linear 0.25 xpos 1.5
         pause 0.5
         hide w
@@ -303,7 +329,7 @@ label choose_w:
         "你接近了勝勝"
     scene classroom with dissolve
     show w norm with dissolve:
-            zoom 0.95
+            zoom 0.9
             yalign 1.5
             xalign 0.5
     menu:

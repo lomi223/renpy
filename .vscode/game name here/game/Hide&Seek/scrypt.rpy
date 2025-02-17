@@ -8,6 +8,7 @@ style test_style:
     color "#aa0000"
 
 label bob_and_seak:
+    $ quick_menu = False
     $ player_at2 = False
     scene black:
         zoom 2.0
@@ -68,10 +69,14 @@ label foundu:
     scene black with dissolve
     centered "你打開了櫃子"
     scene class with dissolve
-    show bob norm with dissolve
+    show bob norm with dissolve:
+        zoom 0.3
+        xalign 0.5
+        yalign 1.0
     b "哎呀！居然被你發現了嘻嘻"
     b "那麼現在....."
     play sound "SFX/undertale-sound-effect-chara-jumpscare.mp3"
+    show bob happy
     b "{sc}{=test_style}{cps=5}{size=*1.5}輪‧到‧你‧啦！{/size}{/cps}{/=test_style}{/sc}"
     call switch
     
@@ -155,6 +160,10 @@ label pos_check2:
 
 label hide_check:
     stop music
+    hide screen arrow_down
+    hide screen arrow_left
+    hide screen arrow_right
+    hide screen arrow_up
     scene black
     if player_x != 18 and player_y != 1:
         jump fail
@@ -181,10 +190,16 @@ label fail:
     stop sound
     play sound "SFX/scary-girl.mp3"
     $ renpy.pause(3.2,hard=True)
+    window auto hide
+    show bob sexy:
+        default
+        subpixel True 
+        pos (675, 3366) xzoom 2.81 yzoom 1.0 zoom 1.0 alpha 1.0 matrixcolor InvertMatrix(0.06)*ContrastMatrix(3.08)*SaturationMatrix(1.94)*BrightnessMatrix(-0.01)*HueMatrix(855.0)  
     play music "ufail.mp3"
     $ renpy.pause(5.0,hard=True)
     $ caught = True
     $ delete_all_saves()
+    $ persistent.agreed = False
     $ persistent.bob = True
     $ renpy.quit()
     return
@@ -192,6 +207,10 @@ label fail:
 label success:
     $ quick_menu = False
     stop music
+    hide screen arrow_down
+    hide screen arrow_left
+    hide screen arrow_right
+    hide screen arrow_up
     scene black
     hide screen timerFame
     play sound "SFX/53271__the_bizniss__door-close-4.wav"
@@ -267,7 +286,7 @@ label switch:
         subpixel True 
         matrixcolor TintMatrix("#fff")*InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)  
     pause 1.0
-    show bob scary
+    show bob sexy
     pause 0.1
     hide bob
     stop sound

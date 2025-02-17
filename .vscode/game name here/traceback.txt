@@ -1,5 +1,11 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
+<<<<<<< HEAD
+While running game code:
+  File "game/Hide&Seek/BOBD3.rpy", line 118, in script
+    show b norm with dissolve
+Exception: Image 'b' does not accept attributes 'norm'.
+=======
 While processing text tag {=fast} in '{=fast}野獸前輩'.:
   File "game/act4.rpy", line 67, in script call
     call cookie
@@ -8,10 +14,28 @@ While processing text tag {=fast} in '{=fast}野獸前輩'.:
   File "renpy/common/000statements.rpy", line 671, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
 Exception: Style 'fast' does not exist.
+>>>>>>> 87417598eab3b132aa380898d3753b6f19691a1c
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
+  File "game/Hide&Seek/BOBD3.rpy", line 118, in script
+    show b norm with dissolve
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\USER\Desktop\renpy-8.3.2-sdk.7z\renpy-8.3.2-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'b' does not accept attributes 'norm'.
+=======
   File "game/act4.rpy", line 67, in script call
     call cookie
   File "game/act4.rpy", line 191, in script
@@ -73,9 +97,14 @@ Full traceback:
   File "style.pyx", line 216, in renpy.style.StyleManager.__getattr__
   File "style.pyx", line 83, in renpy.style.get_style
 Exception: Style 'fast' does not exist.
+>>>>>>> 87417598eab3b132aa380898d3753b6f19691a1c
 
-macOS-12.5-arm64-arm-64bit arm64
-Ren'Py 8.3.3.24111502
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.2.24090902
 Doki Doki
 Fixed     1.0
+<<<<<<< HEAD
+Thu Dec 19 12:56:17 2024
+=======
 Thu Dec 19 14:12:20 2024
+>>>>>>> 87417598eab3b132aa380898d3753b6f19691a1c

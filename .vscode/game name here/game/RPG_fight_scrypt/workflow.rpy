@@ -272,17 +272,17 @@ label CheckWL:
     stop music fadeout 0.3
     if mc.hp <= 0 and winwin.hp <= 0:
         jump player_lost
-    if principal.hp < 0 and (mc.hp > 0 and winwin.hp <= 0) or (mc.hp <= 0 and winwin.hp > 0):
+    if principal.hp <= 0 and (mc.hp > 0 and winwin.hp <= 0) or (mc.hp <= 0 and winwin.hp > 0):
+        pr "咳......咳......"
+        $ renpy.pause(1.0, hard=True)
+        pr "我......認可你們"
+        $ renpy.pause(1.0, hard=True)
         jump norm_win
+    if principal.hp <= 0 and mc.hp > 0 and winwin.hp > 0:
         pr "咳......咳......"
-        $ renpy.pause(3.0, hard=True)
+        $ renpy.pause(1.0, hard=True)
         pr "我......認可你們"
-        $ renpy.pause(3.0, hard=True)
-    if principal.hp < 0 and mc.hp > 0 and winwin.hp > 0:
+        $ renpy.pause(1.0, hard=True)
         jump perfect_win
-        pr "咳......咳......"
-        $ renpy.pause(3.0, hard=True)
-        pr "我......認可你們"
-        $ renpy.pause(3.0, hard=True)
     $ end = True
     return
