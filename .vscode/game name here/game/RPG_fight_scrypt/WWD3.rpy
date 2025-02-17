@@ -176,7 +176,10 @@ label shareice_version:
     w "呃..."
     w "[player]"
     hide w
-    show w mad with moveinbottom
+    show w mad with moveinbottom:
+        zoom 0.35
+        yalign 1.0
+        xalign 0.5
     pause (1.0)
     w "啊--"
     "..."
