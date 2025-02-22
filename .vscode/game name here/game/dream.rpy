@@ -50,4 +50,4 @@ label changed:
         linear 0.5 zoom 5
     $ renpy.pause(2.0, hard=True)
     stop sound
-    jump act2
+    return

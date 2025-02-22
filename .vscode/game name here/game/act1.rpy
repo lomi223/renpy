@@ -29,8 +29,7 @@ label do_what:
             if played_count < 3:
                 jump do_what
             else:
-                stop music
-                jump playing_ending
+                return
             
 label a_on_street:
     scene black with dissolve
@@ -448,10 +447,5 @@ label night:
     player "他真的好美啊......"
     scene black with Fade(1.0,0.0,0.0)
     "不知怎地，眼皮越來越沉重，回想著今天發生的一切，[player]就這麼進入了夢鄉"
-    if b_love == 1:
-        player "喔對還有那個人......"
-        player "他究竟是誰？"
-        jump dream
-    jump act2
-
-return
+    return
+    

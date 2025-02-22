@@ -889,8 +889,7 @@ label day2_night:
     play music "night.mp3"
     "一天又這麼過去了，好累啊"
     scene black with Fade(0.5,1.0,0.5)
-    jump D3
-
+    return
 
 label bob_morning:
     scene bedroom

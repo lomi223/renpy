@@ -19,7 +19,6 @@ label splashscreen:
     with Pause(1)
     return
 
-
 label start: 
     stop music
     if persistent.bob:
@@ -29,6 +28,35 @@ label start:
         perspective True
     play music "Start Menu.mp3" loop fadein 0.3 volume 2
     jump inputname
+
+    
+label inputname:
+
+    scene black with fade
+    $ name = renpy.input("請在此輸入你的名字",length = 32)
+    $ name = name.strip()
+    if not name:
+        $ name = "澤澤" 
+    "[name]是你的名字嗎?"
+    
+menu:
+    "Yes":
+        jump say_my_name
+    "No":
+        jump inputname
+        
+label say_my_name:
+    player "我的名字是[name]。"
+    stop music fadeout 0.5
+    jump stages
+    
+    return
+
+label test:
+    show b glitched
+    ""
+    return
+
 #label cg:
 #    show black with dissolve
 #    menu:
@@ -61,31 +89,3 @@ label start:
 #            jump cg
 #        "nah":
 #            jump inputname
-
-    
-label inputname:
-
-    scene black with fade
-    $ name = renpy.input("請在此輸入你的名字",length = 32)
-    $ name = name.strip()
-    if not name:
-        $ name = "澤澤" 
-    "[name]是你的名字嗎?"
-    
-menu:
-    "Yes":
-        jump say_my_name
-    "No":
-        jump inputname
-        
-label say_my_name:
-    player "我的名字是[name]。"
-    stop music fadeout 0.5
-    jump act1
-    
-    return
-
-label test:
-    show b glitched
-    ""
-    return
