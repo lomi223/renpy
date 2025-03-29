@@ -189,6 +189,18 @@ label shareice_version:
     "他看起來有什麼話要說"
     w "呃..."
     w "[player]"
+<<<<<<< HEAD
+<<<<<<< HEAD
+    hide w
+    show w mad with moveinbottom:
+        zoom 0.35
+        yalign 1.0
+        xalign 0.5
+    pause (1.0)
+=======
+>>>>>>> 07f6d7fc5acdb10b0ab5c5d1ac8759cecc788e90
+=======
+>>>>>>> 07f6d7fc5acdb10b0ab5c5d1ac8759cecc788e90
     w "啊--"
     "..."
     player "（含）"
